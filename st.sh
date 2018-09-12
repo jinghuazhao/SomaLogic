@@ -2,6 +2,8 @@
 
 git add .gitignore
 git commit -m ".gitignore"
+git add doc
+git commit -m "Documents and auxiliary files"
 git add README.md
 git commit -m "README"
 git add st.sh
