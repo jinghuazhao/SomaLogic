@@ -1,7 +1,7 @@
-# 6-9-2018 JHZ
+# 12-9-2018 JHZ
 
 # title("Missense variant rs28929474:T in SERPINA1 is a trans pQTL hotspot", line = -33, cex = 0.4)
-xlsx <- "https://github.com/jinghuazhao/INF/blob/master/doc/SOMAscan.xlsx?raw=true"
+xlsx <- "https://github.com/jinghuazhao/SomaLogic/blob/master/doc/SOMAscan.xlsx?raw=true"
 t <- openxlsx::read.xlsx(xlsx, sheet=4, colNames=TRUE, skipEmptyRows=TRUE, cols=c(3,5,7:16,23,24), rows=c(5,1019:1037))
 hgTables <- read.delim("hgTables.txt",as.is=TRUE)
 hgTables <- within(hgTables, UniProt <- unlist(lapply(strsplit(hgTables$name,"-"),"[",1)))
