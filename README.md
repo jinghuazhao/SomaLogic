@@ -12,7 +12,7 @@ https://somalogic.com/
 ## References
 
 Cotton RJ, GraumannEmail J (2016) readat: An R package for reading and working with SomaLogic ADAT files.
-*BMC Bioinformatics*, https://doi.org/10.1186/s12859-016-1007-8, [aptamers](https://rdrr.io/bioc/readat/man/aptamers.html) function in 
+*BMC Bioinformatics*, https://doi.org/10.1186/s12859-016-1007-8, [aptamers function](https://rdrr.io/bioc/readat/man/aptamers.html) in 
 readat from [bitbucket](https://bitbucket.org/graumannlabtools/readat) and 
 [Bioconductor](https://bioconductor.org/packages/release/bioc/html/readat.html).
 
