@@ -7,7 +7,7 @@ https://somalogic.com/
 
 * **1310 assay**. [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf)
 
-* **1129 assay**. [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)
+* **1129 assay**. [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)
 
 ## References
 
