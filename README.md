@@ -1,7 +1,7 @@
 # SomaLogic
 SomaLogic data analysis
 
-## SomaLogic
+## SomaLogic assays
 
 https://somalogic.com/
 
