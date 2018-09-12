@@ -13,7 +13,7 @@ https://somalogic.com/
 
 File / root  | Description
 ---------|---------------------------------------------------------------------------------------------------------------------
-SERPINA1 | [SERPINA1.R](doc/SERPINA1.R) and [SERPINA1.pdf](doc/SERPINA1.pdf) which emulate [version in the paper](doc/fig2.R) (Sun et al. 2018)
+SERPINA1 | [SERPINA1.R](doc/SERPINA1.R) and [SERPINA1.pdf](doc/SERPINA1.pdf) which emulate [RCircos version by Jimmy](doc/fig2.R) for the paper (Sun et al. 2018)
 SOMAscan | Methods ([SOMAscan.md](doc/SOMAscan.md), [SOMAscan.pdf](doc/SOMAscan.pdf), [SOMAscan.tif](doc/SOMAscan.tif)) and supplementary tables ([SOMAscan.xlsx](doc/SOMAscan.xlsx)) for the SOMAscan paper
 
 ## References
