@@ -9,6 +9,10 @@ https://somalogic.com/
 
 * **1129 assay**. [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)
 
+## Analysis
+
+https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules
+
 ## A summary of files
 
 File / root  | Description
