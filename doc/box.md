@@ -2,4 +2,4 @@
 
 * Community, https://community.box.com/
 * Sync, https://app.box.com/settings/sync
-* Account https://app.box.com/folder/50333212285
+* Account, https://app.box.com/folder/50333212285
