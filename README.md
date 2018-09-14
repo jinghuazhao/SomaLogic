@@ -11,7 +11,7 @@ https://somalogic.com/
 
 ## Analysis
 
-https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules
+[HPC user environment and modules](https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules).
 
 ## A summary of files
 
