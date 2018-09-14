@@ -1,4 +1,4 @@
-# on box
+# On box
 
 * Community, https://community.box.com/
 * Sync, https://app.box.com/settings/sync
