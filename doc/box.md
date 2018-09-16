@@ -34,3 +34,6 @@ OPtions | Description
 --include | opposite of --exclude
 -P | Combination of --progress which gives you a progress bar for the transfers and --partial allows you to resume interrupted transfers
 -ssh | --rsh="ssh -l username" to copy over network
+
+
+GUI, https://sourceforge.net/projects/grsync/
