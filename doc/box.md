@@ -1,4 +1,4 @@
-# On box, FileZilla and rsync
+# On box, lftp, FileZilla and rsync
 
 ## box
 
@@ -6,15 +6,41 @@
 * Sync, https://app.box.com/settings/sync
 * Account, https://app.box.com/folder/50333212285
 
+## lftp
+
+This script downloads from remote directory at the FTP site to local direcory,
+```bash
+#!/bin/bash
+
+HOST="ftp.box.com"
+USER="USER"
+PASS="PASS"
+FTPURL="ftp://$USER:$PASS@$HOST"
+LCD="Local directory"
+RCD="Remove directory"
+
+lftp $HOST <<END
+set ftp:list-options -a;
+open '$FTPURL'
+lcd $LCD;
+cd $RCD;
+mirror --parallel=15 --log=$HOME/box.log --verbose
+bye
+END
+```
+A verbose log file is request. One can use additional options such as --exclude-glob a-dir-to-exclude --exclude-glob a-file-to-exclude --exclude-glob a-file-group-to-exclude* --exclude-glob other-files-to-exclude.
+
 ## FileZilla
 
 https://filezilla-project.org/index.php
+
+It is very unwieldy to install for ordinary users.
 
 ## rsync
 
 https://everythinglinux.org/rsync/
 
-**syntax** rsync -options --otherOptions sourceDir targetDir
+**syntax**: rsync -options --otherOptions sourceDir targetDir
 
 where Dir could be username@remote_host:destination_directory.
 
@@ -36,4 +62,6 @@ OPtions | Description
 -ssh | --rsh="ssh -l username" to copy over network
 
 
-GUI, https://sourceforge.net/projects/grsync/
+**GUI**: https://sourceforge.net/projects/grsync/
+
+However, rsync was not designed for FTP.
