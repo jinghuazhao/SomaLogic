@@ -38,8 +38,6 @@ A verbose log file is request. One can use additional options such as --exclude-
 
 ## rsync
 
-https://everythinglinux.org/rsync/
-
 **syntax**: rsync -options --otherOptions sourceDir targetDir
 
 where Dir could be username@remote_host:destination_directory.
