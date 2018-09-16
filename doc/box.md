@@ -14,7 +14,7 @@ It is very unwieldy to install for non-Admin users.
 
 ## ftp/lftp
 
-A plain FTP is not allowed at the clusters, so we turned to lftp which also supports recursive directories. This script downloads from remote directory at the FTP site to local direcory,
+A plain FTP is not allowed at the clusters, so we turned to lftp which also supports recursive directories. This script downloads from remote directory at the FTP site to a local one,
 ```bash
 #!/bin/bash
 
