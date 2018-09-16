@@ -1,4 +1,4 @@
-# On box, lftp, FileZilla and rsync
+# On box, FileZilla, ftp/lftp, and rsync
 
 ## box
 
@@ -6,9 +6,15 @@
 * Sync, https://app.box.com/settings/sync
 * Account, https://app.box.com/folder/50333212285
 
-## lftp
+## FileZilla
 
-This script downloads from remote directory at the FTP site to local direcory,
+https://filezilla-project.org/index.php
+
+It is very unwieldy to install for ordinary users.
+
+## ftp/lftp
+
+plain FTP is not allowed at the clusters, so we turned to lftp. This script downloads from remote directory at the FTP site to local direcory,
 ```bash
 #!/bin/bash
 
@@ -29,12 +35,6 @@ bye
 END
 ```
 A verbose log file is request. One can use additional options such as --exclude-glob a-dir-to-exclude --exclude-glob a-file-to-exclude --exclude-glob a-file-group-to-exclude* --exclude-glob other-files-to-exclude.
-
-## FileZilla
-
-https://filezilla-project.org/index.php
-
-It is very unwieldy to install for ordinary users.
 
 ## rsync
 
