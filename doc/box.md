@@ -10,7 +10,7 @@ As there are many dependencies to work around, it is very unwieldy to install fo
 
 ## ftp/lftp
 
-A plain FTP as invoked from the Linux ftp command is not allowed at the clusters, so we turned to lftp which also supports recursive directories. This script downloads from remote directory at the FTP site to a local one,
+A plain FTP as invoked from the Linux `ftp` command is not allowed at the clusters, so we turned to lftp which also supports recursive directories. This script downloads from remote directory at the FTP site to a local one,
 ```bash
 #!/bin/bash
 
@@ -30,7 +30,7 @@ mirror --parallel=15 --log=$HOME/box.log --verbose
 bye
 END
 ```
-A verbose log file is request. One can use additional options such as --exclude-glob a-dir-to-exclude --exclude-glob a-file-to-exclude --exclude-glob a-file-group-to-exclude* --exclude-glob other-files-to-exclude.
+A verbose log file is request. One can use additional options such as `--exclude-glob a-dir-to-exclude --exclude-glob a-file-to-exclude --exclude-glob a-file-group-to-exclude* --exclude-glob other-files-to-exclude`.
 
 ## rsync
 
