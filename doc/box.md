@@ -15,6 +15,7 @@ https://everythinglinux.org/rsync/
 where Dir could be username@remote_host:destination_directory.
 
 OPtions | Description
+--------|----------------------------------------------------
 -v | Turn on verbose mode
 -a | This turns on archive mode to recurse the directory copying all the files and directories and perserving things like case, permissions, and ownership on the target (Note: Ownership may not be preserved if you are not logged in as the root user)
 -z | Turns on compression during the transfer. This option compresses the data as it is copied over the network
