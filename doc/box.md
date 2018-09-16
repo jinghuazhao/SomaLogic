@@ -6,7 +6,7 @@
 
 https://filezilla-project.org/index.php
 
-It is very unwieldy to install for non-Admin users.
+As there are many dependencies to work around, it is very unwieldy to install for non-Admin users.
 
 ## ftp/lftp
 
