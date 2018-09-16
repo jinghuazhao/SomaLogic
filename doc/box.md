@@ -1,4 +1,4 @@
-# On box, filezilla and rsync
+# On box, FileZilla and rsync
 
 ## box
 
@@ -6,7 +6,7 @@
 * Sync, https://app.box.com/settings/sync
 * Account, https://app.box.com/folder/50333212285
 
-## filezilla
+## FileZilla
 
 https://filezilla-project.org/index.php
 
