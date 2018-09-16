@@ -1,10 +1,6 @@
 # On box, FileZilla, ftp/lftp, and rsync
 
-## box
-
-* Community, https://community.box.com/
-* Sync, https://app.box.com/settings/sync
-* Account, https://app.box.com/folder/50333212285
+Box provides comprehensive cloud storage and offers support for FTP. The following software are tested.
 
 ## FileZilla
 
@@ -62,3 +58,9 @@ Options | Descriptions
 -ssh | --rsh="ssh -l username" to copy over network
 
 However, rsync was not designed for FTP.
+
+## URLs
+
+* Community, https://community.box.com/
+* Sync, https://app.box.com/settings/sync
+* Account, https://app.box.com/folder/50333212285
