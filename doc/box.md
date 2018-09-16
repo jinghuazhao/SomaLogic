@@ -10,7 +10,7 @@
 
 https://filezilla-project.org/index.php
 
-It is very unwieldy to install for ordinary users.
+It is very unwieldy to install for non-Admin users.
 
 ## ftp/lftp
 
