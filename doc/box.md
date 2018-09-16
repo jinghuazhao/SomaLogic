@@ -42,6 +42,8 @@ A verbose log file is request. One can use additional options such as --exclude-
 
 where Dir could be username@remote_host:destination_directory.
 
+**GUI**: https://sourceforge.net/projects/grsync/
+
 OPtions | Description
 --------|----------------------------------------------------
 -v | Turn on verbose mode
@@ -58,8 +60,5 @@ OPtions | Description
 --include | opposite of --exclude
 -P | Combination of --progress which gives you a progress bar for the transfers and --partial allows you to resume interrupted transfers
 -ssh | --rsh="ssh -l username" to copy over network
-
-
-**GUI**: https://sourceforge.net/projects/grsync/
 
 However, rsync was not designed for FTP.
