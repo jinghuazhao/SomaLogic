@@ -1,6 +1,6 @@
 # On box, FileZilla, ftp/lftp, and rsync
 
-Box provides comprehensive cloud storage and offers support for FTP. The following software are tested.
+[Box](https://www.box.com/) provides cloud storage service and offers support for FTP. The following software are tested.
 
 ## FileZilla
 
