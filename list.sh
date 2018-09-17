@@ -26,7 +26,7 @@ ls $box/KORA | sed 's/KORA_pGWAS.//g;s/.assoc.linear.gz//g'
 
 # Malmo
 
-ls $box/Malmo | sed 's/_summary.csv.gz//g'
+ls $box/Malmo | sed 's/^zln//g;s/_summary.csv.gz//g'
 
 # QMDiab
 
