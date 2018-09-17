@@ -30,4 +30,4 @@ ls $box/Malmo | sed 's/_summary.csv.gz//g'
 
 # QMDiab
 
-ls $box/QMDiab $box/QMDiab/PGWAS_Results | sed 's/QMDiab_pGWAS.//g;s/assoc.linear.gz//g;s/assoc.linear//g'
+ls $box/QMDiab $box/QMDiab/PGWAS_Results | sed 's/QMDiab_pGWAS.//g;s/.assoc.linear.gz//g;s/.assoc.linear//g'
