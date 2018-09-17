@@ -7,7 +7,7 @@ git commit -m "README"
 git add doc
 git commit -m "Documents and auxiliary files"
 git add analysis-plan.md
-git commit "Analysis plan"
+git commit -m "Analysis plan"
 git add st.sh
 git commit -m "st.sh"
 git push
