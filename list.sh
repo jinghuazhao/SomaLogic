@@ -4,9 +4,11 @@
 # Sequence data for the Somalogic SOMAscan assay
 R --no-save <<END
 library(readat)
-write.table(aptamers,file="aptamers.txt",quote=FALSE,row.names=FALSE,sep="\t")
+vars <- c("AptamerId","SomaId","Target","TargetFullName","UniProt","EntrezGeneID","EntrezGeneSymbol")
+write.table(aptamers[vars],file="aptamers.txt",quote=FALSE,row.names=FALSE,sep="\t")
 chrpos <- as.data.frame(chromosomalPositions)
-write.table(chrpos,file="chrpos.txt",quote=FALSE,row.names=FALSE,sep="\t")
+vars <- c("group","group_name","AptamerId","UniProt","EntrezGeneID")
+write.table(chrpos[vars],file="chrpos.txt",quote=FALSE,row.names=FALSE,sep="\t")
 END
 
 export box=/scratch/jhz22/box
