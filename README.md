@@ -15,7 +15,7 @@ https://somalogic.com/
 
 ## A summary of files
 
-                        File / root  | Description
+                    File / root  | Description
 ---------------------------------|------------------------------------------------------------
 [analysis-plan.md](analysis-plan.md) | Analysis plan
 SERPINA1 | [SERPINA1.R](doc/SERPINA1.R) and [SERPINA1.pdf](doc/SERPINA1.pdf) which emulate the [RCircos version by Jimmy](doc/fig2.R) for the paper (Sun et al. 2018)
