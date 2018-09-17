@@ -11,8 +11,6 @@ https://somalogic.com/
 
 ## Analysis
 
-[Cloud storage](doc/box.md)
-
 [HPC user environment and modules](https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules).
 
 ## A summary of files
