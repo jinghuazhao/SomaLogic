@@ -14,12 +14,12 @@ A plain FTP as invoked from the Linux `ftp` command is not allowed at the cluste
 ```bash
 #!/bin/bash
 
-HOST="ftp.box.com"
-USER="USER"
-PASS="PASS"
-FTPURL="ftp://$USER:$PASS@$HOST"
-LCD="Local directory"
-RCD="Remove directory"
+export HOST="ftp.box.com"
+export USER="USER"
+export PASS="PASS"
+export FTPURL="ftp://$USER:$PASS@$HOST"
+export LCD="Local directory"
+export RCD="Remove directory"
 
 lftp $HOST <<END
 set ftp:list-options -a;
