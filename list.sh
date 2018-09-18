@@ -26,7 +26,7 @@ ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' > $sumstats/FHS.list
 
 ls $box/INTERVAL/A1CF.12423.38.3/ | sed 's/12423.38.3_chrom_//g;s/_meta_final_v1.tsv.gz//g' > $sumstats/INTERVAL.list
 
-# KORA, 1131 panel, PLINK outputs by AptamerId
+# KORA, 1131 panel, PLINK outputs on 8m imputed genotypes by AptamerId
 
 ls $box/KORA | sed 's/KORA_pGWAS.//g;s/.assoc.linear.gz//g' > $sumstats/KORA.list
 
@@ -34,6 +34,7 @@ ls $box/KORA | sed 's/KORA_pGWAS.//g;s/.assoc.linear.gz//g' > $sumstats/KORA.lis
 
 ls $box/Malmo | sed 's/^zln//g;s/_summary.csv.gz//g' > $sumstats/Malmo.list
 
-# QMDiab, PLINK outputs (4+1141) by AptamerId
+# QMDiab, PLINK outputs (4+1141) 20m imputed genotypes by AptamerId
 
-ls $box/QMDiab $box/QMDiab/PGWAS_Results | sed 's/QMDiab_pGWAS.//g;s/.assoc.linear.gz//g;s/.assoc.linear//g' > $sumstats/QMDiab.list
+ls $box/QMDiab/PGWAS_Results | \
+sed 's/QMDiab_pGWAS.//g;s/.assoc.linear.gz//g;s/.assoc.linear//g' > $sumstats/QMDiab.list
