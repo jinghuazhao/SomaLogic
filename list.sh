@@ -2,6 +2,8 @@
 # Generation of file lists and directories
 
 # Sequence data for the Somalogic SOMAscan assay
+# Comments - it is sensible to work with Aptamer ID to avaoid uncertainty in UniProt ID at this stage
+
 R --no-save <<END
 library(readat)
 vars <- c("AptamerId","SomaId","Target","TargetFullName","UniProt","EntrezGeneID","EntrezGeneSymbol")
@@ -9,6 +11,9 @@ write.table(aptamers[vars],file="aptamers.txt",quote=FALSE,row.names=FALSE,sep="
 chrpos <- as.data.frame(chromosomalPositions)
 vars <- c("group","group_name","AptamerId","UniProt","EntrezGeneID")
 write.table(chrpos[vars],file="chrpos.txt",quote=FALSE,row.names=FALSE,sep="\t")
+ord <- with(aptamers,order(AptamerId))
+UniProt <- aptamers[ord,c("AptamerId","UniProt")]
+write.table(UniProt,file="UniProt.txt",quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
 END
 
 export box=/scratch/jhz22/box
