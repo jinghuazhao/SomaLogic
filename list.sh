@@ -23,9 +23,17 @@ cd $sumstats
 mkdir FHS INTERVAL KORA Malmo QMDiab
 cd -
 
-# FHS, 1118 items, 16m imputed genotypes by unidentified IDs
+# FHS, 1118 items, 16m imputed genotypes by "-"-stripped AptamerId
 
 ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' > $sumstats/FHS.list
+
+R --no-save <<END
+pan <-read.csv("MalmoProteomicsKeyCleaned_tab1.csv",as.is=T)
+pan <- within(pan, aptamer <-gsub("-","",pan$SeqId..no.underscore))
+require(xlsx)
+xlsx <- "170724- List of uniprot, target, aptamer ID info with proteins f....xls"
+map <- read.xlsx(xlsx,sheet=1)
+END
 
 # INTERVAL, A1CF results for imputed genotypes by chromosome
 
