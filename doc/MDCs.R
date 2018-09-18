@@ -17,9 +17,10 @@ summary(as.numeric(pan$aptamer))
 table(duplicated(pan.mdc$Target)) #no duplicated entry
 sh <- "MDCs.sh"
 unlink(sh)
-for (j in 1:nrow(pan.mdc)){
-		mf <-pan.mdc$mdc.file[j]
-		mf.pid <-paste("X_",pan.mdc$aptamer[j],".summary.csv1.tbl.gz",sep="")
-		cmd <- paste("ln -sf ", mdc,"/",mf," ",mdc2,"/",mf.pid,sep="")
-                cat(cmd,"\n",file=sh,append=TRUE)
+for (j in 1:nrow(pan.mdc))
+{
+   mf <-pan.mdc$mdc.file[j]
+   mf.pid <-paste("X_",pan.mdc$aptamer[j],".summary.csv1.tbl.gz",sep="")
+   cmd <- paste("ln -sf ", mdc,"/",mf," ",mdc2,"/",mf.pid,sep="")
+   cat(cmd,"\n",file=sh,append=TRUE)
 }
