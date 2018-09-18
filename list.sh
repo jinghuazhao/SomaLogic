@@ -37,4 +37,4 @@ ls $box/Malmo | sed 's/^zln//g;s/_summary.csv.gz//g' > $sumstats/Malmo.list
 # QMDiab, PLINK outputs (4+1141) 20m imputed genotypes by AptamerId
 
 ls $box/QMDiab/PGWAS_Results | \
-sed 's/QMDiab_pGWAS.//g;s/.assoc.linear.gz//g;s/.assoc.linear//g' > $sumstats/QMDiab.list
+sed 's/QMDiab_pGWAS.//g;s/.assoc.linear.gz//g;s/.assoc.linear//g' | awk 'NR>2' > $sumstats/QMDiab.list
