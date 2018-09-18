@@ -19,7 +19,7 @@ File / root  | Description
 -------------|---------------------------------
 [analysis-plan.md](analysis-plan.md) | Analysis plan
 [list.sh](list.sh) | Generation of file lists and directories
-[format.sh](format.sh) | Code for format GWAS summary statistics
+[format.sh](format.sh) | Reformatting GWAS summary statistics
 
 ## References
 
