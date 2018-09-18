@@ -32,7 +32,7 @@ pan <-read.csv("MalmoProteomicsKeyCleaned_tab1.csv",as.is=T)
 pan <- within(pan, aptamer <-gsub("-","",pan$SeqId..no.underscore))
 require(xlsx)
 x <- "170724- List of uniprot, target, aptamer ID info with proteins f....xls"
-map <- read.xlsx(x,sheet=1)
+map <- read.xlsx(x,sheetName="Proteins")
 END
 
 # INTERVAL, A1CF results for imputed genotypes by chromosome
