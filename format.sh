@@ -1,11 +1,10 @@
 # 18-9-2018 JHZ
-
 #  Reformatting files into directories
 
 export box=/scratch/jhz22/box
 
-# FHS
-
+function FHS()
+{
 #1	MarkerName: chr:pos (:<ref>_<nonref> for indels)
 #2	Allele1: (please ignore this column)
 #3	Allele2: (please ignore this column)
@@ -30,8 +29,10 @@ export box=/scratch/jhz22/box
 #22	ratio: equivalent to oevar but compute slightly different
 #23	MarkerName2: SNP ID in the format chromosome:position(:I, D,R for indels)
 #24	seg:(please ignore this column)
+}
 
-# KORA
+function KORA()
+{
 # gunzip -c KORA/KORA_pGWAS.4292-5_3.assoc.linear.gz | head -1 > ~/1
 
 #1	CHR
@@ -43,8 +44,10 @@ export box=/scratch/jhz22/box
 #7	BETA
 #8	STAT
 #9	P
+}
 
-# Malmo
+function Malmo()
+{
 # gunzip -c $box/gunzip -c Malmo/zlnX6Phosphogluconatedehydrogenase_summary.csv.gz | \
 # head -1 | awk '{gsub(/,/,"\n");print}' | awk '{OFS="\t";print "#" NR,$1}' > ~/1
 
@@ -69,6 +72,9 @@ export box=/scratch/jhz22/box
 #19	maf_b1
 #20	af_coded_b2
 #21	maf_b2
+}
 
-# QMDiab
+function QMDiab()
+{
 # See KORA above
+}
