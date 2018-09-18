@@ -18,7 +18,7 @@ cd $sumstats
 mkdir FHS INTERVAL KORA Malmo QMDiab
 cd -
 
-# FHS, 1118 items, 16m imputed genotypes
+# FHS, 1118 items, 16m imputed genotypes by unidentified IDs
 
 ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' > $sumstats/FHS.list
 
