@@ -1,7 +1,7 @@
 # Code to immitate Qiong Yang's MDCs_GWASfile_rename.R
 
 pan <-read.csv("MalmoProteomicsKeyCleaned_tab1.csv",as.is=T)
-pan$aptamer <-gsub("-","",pan$SeqId..no.underscore)
+pan <- within(pan, $aptamer <-gsub("-","",pan$SeqId..no.underscore))
 
 mdc <- "/scratch/jhz22/box/Malmo"
 mdc2 <- "/scratch/jhz22/box/FHS"
