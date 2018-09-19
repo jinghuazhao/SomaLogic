@@ -1,7 +1,10 @@
-# 18-9-2018 JHZ
+# 19-9-2018 JHZ
 #  Reformatting files into directories
 
 export box=/scratch/jhz22/box
+export sumstats=/scratch/jhz22/sumstats
+
+sort -k4,4 doc/MDCs.txt | join -11 -24 -t$'\t' $sumstats/FHS.list - | cut -f2
 
 function FHS()
 {

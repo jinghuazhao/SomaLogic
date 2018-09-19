@@ -25,7 +25,7 @@ cd -
 
 # FHS, 1118 items, 16m imputed genotypes by "-"-stripped AptamerId
 
-ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' > $sumstats/FHS.list
+ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' | sort -k1,1 > $sumstats/FHS.list
 
 R --no-save <<END
 pan <-read.csv("MalmoProteomicsKeyCleaned_tab1.csv",as.is=T)
