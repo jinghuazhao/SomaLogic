@@ -54,6 +54,8 @@ function Malmo()
 # gunzip -c $box/gunzip -c Malmo/zlnX6Phosphogluconatedehydrogenase_summary.csv.gz | \
 # head -1 | awk '{gsub(/,/,"\n");print}' | awk '{OFS="\t";print "#" NR,$1}' > ~/1
 
+sort -k3,3 doc/MDCs.txt | join -11 -23 -t$'\t' $sumstats/Malmo.list - | cut -f2
+
 #1	SNP
 #2	chr
 #3	position
