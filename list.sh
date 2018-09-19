@@ -41,11 +41,11 @@ ls $box/INTERVAL/A1CF.12423.38.3/ | sed 's/12423.38.3_chrom_//g;s/_meta_final_v1
 
 # KORA, 1131 panel, PLINK outputs on 8m imputed genotypes by AptamerId
 
-ls $box/KORA | sed 's/KORA_pGWAS.//g;s/.assoc.linear.gz//g' > $sumstats/KORA.list
+ls $box/KORA | sed 's/KORA_pGWAS.//g;s/.assoc.linear.gz//g' | awk 'NR>2' > $sumstats/KORA.list
 
 # Malmo, 1306 panel, 15m imputed genotypes by EntrezGeneSymbol
 
-ls $box/Malmo | sed 's/^zln//g;s/_summary.csv.gz//g' > $sumstats/Malmo.list
+ls $box/Malmo | sed 's/^zln//g;s/_summary.csv.gz//g' | sort -k1,1 > $sumstats/Malmo.list
 
 # QMDiab, PLINK outputs (4+1141) 20m imputed genotypes by AptamerId
 
