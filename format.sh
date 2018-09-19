@@ -4,10 +4,12 @@
 export box=/scratch/jhz22/box
 export sumstats=/scratch/jhz22/sumstats
 
-sort -k4,4 doc/MDCs.txt | join -11 -24 -t$'\t' $sumstats/FHS.list - | cut -f2
+module load parallel/20131222
 
 function FHS()
 {
+sort -k4,4 doc/MDCs.txt | join -11 -24 -t$'\t' $sumstats/FHS.list - | cut -f2
+
 #1	MarkerName: chr:pos (:<ref>_<nonref> for indels)
 #2	Allele1: (please ignore this column)
 #3	Allele2: (please ignore this column)
