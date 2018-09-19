@@ -29,10 +29,12 @@ ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' | sort -k1,1 > $sumstats/FHS.list
 
 R --no-save <<END
 pan <-read.csv("MalmoProteomicsKeyCleaned_tab1.csv",as.is=T)
-pan <- within(pan, aptamer <-gsub("-","",pan$SeqId..no.underscore))
+pan <- within(pan, aptamer <-gsub("-","",SeqId..no.underscore))
+dim(pan)
 require(xlsx)
 x <- "170724- List of uniprot, target, aptamer ID info with proteins f....xls"
 map <- read.xlsx(x,sheetName="Proteins")
+dim(map)
 END
 
 # INTERVAL, A1CF results for imputed genotypes by chromosome
