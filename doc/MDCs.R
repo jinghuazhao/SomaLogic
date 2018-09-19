@@ -15,14 +15,18 @@ names(mdc.lnk)[2] <- "mdcProtein"
 
 pan.mdc <- merge(mdc.lnk,pan,by="mdcProtein",all.x=T)
 summary(as.numeric(with(pan,aptamer)))
-table(duplicated(pan.with(mdc, Target))) #no duplicated entry
+table(duplicated(with(pan.mdc, TargetName))) #no duplicated entry
 
 sh <- "MDCs.sh"
+txt <- "MDCs.txt"
 unlink(sh)
-for (j in 1:nrow(pan.mdc))
+unlink(txt)
+ord <- with(pan.mdc,order(SeqId..no.underscore))
+with(pan.mdc[ord,], for (j in 1:nrow(pan.mdc))
 {
-   mf <- with(pan.mdc,mdc.file)[j]
-   mf.pid <- paste("X_",with(pan.mdc,aptamer)[j],".summary.csv1.tbl.gz",sep="")
-   cmd <- paste("ln -sf ", mdc,"/",mf," ",mdc2,"/",mf.pid,sep="")
+   mf <- as.character(mdc.file[j])
+   mf.pid <- paste("X_",aptamer[j],".txt.gz",sep="")
+   cat(FHS_seq_ID[j], SeqId..no.underscore[j], Malmo.Name[j],aptamer[j],"\n",file=txt,append=TRUE,sep="\t")
+   cmd <- paste("ln -sf ", "Malmo/", mf," ","FHS/",mf.pid,sep="")
    cat(cmd,"\n",file=sh,append=TRUE)
-}
+})
