@@ -34,6 +34,8 @@ quantitative trait loci, http://dx.doi.org/10.1101/230094.
 
 Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79, SomaLogic plasma protein GWAS summary statistics, https://app.box.com/s/u3flbp13zjydegrxjb2uepagp1vb6bj2, [EGA entry](https://ega-archive.org/studies/EGAS00001002555).
 
+Supplementary files
+-----------------------------------------------
 File | Description
 -------------|---------------------------------
 [SERPINA1.R](doc/SERPINA1.R) |
