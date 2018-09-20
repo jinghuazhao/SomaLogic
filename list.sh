@@ -4,8 +4,8 @@
 # Sequence data for the Somalogic SOMAscan assay
 # Comments - it is sensible to work with Aptamer ID to avaoid uncertainty in UniProt ID at this stage
 
-## from Bioconductor
 R --no-save <<END
+## from Bioconductor
 library(readat)
 vars <- c("AptamerId","SomaId","Target","TargetFullName","UniProt","EntrezGeneID","EntrezGeneSymbol")
 write.table(aptamers[vars],file="aptamers.txt",quote=FALSE,row.names=FALSE,sep="\t")
@@ -15,6 +15,9 @@ write.table(chrpos[vars],file="chrpos.txt",quote=FALSE,row.names=FALSE,sep="\t")
 ord <- with(aptamers,order(AptamerId))
 UniProt <- aptamers[ord,c("AptamerId","UniProt")]
 write.table(UniProt,file="UniProt.txt",quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
+## from Jimmy
+m <- read.delim(paste0("doc/SOMALOGIC_Master_Table_160410_1129info.tsv"),as.is=TRUE)
+mm <-merge(m,aptamers[c("AptamerId","Units","IsIn1310Panel","IsIn1129Panel","PlasmaDilution","SerumDilution")],by.x="Seq",by.y="AptamerId")
 END
 
 ## from FHS
