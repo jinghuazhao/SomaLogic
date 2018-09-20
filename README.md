@@ -32,7 +32,7 @@ from [Bioconductor](https://bioconductor.org/packages/release/bioc/html/readat.h
 Stacey D, et al. (2017), [ProGeM](https://github.com/ds763/ProGeM): A framework for the prioritisation of candidate causal genes at molecular
 quantitative trait loci, http://dx.doi.org/10.1101/230094.
 
-Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79, SomaLogic plasma protein GWAS summary statistics, https://app.box.com/s/u3flbp13zjydegrxjb2uepagp1vb6bj2
+Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79, SomaLogic plasma protein GWAS summary statistics, https://app.box.com/s/u3flbp13zjydegrxjb2uepagp1vb6bj2, Plasma pQTLs in INTERVAL cohort, [EGA entry](https://ega-archive.org/studies/EGAS00001002555).
 
 File | Description
 -------------|---------------------------------
@@ -43,4 +43,3 @@ File | Description
 [SOMAscan.tif](doc/SOMAscan.tif)) | Methods
 ([SOMAscan.xlsx](doc/SOMAscan.xlsx)) | Supplementary tables
 
-Plasma pQTLs in INTERVAL cohort, [EGA entry](https://ega-archive.org/studies/EGAS00001002555).
