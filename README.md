@@ -38,4 +38,5 @@ File | Description
 [SERPINA1.pdf](doc/SERPINA1.pdf) | Code to emulate the [RCircos version by Jimmy](doc/fig2.R)
 [SOMAscan.md](doc/SOMAscan.md) |
 [SOMAscan.pdf](doc/SOMAscan.pdf) |
-[SOMAscan.tif](doc/SOMAscan.tif)) | supplementary tables ([SOMAscan.xlsx](doc/SOMAscan.xlsx))
+[SOMAscan.tif](doc/SOMAscan.tif)) | Methods
+([SOMAscan.xlsx](doc/SOMAscan.xlsx)) | Supplementary tables
