@@ -1,5 +1,5 @@
 # 20-9-2018 JHZ
-#  Reformatting files into directories
+# Reformatting files into directories
 
 ## raw and reformatted SUMSTATS
 export box=/scratch/jhz22/box
