@@ -18,6 +18,7 @@ https://somalogic.com/
 File  | Description
 -------------|---------------------------------
 [analysis-plan.md](analysis-plan.md) | Analysis plan
+[SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics
 [meta.sh](metal.sh) | Generation of individual METAL entries
