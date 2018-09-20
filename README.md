@@ -1,9 +1,9 @@
 # SomaLogic
 SomaLogic data analysis
 
-## SomaLogic assays
+## SomaLogic SOMAscan assays
 
-https://somalogic.com/
+The [SomaLogic](https://somalogic.com/) SOMAscan assay [white paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
 
 * **1310 assay**. [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf)
 * **1129 assay**. [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)
@@ -41,3 +41,7 @@ File | Description
 [SOMAscan.pdf](doc/SOMAscan.pdf) |
 [SOMAscan.tif](doc/SOMAscan.tif)) | Methods
 ([SOMAscan.xlsx](doc/SOMAscan.xlsx)) | Supplementary tables
+
+[GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k).
+
+[INTERVAL project](https://ega-archive.org/studies/EGAS00001002555).
