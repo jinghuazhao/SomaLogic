@@ -4,6 +4,7 @@
 # Sequence data for the Somalogic SOMAscan assay
 # Comments - it is sensible to work with Aptamer ID to avaoid uncertainty in UniProt ID at this stage
 
+## from Bioconductor
 R --no-save <<END
 library(readat)
 vars <- c("AptamerId","SomaId","Target","TargetFullName","UniProt","EntrezGeneID","EntrezGeneSymbol")
@@ -16,17 +17,7 @@ UniProt <- aptamers[ord,c("AptamerId","UniProt")]
 write.table(UniProt,file="UniProt.txt",quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
 END
 
-export box=/scratch/jhz22/box
-export sumstats=/scratch/jhz22/sumstats
-mkdir $sumstats
-cd $sumstats
-mkdir FHS INTERVAL KORA Malmo QMDiab
-cd -
-
-# FHS, 1118 items, 16m imputed genotypes by "-"-stripped AptamerId
-
-ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' | sort -k1,1 > $sumstats/FHS.list
-
+## from FHS
 R --no-save <<END
 pan <-read.csv("MalmoProteomicsKeyCleaned_tab1.csv",as.is=T)
 pan <- within(pan, aptamer <-gsub("-","",SeqId..no.underscore))
@@ -39,6 +30,17 @@ map <- within(map,aptamer2 <- gsub("_","",as.character(aptamer2)))
 ord <- with(map,order(as.character(aptamer2)))
 write.table(map[ord,c("aptamer2","SeqId")],file="FHS.txt",quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
 END
+
+export box=/scratch/jhz22/box
+export sumstats=/scratch/jhz22/sumstats
+mkdir $sumstats
+cd $sumstats
+mkdir FHS INTERVAL KORA Malmo QMDiab
+cd -
+
+# FHS, 1118 items, 16m imputed genotypes by "-"-stripped AptamerId
+
+ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' | sort -k1,1 > $sumstats/FHS.list
 
 # INTERVAL, A1CF results for imputed genotypes by chromosome
 

@@ -1,6 +1,7 @@
 # 20-9-2018 JHZ
 #  Reformatting files into directories
 
+## raw and reformatted SUMSTATS
 export box=/scratch/jhz22/box
 export sumstats=/scratch/jhz22/sumstats
 
@@ -8,7 +9,11 @@ module load parallel/20131222
 
 function FHS()
 {
-join -j1 -t$'\t' $sumstats/FHS.list FHS.txt
+
+echo --- FHS ---
+join -j1 $sumstats/FHS.list doc/FHS.txt | \
+parallel --dry-run -j4 -C' ' --env box --env sumstats 'gunzip -c $box/FHS/X_{1}.txt.gz | \
+awk -f FHS.awk > $sumstats/FHS/FHS.{2}.txt'
 
 #1	MarkerName: chr:pos (:<ref>_<nonref> for indels)
 #2	Allele1: (please ignore this column)
@@ -38,7 +43,13 @@ join -j1 -t$'\t' $sumstats/FHS.list FHS.txt
 
 function KORA()
 {
+
+echo --- KORA ---
 # gunzip -c KORA/KORA_pGWAS.4292-5_3.assoc.linear.gz | head -1 > ~/1
+
+cat $sumstats/KORA.list | \
+parallel --dry-run -j4 -C' ' --env box --env sumstats 'gunzip -c $DEPICT/KORA_pGWAS.{}.assoc.linear.gz | \
+awk -vOFS="\t" -f KORA.awk > $sumstat/KORA/KORA.{}.txt'
 
 #1	CHR
 #2	SNP
@@ -53,10 +64,16 @@ function KORA()
 
 function Malmo()
 {
+
+echo -- Malmo --
 # gunzip -c $box/gunzip -c Malmo/zlnX6Phosphogluconatedehydrogenase_summary.csv.gz | \
 # head -1 | awk '{gsub(/,/,"\n");print}' | awk '{OFS="\t";print "#" NR,$1}' > ~/1
 
-sort -k3,3 doc/MDCs.txt | join -11 -23 -t$'\t' $sumstats/Malmo.list - | cut -f1,2
+sort -k3,3 doc/MDCs.txt | \
+join -11 -23 -t$'\t' $sumstats/Malmo.list - | \
+awk '{print $1, $2}' | \
+parallel --dry-run -j4 -C' ' --env box --env sumstats 'gunzip -c $box/zln{1}_summary.csv.gz | \
+awk -vOFS="\t" -f Malmo.awk > $sumstats/Malmo/Malmo.{}.txt'
 
 #1	SNP
 #2	chr
@@ -83,5 +100,17 @@ sort -k3,3 doc/MDCs.txt | join -11 -23 -t$'\t' $sumstats/Malmo.list - | cut -f1,
 
 function QMDiab()
 {
+
+echo -- QMDiab ---
 # See KORA above
+cat $sumstats/KORA.list | \
+parallel --dry-run -j5 -C' ' --env box --env sumstats 'gunzip -c $box/QMDiab/PGWAS_Results/QMDiab_pGWAS.{}.assoc.linear.gz | \
+awk -vOFS="\t" -f QMDiab.awk > $sumstat/QMDiab/QMDiab.{}.txt'
 }
+
+## Each cohort is formatted and output with its AWK program,.
+
+FHS
+KORA
+Malmo
+QMDiab
