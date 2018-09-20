@@ -8,6 +8,8 @@ git add doc
 git commit -m "Documents and auxiliary files"
 git add analysis-plan.md
 git commit -m "Analysis plan"
+git add SomaLogic.R
+git commit -m "Generation of auxiliary files from curated databases"
 git add list.sh format.sh metal.sh
 git commit -m "Programs"
 git add st.sh
