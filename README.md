@@ -20,6 +20,7 @@ File  | Description
 [analysis-plan.md](analysis-plan.md) | Analysis plan
 [list.sh](list.sh) | Generation of file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics
+[meta.sh](metal.sh) | Generation of individual METAL entries
 
 ## References
 
