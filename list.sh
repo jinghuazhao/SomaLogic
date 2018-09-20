@@ -1,4 +1,4 @@
-# 18-9-2018 JHZ
+# 20-9-2018 JHZ
 # Generation of file lists and directories
 
 # Sequence data for the Somalogic SOMAscan assay
@@ -35,6 +35,9 @@ require(xlsx)
 x <- "170724- List of uniprot, target, aptamer ID info with proteins f....xls"
 map <- read.xlsx(x,sheetName="Proteins")
 dim(map)
+map <- within(map,aptamer2 <- gsub("_","",as.character(aptamer2)))
+ord <- with(map,order(as.character(aptamer2)))
+write.table(map[ord,c("aptamer2","SeqId")],file="FHS.txt",quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
 END
 
 # INTERVAL, A1CF results for imputed genotypes by chromosome
