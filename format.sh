@@ -72,7 +72,4 @@ sort -k2,2n -k3,3n | \
 gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
 
-FHS
-KORA
-Malmo
-QMDiab
+$1
