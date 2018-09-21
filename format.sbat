@@ -4,7 +4,8 @@ declare -a cohorts=(FHS KORA Malmo QMDiab)
 for s in $(seq 1 ${#cohorts[@]})
 do
    echo ${cohorts[$(( $s-1 ))]}
-   if [ $s -eq 1 ];
+   if [ $s -eq 1 ]
+   then
       export study=${cohorts[0]}
       jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL --wrap="$HOME/SomaLogic/format.sh")
    else
