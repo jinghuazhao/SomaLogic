@@ -13,7 +13,7 @@ export SomaLogic=/scratch/jhz22/SomaLogic
 export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
 
-## Each cohort is formatted and output with its AWK program,.
+## Each cohort is formatted and output with its AWK program.
 
 function FHS()
 {
