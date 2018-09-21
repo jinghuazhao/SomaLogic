@@ -23,4 +23,7 @@
 #22	ratio: equivalent to oevar but compute slightly different
 #23	MarkerName2: SNP ID in the format chromosome:position(:I, D,R for indels)
 #24	seg:(please ignore this column)
+  if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FREQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
+  else print $14,$12,$13,"STRAND","N",$15,$16,$18,$4,$5,$6,"RSQ",$21,"IMP"
+  
 }
