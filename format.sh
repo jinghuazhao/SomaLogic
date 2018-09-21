@@ -4,7 +4,7 @@
 
 function module ()
 {
-    eval `/usr/bin/modulecmd bash $*`
+  eval `/usr/bin/modulecmd bash $*`
 }
 
 module load parallel/20131222
@@ -22,7 +22,7 @@ function FHS()
 echo --- FHS ---
 join -j1 $sumstats/FHS.list doc/FHS.txt | \
 parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/FHS/X_{1}.txt.gz | \
-awk -f doc/FHS.awk | \
+awk -vFS="," -vOFS="\t" -f doc/FHS.awk | \
 gzip -f > $sumstats/FHS/FHS.{2}.txt.gz'
 
 }
@@ -49,7 +49,7 @@ sort -k3,3 doc/MDCs.txt | \
 join -11 -23 -t$'\t' $sumstats/Malmo.list - | \
 awk '{print $1, $2}' | \
 parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/Malmo/zln{1}_summary.csv.gz | \
-awk -vOFS="\t" -f doc/Malmo.awk | \
+awk -vFS="," -vOFS="\t" -f doc/Malmo.awk | \
 gzip -f > $sumstats/Malmo/Malmo.{}.txt.gz'
 
 }

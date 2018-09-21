@@ -3,7 +3,7 @@
 
 function module ()
 {
-    eval `/usr/bin/modulecmd bash $*`
+  eval `/usr/bin/modulecmd bash $*`
 }
 
 module load parallel/20131222
