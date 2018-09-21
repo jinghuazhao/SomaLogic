@@ -3,9 +3,12 @@
 #SBATCH --ntasks=1
 #SBATCH --job-name=format.sbat
 #SBATCH --cpus-per-task=1 #or –c, max CPUs for the job
-#SBATCH --output=mySLURMjob.err # or –o, file name to log output to
-#SBATCH --error=mySLURMjob.out # or –e, file name to log error to
 #SBATCH --array=1
 
 echo –ne “Hello, world $SLURM_ARRAY_TASK_ID!\n”;
-squeue -h jhz22
+squeue -u jhz22
+
+#SBATCH --array=2
+
+echo –ne “Hello, world $SLURM_ARRAY_TASK_ID!\n”;
+squeue -u jhz22
