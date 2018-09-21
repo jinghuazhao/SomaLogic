@@ -1,8 +1,9 @@
-# 20-9-2018 JHZ
+# 21-9-2018 JHZ
 # Generation of file lists and directories
 
-export box=/scratch/jhz22/box
-export sumstats=/scratch/jhz22/sumstats
+export SomaLogic=/scratch/jhz22/SomaLogic
+export box=$SomaLogic/box
+export sumstats=$SomaLogic/sumstats
 mkdir $sumstats
 cd $sumstats
 mkdir FHS INTERVAL KORA Malmo QMDiab
