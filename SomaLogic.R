@@ -1,4 +1,4 @@
-# 20-9-2018 JHZ
+# 21-9-2018 JHZ
 # Generation of auxiliary files from curated databases
 
 # Sequence data for the Somalogic SOMAscan assay
@@ -15,9 +15,12 @@ write.table(chrpos[vars],file="chrpos.txt",quote=FALSE,row.names=FALSE,sep="\t")
 ord <- with(aptamers,order(AptamerId))
 UniProt <- aptamers[ord,c("AptamerId","UniProt")]
 write.table(UniProt,file="UniProt.txt",quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
-## from Jimmy
+## from Jimmy|/scratch/public_databases/SOMALOGIC/LatestVersion
 m <- read.delim(paste0("SOMALOGIC_Master_Table_160410_1129info.tsv"),as.is=TRUE)
-sl <-merge(m,aptamers[c("AptamerId","Units","IsIn1310Panel","IsIn1129Panel","PlasmaDilution","SerumDilution")],by.x="Seq",by.y="AptamerId")
+sl <-merge(m,aptamers[c("AptamerId","Units","IsIn1310Panel","IsIn1129Panel","PlasmaDilution","SerumDilution")],
+           by.x="Seq",by.y="AptamerId")
+library(dplyr)
+mapt <- left_join(m,aptamers)
 ## from FHS
 pan <-read.csv("MalmoProteomicsKeyCleaned_tab1.csv",as.is=T)
 pan <- within(pan, aptamer <-gsub("-","",SeqId..no.underscore))
