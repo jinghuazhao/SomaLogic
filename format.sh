@@ -23,6 +23,7 @@ echo --- FHS ---
 join -j1 $sumstats/FHS.list doc/FHS.txt | \
 parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/FHS/X_{1}.txt.gz | \
 awk -vFS="," -vOFS="\t" -f doc/FHS.awk | \
+sort -k2,2n -k3,3n | \
 gzip -f > $sumstats/FHS/FHS.{2}.txt.gz'
 
 }
@@ -38,6 +39,7 @@ parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/KORA/KORA_pGWAS.{}.a
 sort -k2,2 | \
 join -j2 - $sumstats/KORA.bim | \
 awk -vOFS="\t" -f doc/KORA.awk | \
+sort -k2,2n -k3,3n | \
 gzip -f > $sumstat/KORA/KORA.{}.txt.gz'
 
 }
@@ -50,6 +52,7 @@ join -11 -23 -t$'\t' $sumstats/Malmo.list - | \
 awk '{print $1, $2}' | \
 parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/Malmo/zln{1}_summary.csv.gz | \
 awk -vFS="," -vOFS="\t" -f doc/Malmo.awk | \
+sort -k2,2n -k3,3n | \
 gzip -f > $sumstats/Malmo/Malmo.{}.txt.gz'
 
 }
@@ -65,6 +68,7 @@ parallel -j4 -C' ' --env src --env sumstats 'gunzip -c $src/QMDiab_pGWAS.{}.asso
 sort -k2,2 | \
 join -j2 - $sumstats/QMDiab.bim | \
 awk -vOFS="\t" -f doc/QMDiab.awk | \
+sort -k2,2n -k3,3n | \
 gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
 
