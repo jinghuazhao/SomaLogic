@@ -11,4 +11,4 @@
 
 echo –ne “Hello, world!\n”;
 
-# squeue -h jhz22
+squeue -h jhz22
