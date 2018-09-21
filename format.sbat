@@ -1,14 +1,12 @@
 #!/bin/bash
 
-#SBATCH --ntasks=1
-#SBATCH --job-name=format.sbat
-#SBATCH --cpus-per-task=1 #or –c, max CPUs for the job
-#SBATCH --array=1
+function hello()
+{
+  echo "Hello, $SLURM_ARRAY_TASK_ID!\n"
+}
 
-echo –ne “Hello, world $SLURM_ARRAY_TASK_ID!\n”;
-squeue -u jhz22
-
-#SBATCH --array=2
-
-echo –ne “Hello, world $SLURM_ARRAY_TASK_ID!\n”;
+for s in FHS KORA Malmo QMDiab
+do
+  sbatch --job-name=$s --array=1 -c 1 -e $s.e -o $s.o --wrap="$HOME/SomaLogic/format.sh $i"
+done
 squeue -u jhz22
