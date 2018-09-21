@@ -53,7 +53,7 @@ awk '{print $1, $2}' | \
 parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/Malmo/zln{1}_summary.csv.gz | \
 awk -vFS="," -vOFS="\t" -f doc/Malmo.awk | \
 sort -k2,2n -k3,3n | \
-gzip -f > $sumstats/Malmo/Malmo.{}.txt.gz'
+gzip -f > $sumstats/Malmo/Malmo.{2}.txt.gz'
 
 }
 
