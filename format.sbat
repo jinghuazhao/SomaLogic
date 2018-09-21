@@ -20,3 +20,5 @@ done
 squeue -u $USER -o "%.8A %.4C %.10m %.20E"
 # delete jobs shown in qstat
 # qstat | grep $USER | cut -d. -f1 | xargs qdel
+# qdel {id1..id2}
+# qselect -u <username> | xargs qdel
