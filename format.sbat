@@ -10,7 +10,7 @@ do
       jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL --wrap="$HOME/SomaLogic/format.sh")
    else
       export later=${cohorts[$(( $-1 ))}
-      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:jid --wrap="$HOME/SomaLogic/format.sh")
+      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$jid --wrap="$HOME/SomaLogic/format.sh")
    fi
 done
 
