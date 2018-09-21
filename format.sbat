@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export format_cohort=$HOME/SomaLogic/format.sh
+
 declare -a cohorts=(FHS KORA Malmo QMDiab)
 for s in $(seq 1 ${#cohorts[@]})
 do
@@ -7,10 +9,10 @@ do
    if [ $s -eq 1 ]
    then
       export study=${cohorts[0]}
-      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL --wrap="$HOME/SomaLogic/format.sh")
+      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL $format_cohort)
    else
       export later=${cohorts[$(( $-1 ))}
-      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$jid --wrap="$HOME/SomaLogic/format.sh")
+      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$jid $format_cohort)
    fi
 done
 
