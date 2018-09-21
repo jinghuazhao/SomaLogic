@@ -1,7 +1,13 @@
-# 20-9-2018 JHZ
+# 21-9-2018 JHZ
 ## generation of individual METAL entries
 
+function module ()
+{
+    eval `/usr/bin/modulecmd bash $*`
+}
+
 module load parallel/20131222
+
 export SomaLogic=/scratch/jhz22/SomaLogic
 export sumstats=$SomaLogic/sumstats
 export METAL=$SomaLogic/METAL
