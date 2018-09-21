@@ -15,17 +15,15 @@ export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
 
 ## Each cohort is formatted and output with its AWK program.
-
-export run_cohort=$1
-export SLURM_ARRAY_TASK_ID=$2
-export sl=27
+## block size can be refined
+export bs=27
 
 function FHS()
 {
 
 echo --- FHS ---
 join -j1 $sumstats/FHS.list doc/FHS.txt | \
-awk 'NR==(v-1)*sl+1, NR==v*sl' v=SLURM_ARRAY_TASK_ID sl=$sl | \
+awk 'NR==(b-1)*bs+1, NR==b*bs' b=SLURM_ARRAY_TASK_ID bs=$bs | \
 parallel -j1 -C' ' --env box --env sumstats 'gunzip -c $box/FHS/X_{1}.txt.gz | \
 awk -vFS="," -vOFS="\t" -f doc/FHS.awk | \
 sort -k2,2n -k3,3n | \
@@ -40,7 +38,7 @@ echo --- KORA ---
 
 sort -k2,2 $box/KORA/KORA.bim > $sumstats/KORA.bim
 cat $sumstats/KORA.list | \
-awk 'NR==(v-1)*sl+1, NR==v*sl' v=SLURM_ARRAY_TASK_ID sl=$sl | \
+awk 'NR==(b-1)*bs+1, NR==b*bs' b=SLURM_ARRAY_TASK_ID bs=$bs | \
 parallel -j1 -C' ' --env box --env sumstats 'gunzip -c $box/KORA/KORA_pGWAS.{}.assoc.linear.gz | \
 sort -k2,2 | \
 join -j2 - $sumstats/KORA.bim | \
@@ -56,7 +54,7 @@ function Malmo()
 sort -k3,3 doc/MDCs.txt | \
 join -11 -23 -t$'\t' $sumstats/Malmo.list - | \
 awk '{print $1, $2}' | \
-awk 'NR==(v-1)*sl+1, NR==v*sl' v=SLURM_ARRAY_TASK_ID sl=$sl | \
+awk 'NR==(b-1)*bs+1, NR==b*bs' b=SLURM_ARRAY_TASK_ID bs=$bs | \
 parallel -j1 -C' ' --env box --env sumstats 'gunzip -c $box/Malmo/zln{1}_summary.csv.gz | \
 awk -vFS="," -vOFS="\t" -f doc/Malmo.awk | \
 sort -k2,2n -k3,3n | \
@@ -71,7 +69,7 @@ echo -- QMDiab ---
 export src=$box/QMDiab/PGWAS_Results
 sort -k2,2 $src/QMDiab.bim > $sumsstats/QMDiab.bim
 cat $sumstats/QMDiab.list | \
-awk 'NR==(v-1)*sl+1, NR==v*sl' v=SLURM_ARRAY_TASK_ID sl=$sl | \
+awk 'NR==(b-1)*bs+1, NR==b*bs' b=SLURM_ARRAY_TASK_ID bs=$bs | \
 parallel -j1 -C' ' --env src --env sumstats 'gunzip -c $src/QMDiab_pGWAS.{}.assoc.linear.gz | \
 sort -k2,2 | \
 join -j2 - $sumstats/QMDiab.bim | \
@@ -80,4 +78,4 @@ sort -k2,2n -k3,3n | \
 gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
 
-$run_cohort
+$study

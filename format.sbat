@@ -1,7 +1,17 @@
 #!/bin/bash
 
-for s in FHS KORA Malmo QMDiab
+declare -a cohorts=(FHS KORA Malmo QMDiab)
+for s in $(seq 1 ${#cohorts[@]})
 do
-  sbatch -J $s -a 1-50 -e $s.e -o $s.o --wrap="$HOME/SomaLogic/format.sh $i $SLURM_ARRAY_TASK_ID"
+   echo ${cohorts[$(( $s-1 ))]}
+   if [ $s -eq 1 ];
+      export study=${cohorts[0]}
+      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL --wrap="$HOME/SomaLogic/format.sh")
+   else
+      export later=${cohorts[$(( $-1 ))}
+      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:jid --wrap="$HOME/SomaLogic/format.sh")
+   fi
 done
-squeue -u jhz22
+
+# show dependencies in squeue output
+squeue -u $USER -o "%.8A %.4C %.10m %.20E"
