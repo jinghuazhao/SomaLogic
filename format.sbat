@@ -11,7 +11,7 @@ do
       export study=${cohorts[0]}
       jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL $format_cohort)
    else
-      export later=${cohorts[$(( $-1 ))}
+      export later=${cohorts[$(( $s-1 ))}
       jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$jid $format_cohort)
    fi
 done
