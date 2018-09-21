@@ -22,7 +22,8 @@ function FHS()
 echo --- FHS ---
 join -j1 $sumstats/FHS.list doc/FHS.txt | \
 parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/FHS/X_{1}.txt.gz | \
-awk -f doc/FHS.awk > $sumstats/FHS/FHS.{2}.txt'
+awk -f doc/FHS.awk | \
+gzip -f > $sumstats/FHS/FHS.{2}.txt.gz'
 
 }
 
@@ -31,13 +32,13 @@ function KORA()
 
 echo --- KORA ---
 
-export src=$box/KORA
-sort -k2,2 $src/KORA.bim > $sumstats/KORA.bim
+sort -k2,2 $box/KORA/KORA.bim > $sumstats/KORA.bim
 cat $sumstats/KORA.list | \
-parallel -j4 -C' ' --env src --env sumstats 'gunzip -c $src/KORA_pGWAS.{}.assoc.linear.gz | \
+parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/KORA/KORA_pGWAS.{}.assoc.linear.gz | \
 sort -k2,2 | \
 join -j2 - $sumstats/KORA.bim | \
-awk -vOFS="\t" -f doc/KORA.awk > $sumstat/KORA/KORA.{}.txt'
+awk -vOFS="\t" -f doc/KORA.awk | \
+gzip -f > $sumstat/KORA/KORA.{}.txt.gz'
 
 }
 
@@ -47,8 +48,9 @@ function Malmo()
 sort -k3,3 doc/MDCs.txt | \
 join -11 -23 -t$'\t' $sumstats/Malmo.list - | \
 awk '{print $1, $2}' | \
-parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/zln{1}_summary.csv.gz | \
-awk -vOFS="\t" -f doc/Malmo.awk > $sumstats/Malmo/Malmo.{}.txt'
+parallel -j4 -C' ' --env box --env sumstats 'gunzip -c $box/Malmo/zln{1}_summary.csv.gz | \
+awk -vOFS="\t" -f doc/Malmo.awk | \
+gzip -f > $sumstats/Malmo/Malmo.{}.txt.gz'
 
 }
 
@@ -62,7 +64,8 @@ cat $sumstats/QMDiab.list | \
 parallel -j4 -C' ' --env src --env sumstats 'gunzip -c $src/QMDiab_pGWAS.{}.assoc.linear.gz | \
 sort -k2,2 | \
 join -j2 - $sumstats/QMDiab.bim | \
-awk -vOFS="\t" -f doc/QMDiab.awk > $sumstat/QMDiab/QMDiab.{}.txt'
+awk -vOFS="\t" -f doc/QMDiab.awk | \
+gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
 
 FHS
