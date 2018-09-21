@@ -1,3 +1,4 @@
+#!/bin/bash
 # 21-9-2018 JHZ
 # Reformatting files into directories
 
