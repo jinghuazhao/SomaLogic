@@ -1,12 +1,7 @@
 #!/bin/bash
 
-function hello()
-{
-  echo "Hello, $SLURM_ARRAY_TASK_ID!\n"
-}
-
 for s in FHS KORA Malmo QMDiab
 do
-  sbatch --job-name=$s --array=1 -c 1 -e $s.e -o $s.o --wrap="$HOME/SomaLogic/format.sh $i"
+  sbatch -J $s -a 1-50 -e $s.e -o $s.o --wrap="$HOME/SomaLogic/format.sh $i $SLURM_ARRAY_TASK_ID"
 done
 squeue -u jhz22
