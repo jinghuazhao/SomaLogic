@@ -10,8 +10,8 @@ library(readat)
 aptamers <- within(aptamers, {apt=1})
 ## from Jimmy|/scratch/public_databases/SOMALOGIC/LatestVersion
 m <- read.delim(paste0("SOMALOGIC_Master_Table_160410_1129info.tsv"),as.is=TRUE)
-a <- aptamers[c("AptamerId","Units","IsIn1310Panel","IsIn1129Panel","PlasmaDilution","SerumDilution")]
-sl <- merge(m,a,by.x="Seq",by.y="AptamerId")
+a <- aptamers[c("SomaId","Units","IsIn1310Panel","IsIn1129Panel","PlasmaDilution","SerumDilution")]
+sl <- merge(m,a,by="SomaId")
 library(dplyr)
 mapt <- left_join(m,aptamers)
 ## from Qiong|FHS
