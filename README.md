@@ -21,8 +21,10 @@ File  | Description
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics
-[format.sbat](format.sbat) | SLURM batch
 [meta.sh](metal.sh) | Generation of individual METAL entries
+
+In addition, [format.sbat](format.sbat) and [format.subs](format.subs) are experimental SLURM batch files.
+
 
 ## References
 
