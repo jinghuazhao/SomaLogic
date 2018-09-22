@@ -13,7 +13,7 @@ do
       id=$(sbatch -J $study -p $P -a 1-40 -e $study.e -o $study-%A_%a.o -D $PWD --export=ALL $format)
    else
       export study=${cohorts[$(( $s-1 ))]}
-      id=$(sbatch -J $study -p $P -a 1-50 -e $study.e -o $study%A_%a.o -D $PWD --export=ALL -d afterok:$id $format)
+      id=$(sbatch -J $study -p $P -a 1-40 -e $study.e -o $study%A_%a.o -D $PWD --export=ALL -d afterok:$id $format)
 #     export joblist=`squeue -u $USER --noheader -o "%i" | sed -n '1h;2,$H;${g;s/\n/:/g;p}'`
 #     sbatch -p $P -a 1-40 -d after:$joblist
    fi
