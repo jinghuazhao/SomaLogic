@@ -4,10 +4,7 @@
 # Sequence data for the Somalogic SOMAscan assay
 # Comments - it is sensible to work with SeqID to avoid uncertainty in UniProt ID at this stage
 
-## from Adam|Bioconductor
 setwd("doc")
-library(readat)
-aptamers <- within(aptamers, {apt=1})
 ## from Jimmy|/scratch/public_databases/SOMALOGIC/LatestVersion
 m <- read.delim(paste0("SOMALOGIC_Master_Table_160410_1129info.tsv"),as.is=TRUE)
 ## 1129 and 1310 SOMAscan assays
@@ -17,6 +14,9 @@ setdiff(with(assay1129,SOMAmer.SeqID),with(assay1310,SOMAmer.SeqID))
 SOMAmer.SeqID <-unique(c(with(assay1129,SOMAmer.SeqID),with(assay1310,SOMAmer.SeqID)))
 length(SOMAmer.SeqID)
 cat(sort(SOMAmer.SeqID),sep="\n",file="SomaLogic.list")
+## from Adam|Bioconductor
+library(readat)
+aptamers <- within(aptamers, {apt=1})
 a <- aptamers[c("SomaId","Units","IsIn1310Panel","IsIn1129Panel","PlasmaDilution","SerumDilution")]
 ma <- merge(m,a,by="SomaId")
 library(dplyr)
