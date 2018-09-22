@@ -5,9 +5,6 @@
 # Comments - it is sensible to work with SeqID to avoid uncertainty in UniProt ID at this stage
 
 setwd("doc")
-# from Jimmy|/scratch/public_databases/SOMALOGIC/LatestVersion
-m <- read.delim(paste0("SOMALOGIC_Master_Table_160410_1129info.tsv"),as.is=TRUE)
-
 # 1129 and 1310 SOMAscan assays
 assay1129 <- read.delim("1129.tsv",as.is=TRUE) # 72, 677 are duplicates
 assay1310 <- read.delim("1310.tsv",as.is=TRUE)
@@ -15,6 +12,9 @@ setdiff(with(assay1129,SOMAmer.SeqID),with(assay1310,SOMAmer.SeqID))
 SOMAmer.SeqID <-unique(c(with(assay1129,SOMAmer.SeqID),with(assay1310,SOMAmer.SeqID)))
 length(SOMAmer.SeqID)
 cat(sort(SOMAmer.SeqID),sep="\n",file="SomaLogic.list")
+
+# from Jimmy|/scratch/public_databases/SOMALOGIC/LatestVersion
+m <- read.delim(paste0("SOMALOGIC_Master_Table_160410_1129info.tsv"),as.is=TRUE)
 
 # from Adam|Bioconductor
 library(readat)
