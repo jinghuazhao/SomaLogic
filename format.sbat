@@ -9,15 +9,17 @@ do
    if [ $s -eq 1 ]
    then
       export study=${cohorts[0]}
-      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL $format_cohort)
+      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study-%A_%a.o -D $PWD --export=ALL $format_cohort)
    else
-      export study=${cohorts[$(( $s-1 ))]}
-      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study.o -D $PWD --export=ALL --dependency=afterok:$jid $format_cohort)
+#     export study=${cohorts[$(( $s-1 ))]}
+#     jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study%A_%a.o -D $PWD --export=ALL --dependency=afterok:$jid $format_cohort)
+      export joblist=`squeue -u $USER --noheader -o "%i" | sed -n '1h;2,$H;${g;s/\n/:/g;p}'`
+      sbatch -d after:$joblist
    fi
 done
 
 # show dependencies in squeue output
-squeue -u $USER -o "%.8A %.4C %.10m %.20E"
+squeue -u $USER -r
 
 # SGE to SLURM conversion
 ## https://srcc.stanford.edu/sge-slurm-conversion
