@@ -1,7 +1,6 @@
 # Analysis plan
 
-This is to be updated -- for now the following columns as in OLINK CVD1 analysis plan are 
-assumed.
+This is to be updated -- for now the following columns as in OLINK SCALLOP/CVD1 analysis plan are assumed.
 
 SNP table for association results. Missing values are coded as “NA”.
 
@@ -21,3 +20,5 @@ No. | Variable name | Description
 12 | RSQ | Residual phenotypic variance explained by SNP. “NA” if not available
 13 | RSQ_IMP| Observed divided by expected variance for imputed allele dosage.
 14 | IMP | Please specify whether the SNP was imputed or genotyped: 1: imputed SNP, 0: directly genotyped SNP
+
+Cohorts which reported results from PLINK, please provided SNP-level information as appropriate. 
