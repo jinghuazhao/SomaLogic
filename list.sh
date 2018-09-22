@@ -44,5 +44,5 @@ awk '{print $1, $2}' > $sumstats/Malmo.list
 ls $box/QMDiab/PGWAS_Results | \
 sed 's/QMDiab_pGWAS.//g;s/.assoc.linear.gz//g;s/.assoc.linear//g' | awk 'NR>2' > $sumstats/QMDiab.input
 export src=$box/QMDiab/PGWAS_Results
-sort -k2,2 $src/QMDiab.bim > $sumsstats/QMDiab.bim
+sort -k2,2 $src/QMDiab.bim > $sumstats/QMDiab.bim
 cat $sumstats/QMDiab.input > $sumstats/QMDiab.list
