@@ -20,7 +20,7 @@ cd -
 # FHS, 1118 items, 16m imputed genotypes by "-"-stripped AptamerId
 
 ls $box/FHS | sed 's/X_//g;s/.txt.gz//g' | sort -k1,1 > $sumstats/FHS.input
-join -j1 $sumstats/FHS.input doc/FHS.txt > $sumstats/FHS.list
+join -j1 $sumstats/FHS.input doc/FHS.tsv > $sumstats/FHS.list
 
 # INTERVAL, A1CF results for imputed genotypes by chromosome
 
