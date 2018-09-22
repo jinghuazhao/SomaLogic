@@ -18,7 +18,7 @@ summary(as.numeric(with(pan,aptamer)))
 table(duplicated(with(pan.mdc, TargetName))) #no duplicated entry
 
 sh <- "MDCs.sh"
-txt <- "MDCs.txt"
+txt <- "MDCs.tsv"
 unlink(sh)
 unlink(txt)
 ord <- with(pan.mdc,order(SeqId..no.underscore))
