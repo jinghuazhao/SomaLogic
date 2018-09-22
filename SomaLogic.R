@@ -10,8 +10,15 @@ library(readat)
 aptamers <- within(aptamers, {apt=1})
 ## from Jimmy|/scratch/public_databases/SOMALOGIC/LatestVersion
 m <- read.delim(paste0("SOMALOGIC_Master_Table_160410_1129info.tsv"),as.is=TRUE)
+## 1129 and 1310 SOMAscan assays
+assay1129 <- read.delim("1129.tsv",as.is=TRUE) # 72, 677 are duplicates
+assay1310 <- read.delim("1310.tsv",as.is=TRUE)
+setdiff(with(assay1129,SOMAmer.SeqID),with(assay1310,SOMAmer.SeqID))
+SOMAmer.SeqID <-unique(c(with(assay1129,SOMAmer.SeqID),with(assay1310,SOMAmer.SeqID)))
+length(SOMAmer.SeqID)
+cat(sort(SOMAmer.SeqID),sep="\n",file="SomaLogic.list")
 a <- aptamers[c("SomaId","Units","IsIn1310Panel","IsIn1129Panel","PlasmaDilution","SerumDilution")]
-sl <- merge(m,a,by="SomaId")
+ma <- merge(m,a,by="SomaId")
 library(dplyr)
 mapt <- left_join(m,aptamers)
 ## from Qiong|FHS
