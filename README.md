@@ -7,8 +7,8 @@ The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/So
 [GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k) and 
 [white paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
 
-* **1310 assay**. [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf)
-* **1129 assay**. [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)
+* **1129 assay**. [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf) ([1129.txt](doc/1129.tsv))
+* **1310 assay**. [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf) ([1310.txt](doc/1310.tsv))
 
 ## Analysis
 
@@ -29,8 +29,7 @@ For instance, `format.sh FHS` will format FHS. In addition, [format.sbat](format
 ## References
 
 Cotton RJ, GraumannEmail J (2016) readat: An R package for reading and working with SomaLogic ADAT files.
-*BMC Bioinformatics*, https://doi.org/10.1186/s12859-016-1007-8, [aptamers function](https://rdrr.io/bioc/readat/man/aptamers.html) 
-from [Bioconductor](https://bioconductor.org/packages/release/bioc/html/readat.html) and [bitbucket](https://bitbucket.org/graumannlabtools/readat).
+*BMC Bioinformatics*, https://doi.org/10.1186/s12859-016-1007-8, [Bioconductor](https://bioconductor.org/packages/release/bioc/html/readat.html) and [bitbucket](https://bitbucket.org/graumannlabtools/readat).
 
 Stacey D, et al. (2017), [ProGeM](https://github.com/ds763/ProGeM): A framework for the prioritisation of candidate causal genes at molecular
 quantitative trait loci, http://dx.doi.org/10.1101/230094.
