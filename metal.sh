@@ -1,4 +1,4 @@
-# 21-9-2018 JHZ
+# 22-9-2018 JHZ
 ## generation of individual METAL entries
 
 function module ()
@@ -24,7 +24,7 @@ do
    }' >> $METAL/METAL.tmp
 done
 sort -k1,1 $METAL/METAL.tmp > $METAL/METAL.list
-for p in $(cut -f1 inf1.list)
+for p in $(cut -f1 SomaLogic.list)
 do
    export run=METAL/$p.run
    echo MARKERLABEL SNPID > $run
