@@ -24,7 +24,7 @@ do
    }' >> $METAL/METAL.tmp
 done
 sort -k1,1 $METAL/METAL.tmp > $METAL/METAL.list
-for p in $(cut -f1 SomaLogic.list)
+for p in $(cut -f1 doc/SomaLogic.list)
 do
    export run=METAL/$p.run
    echo MARKERLABEL SNPID > $run
