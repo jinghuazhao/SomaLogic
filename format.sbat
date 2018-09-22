@@ -18,7 +18,17 @@ done
 
 # show dependencies in squeue output
 squeue -u $USER -o "%.8A %.4C %.10m %.20E"
+
+# SGE to SLURM conversion
+## https://srcc.stanford.edu/sge-slurm-conversion
+
 # delete jobs shown in qstat
-# qstat | grep $USER | cut -d. -f1 | xargs qdel
-# qdel {id1..id2}
-# qselect -u <username> | xargs qdel
+## qstat | grep $USER | cut -d. -f1 | xargs qdel
+## qdel {id1..id2}
+## qselect -u <username> | xargs qdel
+
+# dependency
+## https://hpc.nih.gov/docs/job_dependencies.html
+
+# bash array
+## https://www.thegeekstuff.com/2010/06/bash-array-tutorial
