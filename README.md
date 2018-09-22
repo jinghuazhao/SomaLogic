@@ -23,7 +23,7 @@ File  | Description
 [format.sh](format.sh) | Reformatting GWAS summary statistics
 [meta.sh](metal.sh) | Generation of individual METAL entries
 
-In addition, [format.sbat](format.sbat) and [format.subs](format.subs) are experimental [SLURM](https://slurm.schedmd.com/) batch files.
+For instance, `format.sh FHS` will format FHS. In addition, [format.sbat](format.sbat) and [format.subs](format.subs) are experimental [SLURM](https://slurm.schedmd.com/) batch files.
 
 ## References
 
