@@ -40,8 +40,8 @@ Reading notes
 -----------------------------------------------
 File | Description
 -------------|---------------------------------
-[SERPINA1.R](doc/SERPINA1.R) |
-[SERPINA1.pdf](doc/SERPINA1.pdf) | Code to emulate the [RCircos version by Jimmy](doc/fig2.R)
+[SERPINA1.pdf](doc/SERPINA1.pdf) | 
+[SERPINA1.R](doc/SERPINA1.R) | Code to emulate the [RCircos version by Jimmy](doc/fig2.R)
 [SOMAscan.md](doc/SOMAscan.md) |
 [SOMAscan.pdf](doc/SOMAscan.pdf) |
 [SOMAscan.tif](doc/SOMAscan.tif)) | Methods
