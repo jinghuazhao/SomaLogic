@@ -3,7 +3,8 @@ SomaLogic data analysis
 
 ## SomaLogic SOMAscan assays
 
-The [SomaLogic](https://somalogic.com/) SOMAscan assay [GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k) and 
+The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/SomaLogic)) SOMAscan assay
+[GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k) and 
 [white paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
 
 * **1310 assay**. [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf)
