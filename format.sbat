@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export format_cohort=$HOME/SomaLogic/format.sh
+export format_cohort=$HOME/SomaLogic/format.subs
 
 declare -a cohorts=(FHS KORA Malmo QMDiab)
 for s in $(seq 1 ${#cohorts[@]})
