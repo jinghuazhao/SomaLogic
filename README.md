@@ -22,7 +22,7 @@ File  | Description
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics
-[meta.sh](metal.sh) | Generation of individual METAL entries
+[metal.sh](metal.sh) | Generation of individual METAL entries
 
 For instance, `format.sh FHS` will format FHS. In addition, [format.sbat](format.sbat) and [format.subs](format.subs) are experimental [SLURM](https://slurm.schedmd.com/) batch files.
 
