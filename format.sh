@@ -63,7 +63,4 @@ function QMDiab()
   gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
 
-FHS
-KORA
-Malmo
-QMDiab
+$1
