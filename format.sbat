@@ -18,22 +18,10 @@ do
    fi
 done
 
-# show dependencies in squeue output
-squeue -u $USER -r
-
-# SGE to SLURM conversion
-## https://srcc.stanford.edu/sge-slurm-conversion
-
-# Examples
-## https://github.com/statgen/SLURM-examples
-
-# delete jobs shown in qstat
-## qstat | grep $USER | cut -d. -f1 | xargs qdel
-## qdel {id1..id2}
-## qselect -u <username> | xargs qdel
-
-# dependency
-## https://hpc.nih.gov/docs/job_dependencies.html
-
-# bash array
-## https://www.thegeekstuff.com/2010/06/bash-array-tutorial
+# show dependencies in squeue output, squeue -u $USER -r
+# dependency, https://hpc.nih.gov/docs/job_dependencies.html
+# bash array, https://www.thegeekstuff.com/2010/06/bash-array-tutorial
+# sinfo - view information about Slurm nodes and partitions
+# delete jobs shown in qstat, qstat | grep $USER | cut -d. -f1 | xargs qdel, qdel {id1..id2}, qselect -u <username> | xargs qdel
+# Examples, https://github.com/statgen/SLURM-examples
+# SGE to SLURM conversion, https://srcc.stanford.edu/sge-slurm-conversion
