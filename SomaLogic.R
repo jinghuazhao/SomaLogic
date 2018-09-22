@@ -1,4 +1,4 @@
-# 21-9-2018 JHZ
+# 22-9-2018 JHZ
 # Generation of auxiliary files from curated databases
 
 # Sequence data for the Somalogic SOMAscan assay
@@ -7,14 +7,6 @@
 ## from Bioconductor
 setwd("doc")
 library(readat)
-vars <- c("AptamerId","SomaId","Target","TargetFullName","UniProt","EntrezGeneID","EntrezGeneSymbol")
-write.table(aptamers[vars],file="aptamers.txt",quote=FALSE,row.names=FALSE,sep="\t")
-chrpos <- as.data.frame(chromosomalPositions)
-vars <- c("group","group_name","AptamerId","UniProt","EntrezGeneID")
-write.table(chrpos[vars],file="chrpos.txt",quote=FALSE,row.names=FALSE,sep="\t")
-ord <- with(aptamers,order(AptamerId))
-UniProt <- aptamers[ord,c("AptamerId","UniProt")]
-write.table(UniProt,file="UniProt.txt",quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
 ## from Jimmy|/scratch/public_databases/SOMALOGIC/LatestVersion
 m <- read.delim(paste0("SOMALOGIC_Master_Table_160410_1129info.tsv"),as.is=TRUE)
 sl <-merge(m,aptamers[c("AptamerId","Units","IsIn1310Panel","IsIn1129Panel","PlasmaDilution","SerumDilution")],
