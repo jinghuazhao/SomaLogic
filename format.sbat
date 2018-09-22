@@ -9,19 +9,19 @@ do
    if [ $s -eq 1 ]
    then
       export study=${cohorts[0]}
-      jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study-%A_%a.o -D $PWD --export=ALL $format_cohort)
+      jid=$(sbatch -J $study -p short -a 1-50 -e $study.e -o $study-%A_%a.o -D $PWD --export=ALL $format_cohort)
    else
 #     export study=${cohorts[$(( $s-1 ))]}
-#     jid=$(sbatch -J $study -a 1-50 -e $study.e -o $study%A_%a.o -D $PWD --export=ALL --dependency=afterok:$jid $format_cohort)
+#     jid=$(sbatch -J $study -p short -a 1-50 -e $study.e -o $study%A_%a.o -D $PWD --export=ALL -d afterok:$jid $format_cohort)
       export joblist=`squeue -u $USER --noheader -o "%i" | sed -n '1h;2,$H;${g;s/\n/:/g;p}'`
-      sbatch -d after:$joblist
+      sbatch -p short -d after:$joblist
    fi
 done
 
-# show dependencies in squeue output, squeue -u $USER -r
-# dependency, https://hpc.nih.gov/docs/job_dependencies.html
-# bash array, https://www.thegeekstuff.com/2010/06/bash-array-tutorial
-# sinfo - view information about Slurm nodes and partitions
-# delete jobs shown in qstat, qstat | grep $USER | cut -d. -f1 | xargs qdel, qdel {id1..id2}, qselect -u <username> | xargs qdel
-# Examples, https://github.com/statgen/SLURM-examples
 # SGE to SLURM conversion, https://srcc.stanford.edu/sge-slurm-conversion
+# SLURM documentation, https://slurm.schedmd.com/
+# sinfo - view information about Slurm nodes and partitions
+# squeue - view information about jobs located in the Slurm scheduling queue, squeue -u $USER -r
+# dependency, https://hpc.nih.gov/docs/job_dependencies.html
+# delete jobs shown in qstat, qstat | grep $USER | cut -d. -f1 | xargs qdel, qdel {id1..id2}
+# Examples, https://github.com/statgen/SLURM-examples
