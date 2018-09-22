@@ -24,6 +24,9 @@ squeue -u $USER -r
 # SGE to SLURM conversion
 ## https://srcc.stanford.edu/sge-slurm-conversion
 
+# Examples
+## https://github.com/statgen/SLURM-examples
+
 # delete jobs shown in qstat
 ## qstat | grep $USER | cut -d. -f1 | xargs qdel
 ## qdel {id1..id2}
