@@ -17,7 +17,7 @@ export threads=1
 
 ## Each cohort is formatted and output with its AWK program.
 ## block size can be refined
-export bs=27
+export bs=33
 
 function FHS()
 {
