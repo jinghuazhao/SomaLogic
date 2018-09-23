@@ -18,6 +18,7 @@ The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/So
 
 File  | Description
 -------------|---------------------------------
+doc/ | Documents and auxiliary files
 [analysis-plan.md](analysis-plan.md) | Analysis plan
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of file lists and directories
