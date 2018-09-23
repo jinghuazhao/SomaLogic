@@ -1,6 +1,6 @@
 {
   if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FREQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
-  else print $14,$12,$13,"STRAND","N",$15,$16,$18,$4,$5,$6,"RSQ",$21,"IMP"
+  else print $14,$12,$13,"NA","NA",$15,$16,$18,$4,$5,$6,"NA",$21,"NA"
 }
 
 #1	MarkerName: chr:pos (:<ref>_<nonref> for indels)

@@ -1,6 +1,6 @@
 {
   if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FREQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
-  else print $2,$1,$3,"STRAND",$6,$4,"A2","EAF",$7,$7/$8,$9,"RSQ","RSQ_IMP","IMP"
+  else print $2,$1,$3,"NA",$6,$4,"A2","NA",$7,$7/$8,$9,"NA","NA","NA"
 }
 
 #1 CHR

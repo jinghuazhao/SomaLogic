@@ -1,7 +1,7 @@
 {
   CODE_ALL_FREQ=(af_coded_b1*n_b1+af_coded_b2*n_b2)/n
   if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FREQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
-  else print $1,$2,$3,"STRAND",$17,$4,$5,CODE_ALL_FREQ,$14,$15,$16,"RSQ","RSQ_IMP","IMP"
+  else print $1,$2,$3,"NA",$17,$4,$5,CODE_ALL_FREQ,$14,$15,$16,"NA","NA","NA"
 }
 
 #1	SNP
