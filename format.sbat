@@ -3,7 +3,7 @@
 export format=$HOME/SomaLogic/format.subs
 export P=short
 
-declare -a cohorts=(KORA Malmo QMDiab)
+declare -a cohorts=(FHS KORA Malmo QMDiab)
 for s in $(seq 1 ${#cohorts[@]})
 do
    echo ${cohorts[$(( $s-1 ))]}
