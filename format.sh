@@ -13,7 +13,7 @@ module load parallel/20131222
 export SomaLogic=/scratch/jhz22/SomaLogic
 export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
-export threads=8
+export threads=4
 
 ## Each cohort is formatted and output with its AWK program.
 ## block size can be refined
@@ -62,5 +62,12 @@ function QMDiab()
   sort -k2,2n -k3,3n | \
   gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
+
+# remove as appropriate
+
+FHS
+KORA
+Malmo
+QMDiab
 
 $1
