@@ -49,4 +49,4 @@ File | Description
 [SOMAscan.md](doc/SOMAscan.md) |
 [SOMAscan.pdf](doc/SOMAscan.pdf) |
 [SOMAscan.tif](doc/SOMAscan.tif) | Methods
-([SOMAscan.xlsx](doc/SOMAscan.xlsx)) | Supplementary tables
+[SOMAscan.xlsx](doc/SOMAscan.xlsx) | Supplementary tables
