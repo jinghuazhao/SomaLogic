@@ -12,7 +12,9 @@ The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/So
 
 ## Analysis
 
-[HPC user environment and modules](https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules).
+* [HPC user environment and modules](https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules).
+
+* [job submission](https://www.hpc.cam.ac.uk/using-clusters/running-jobs/submission).
 
 ## A summary of files
 
@@ -23,9 +25,11 @@ doc/ | Documents and auxiliary files
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics
+[format.subs](format.subs |)
+[format.sbatch](format.sbatch) | Experimental [SLURM](https://slurm.schedmd.com/) batch
 [metal.sh](metal.sh) | Generation of individual METAL entries
 
-For instance, `format.sh FHS` will format FHS. In addition, [format.sbat](format.sbat) and [format.subs](format.subs) are experimental [SLURM](https://slurm.schedmd.com/) batch files.
+For instance, `format.sh FHS` will format FHS. 
 
 ## References
 
