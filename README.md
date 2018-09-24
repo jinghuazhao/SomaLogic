@@ -12,7 +12,7 @@ The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/So
 
 ## Analysis
 
-* [HPC user environment and modules](https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules)
+* [User environment and modules](https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules)
 * [Submission of jobs](https://www.hpc.cam.ac.uk/using-clusters/running-jobs/submission)
 
 ## A summary of files
