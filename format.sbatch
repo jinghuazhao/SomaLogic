@@ -6,9 +6,9 @@ export P=short
 declare -a cohorts=(FHS KORA Malmo QMDiab)
 for s in $(seq 1 ${#cohorts[@]})
 do
-   echo ${cohorts[$(( $s-1 ))]}
    export study=${cohorts[$(( $s-1 ))]}
    export joblist=`squeue -u $USER --noheader -o "%i" | sed -n '1h;2,$H;${g;s/\n/:/g;p}'`
+   echo $study
    if [ $s -eq 1 ]
    then
       id=$(sbatch -J $study -p $P -a 1-40 -e $study.e -o $study.o -D $PWD --export=ALL $format)
