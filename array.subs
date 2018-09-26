@@ -1,8 +1,62 @@
-#!/bin/sh
+#!/bin/bash
 
-sleepsecs=$[($RANDOM % 10) + 10]s
+export SomaLogic=/scratch/jhz22/SomaLogic
+export box=$SomaLogic/box
+export sumstats=$SomaLogic/sumstats
+export bs=33
 
-echo task $1 seq:$PARALLEL_SEQ sleep:$sleepsecs host:$(hostname) date:$(date) array: $2
+export srun="/usr/local/Cluster-Apps/slurm/bin/srun -n1 -N1 -P long --exclusive"
+export parallel="parallel --delay .2 --env box --env sumstats -j $SLURM_NTASKS"
 
-# sleep a random amount of time
-sleep $sleepsecs
+function FHS()
+{
+  awk "NR==(b-1)*bs+1, NR==b*bs" b=S1 bs=$bs '
+  {
+    cmd="gunzip -c $box/FHS/X_${1}.txt.gz | \
+       awk -vFS=\",\" -vOFS=\"\t\" -f doc/FHS.awk | \
+       sort -k2,2n -k3,3n | \
+       gzip -f > $sumstats/FHS/FHS.${2}.txt.gz"
+    system(cmd)
+  }' box=$box sumstats=$sumstats $sumstats/FHS.list
+}
+
+function KORA()
+{
+  awk "NR==(b-1)*bs+1, NR==b*bs" b=S1 bs=$bs '
+  {
+    cmd="gunzip -c $box/KORA/KORA_pGWAS.${1}.assoc.linear.gz | \
+         sort -k2,2 | \
+         join -j2 - $sumstats/KORA.bim | \
+         awk -vOFS=\"\t\" -f doc/KORA.awk | \
+         sort -k2,2n -k3,3n | \
+         gzip -f > $sumstat/KORA/KORA.${1}.txt.gz"
+  }' box=$box sumstats=$sumstats $sumstats/KORA.list
+}
+
+function Malmo()
+{
+  awk "NR==(b-1)*bs+1, NR==b*bs" b=S1 bs=$bs '
+  {
+    cmd="gunzip -c $box/Malmo/zln${1}_summary.csv.gz | \
+         awk -vFS=\",\" -vOFS=\"\t\" -f doc/Malmo.awk | \
+         sort -k2,2n -k3,3n | \
+         gzip -f > $sumstats/Malmo/Malmo.${2}.txt.gz"
+    system(cmd)
+  }' box=$box sumstats=$sumstats $sumstats/Malmo.list)
+}
+
+function QMDiab()
+{
+  awk "NR==(b-1)*bs+1, NR==b*bs" b=S1 bs=$bs '
+  {
+    cmd="export src=$box/QMDiab/PGWAS_Results;\
+         gunzip -c $src/QMDiab_pGWAS.${1}.assoc.linear.gz | \
+         sort -k2,2 | \
+         join -j2 - $sumstats/QMDiab.bim | \
+         awk -vOFS=\"\t\" -f doc/QMDiab.awk | \
+         sort -k2,2n -k3,3n | \
+         gzip -f > $sumstat/QMDiab/QMDiab.${1}.txt.gz"
+  }' box=$box sumstats=$sumstats $sumstats/QMDiab.list)
+}
+
+$1 $2
