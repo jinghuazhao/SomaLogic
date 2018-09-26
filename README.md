@@ -1,6 +1,8 @@
 # SomaLogic
 SomaLogic data analysis
 
+![**A conceptual figure on SERPINA1**](files/SERPINA1.pdf)
+
 ## SomaLogic SOMAscan assays
 
 The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/SomaLogic)) SOMAscan assay
