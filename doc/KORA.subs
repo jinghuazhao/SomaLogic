@@ -6,9 +6,9 @@ export bs=45
 awk 'NR==(b-1)*bs+1, NR==b*bs {
     cmd=sprintf("gunzip -c %s/KORA/KORA_pGWAS.${1}.assoc.linear.gz | \
          sort -k2,2 | \
-         join -j2 - sumstats/KORA.bim | \
+         join -j2 - %s/KORA.bim | \
          awk -vOFS=\"\\t\" -f doc/KORA.awk | \
          sort -k2,2n -k3,3n | \
-         gzip -f > %s/KORA/KORA.${1}.txt.gz",box,sumstats)
+         gzip -f > %s/KORA/KORA.${1}.txt.gz",box,sumstats,sumstats)
     system(cmd)
 }' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/KORA.list
