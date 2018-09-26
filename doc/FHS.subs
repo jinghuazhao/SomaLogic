@@ -4,9 +4,9 @@ export SomaLogic=/scratch/jhz22/SomaLogic
 export bs=45
 
 awk 'NR==(b-1)*bs+1, NR==b*bs {
-   cmd="gunzip -c box/FHS/X_${1}.txt.gz | \
+   cmd=sprintf("gunzip -c %s/FHS/X_${1}.txt.gz | \
        awk -vFS=\",\" -vOFS=\"\\t\" -f doc/FHS.awk | \
        sort -k2,2n -k3,3n | \
-       gzip -f > sumstats/FHS/FHS.${2}.txt.gz"
+       gzip -f > %s/FHS/FHS.${2}.txt.gz",box,sumstats)
    system(cmd)
 }' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/FHS.list
