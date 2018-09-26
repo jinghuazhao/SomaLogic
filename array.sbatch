@@ -2,6 +2,7 @@
 #SBATCH -n 1
 #SBATCH -o array.%A
 #SBATCH -a 1-40
+#SBATCH -P long
 
 function module ()
 {
