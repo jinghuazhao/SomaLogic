@@ -17,7 +17,7 @@ srun="/usr/local/Cluster-Apps/slurm/bin/srun -n1 -N1 --exclusive"
 # Define parallel arguments:
 parallel="parallel -N 1 --delay .2 -j $SLURM_NTASKS"
 
-$parallel "$srun array.subs $SLURM_ARRAY_TASK_ID" ::: FHS KORA Malmo QMDiab
+$parallel "$srun array.subs {} $SLURM_ARRAY_TASK_ID" ::: FHS KORA Malmo QMDiab
 
 # Multi-threaded tasks, http://portal.hpcwales.co.uk/wordpress/index.php/index/slurm/interactive-use-job-arrays/batch-submission-of-serial-jobs-for-parallel-execution/
 ##SBATCH --nodes=3
