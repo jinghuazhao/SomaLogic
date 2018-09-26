@@ -17,4 +17,4 @@ srun="/usr/local/Cluster-Apps/slurm/bin/srun -n1 -N1 --exclusive"
 # Define parallel arguments:
 parallel="parallel -N 1 --delay .2 -j $SLURM_NTASKS --joblog array.joblog --resume"
 
-$parallel "$srun ./array.subs arg1:{1} {2}" ::: FHS KORA Malmo QMDiab ::: $SLURM_ARRAY_TASK_ID
+$parallel "$srun ./array.subs {1} {2}" ::: FHS KORA Malmo QMDiab ::: $SLURM_ARRAY_TASK_ID
