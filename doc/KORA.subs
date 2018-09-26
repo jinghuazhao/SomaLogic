@@ -5,9 +5,6 @@ export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
 export bs=35
 
-export srun="/usr/local/Cluster-Apps/slurm/bin/srun -n1 -N1 -P long --exclusive"
-export parallel="parallel --delay .2 --env box --env sumstats -j $SLURM_NTASKS"
-
 awk "NR==(b-1)*bs+1, NR==b*bs" b=S1 bs=$bs '
 {
     cmd="gunzip -c $box/KORA/KORA_pGWAS.${1}.assoc.linear.gz | \
