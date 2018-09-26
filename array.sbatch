@@ -1,6 +1,6 @@
 #!/bin/bash --login
 #SBATCH -n 1
-#SBATCH -o array.%J
+#SBATCH -o array.%A
 #SBATCH -a 1-40
 
 function module ()
