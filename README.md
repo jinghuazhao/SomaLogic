@@ -1,8 +1,6 @@
 # SomaLogic
 SomaLogic data analysis
 
-![**An impressionist's SERPINA1**](doc/SERPINA1.pdf)
-
 ## SomaLogic SOMAscan assays
 
 The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/SomaLogic)) SOMAscan assay
@@ -46,6 +44,6 @@ Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558:
 
 File | Description
 -------------|---------------------------------
-[SERPINA1.R](doc/SERPINA1.R) | Code to emulate the [RCircos version by Jimmy](doc/fig2.R)
+[SERPINA1.R](doc/SERPINA1.R) | Code to create ![**An impressionist's SERPINA1**](doc/SERPINA1.pdf) vs [RCircos version by Jimmy](doc/fig2.R)
 [SOMAscan.md](doc/SOMAscan.md) | Methods
 [SOMAscan.xlsx](doc/SOMAscan.xlsx) | Supplementary tables
