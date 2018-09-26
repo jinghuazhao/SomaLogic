@@ -3,7 +3,7 @@
 export SomaLogic=/scratch/jhz22/SomaLogic
 export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
-export bs=35
+export bs=45
 
 awk "NR==(b-1)*bs+1, NR==b*bs" b=S1 bs=$bs '
 {
