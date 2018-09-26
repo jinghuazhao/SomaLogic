@@ -1,0 +1,42 @@
+#!/bin/bash
+
+export SomaLogic=/scratch/jhz22/SomaLogic
+export bs=45
+
+awk 'NR==(b-1)*bs+1, NR==b*bs {
+   cmd=sprintf("gunzip -c %s/FHS/X_${1}.txt.gz | \
+       awk -vFS=\",\" -vOFS=\"\\t\" -f doc/FHS.awk | \
+       sort -k2,2n -k3,3n | \
+       gzip -f > %s/FHS/FHS.${2}.txt.gz",box,sumstats)
+   system(cmd)
+}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/FHS.list
+
+awk 'NR==(b-1)*bs+1, NR==b*bs {
+    cmd=sprintf("gunzip -c %s/KORA/KORA_pGWAS.${1}.assoc.linear.gz | \
+         sort -k2,2 | \
+         join -j2 - sumstats/KORA.bim | \
+         awk -vOFS=\"\\t\" -f doc/KORA.awk | \
+         sort -k2,2n -k3,3n | \
+         gzip -f > %s/KORA/KORA.${1}.txt.gz",box,sumstats)
+    system(cmd)
+}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/KORA.list
+
+awk 'NR==(b-1)*bs+1, NR==b*bs {
+    cmd=sprintf("gunzip -c %s/Malmo/zln${1}_summary.csv.gz | \
+         awk -vFS=\",\" -vOFS=\"\\t\" -f doc/Malmo.awk | \
+         sort -k2,2n -k3,3n | \
+         gzip -f > %s/Malmo/Malmo.${2}.txt.gz",box,sumstats)
+    system(cmd)
+}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/Malmo.list
+
+awk 'NR==(b-1)*bs+1, NR==b*bs {
+    cmd=sprintf("gunzip -c %s/QMDiab/PGWAS_Results/QMDiab_pGWAS.${1}.assoc.linear.gz | \
+         sort -k2,2 | \
+         join -j2 - sumstats/QMDiab.bim | \
+         awk -vOFS=\"\\t\" -f doc/QMDiab.awk | \
+         sort -k2,2n -k3,3n | \
+         gzip -f > %s/QMDiab/QMDiab.${1}.txt.gz",box,sumstats)
+    system(cmd)
+}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/QMDiab.list
+
+$1 $2
