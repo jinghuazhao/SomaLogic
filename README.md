@@ -25,7 +25,7 @@ doc/ | Documents and auxiliary files
 [list.sh](list.sh) | Generation of file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics
 [array.subs](array.subs) |
-array.sbatch](array.sbatch) | Experimental [SLURM](https://slurm.schedmd.com/) scripts
+[array.sbatch](array.sbatch) | Experimental [SLURM](https://slurm.schedmd.com/) scripts
 [metal.sh](metal.sh) | Generation of individual METAL entries
 
 For instance, `format.sh FHS` will format FHS. 
