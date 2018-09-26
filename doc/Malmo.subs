@@ -5,11 +5,10 @@ export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
 export bs=45
 
-awk "NR==(b-1)*bs+1, NR==b*bs" b=S1 bs=$bs '
-{
+awk 'NR==(b-1)*bs+1, NR==b*bs {
     cmd="gunzip -c $box/Malmo/zln${1}_summary.csv.gz | \
-         awk -vFS=\",\" -vOFS=\"\t\" -f doc/Malmo.awk | \
+         awk -vFS=\",\" -vOFS=\"\\t\" -f doc/Malmo.awk | \
          sort -k2,2n -k3,3n | \
          gzip -f > $sumstats/Malmo/Malmo.${2}.txt.gz"
     system(cmd)
-}' box=$box sumstats=$sumstats $sumstats/Malmo.list
+}' b=S1 bs=$bs box=$box sumstats=$sumstats $sumstats/Malmo.list
