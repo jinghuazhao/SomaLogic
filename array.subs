@@ -42,7 +42,7 @@ function Malmo()
          sort -k2,2n -k3,3n | \
          gzip -f > $sumstats/Malmo/Malmo.${2}.txt.gz"
     system(cmd)
-  }' box=$box sumstats=$sumstats $sumstats/Malmo.list)
+  }' box=$box sumstats=$sumstats $sumstats/Malmo.list
 }
 
 function QMDiab()
@@ -56,7 +56,7 @@ function QMDiab()
          awk -vOFS=\"\t\" -f doc/QMDiab.awk | \
          sort -k2,2n -k3,3n | \
          gzip -f > $sumstat/QMDiab/QMDiab.${1}.txt.gz"
-  }' box=$box sumstats=$sumstats $sumstats/QMDiab.list)
+  }' box=$box sumstats=$sumstats $sumstats/QMDiab.list
 }
 
 $1 $2
