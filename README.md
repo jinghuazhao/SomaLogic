@@ -26,7 +26,7 @@ doc/ | Documents and auxiliary files
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics
-[array.subs](array.subs) | Mirror from [array.OK](array.OK) the call that runs OK
+[array.OK](array.OK) |the call that runs OK
 [array.sbatch](array.sbatch) | Experimental [SLURM](https://slurm.schedmd.com/) scripts
 [metal.sh](metal.sh) | Generation of individual METAL entries
 
