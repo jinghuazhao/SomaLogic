@@ -24,8 +24,8 @@ doc/ | Documents and auxiliary files
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics
-[format.subs](format.subs) |
-[format.sbatch](format.sbatch) | Experimental [SLURM](https://slurm.schedmd.com/) scripts
+[array.subs](array.subs) |
+array.sbatch](array.sbatch) | Experimental [SLURM](https://slurm.schedmd.com/) scripts
 [metal.sh](metal.sh) | Generation of individual METAL entries
 
 For instance, `format.sh FHS` will format FHS. 
