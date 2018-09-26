@@ -44,13 +44,8 @@ Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558:
 
 **Notes at this repository**
 
-![Figure 2, height="150" width="150"](doc/41586_2018_175_Fig2_HTML.jpg)
-
-
 File | Description
 -------------|---------------------------------
 [SERPINA1.R](doc/SERPINA1.R) | Code to emulate the [RCircos version by Jimmy](doc/fig2.R)
-[SOMAscan.md](doc/SOMAscan.md) |
-[SOMAscan.pdf](doc/SOMAscan.pdf) |
-[SOMAscan.tif](doc/SOMAscan.tif) | Methods
+[SOMAscan.md](doc/SOMAscan.md) | Methods
 [SOMAscan.xlsx](doc/SOMAscan.xlsx) | Supplementary tables
