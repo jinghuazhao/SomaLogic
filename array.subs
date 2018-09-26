@@ -3,7 +3,7 @@
 export SomaLogic=/scratch/jhz22/SomaLogic
 export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
-export bs=33
+export bs=35
 
 export srun="/usr/local/Cluster-Apps/slurm/bin/srun -n1 -N1 -P long --exclusive"
 export parallel="parallel --delay .2 --env box --env sumstats -j $SLURM_NTASKS"
