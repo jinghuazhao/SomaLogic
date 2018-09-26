@@ -1,8 +1,6 @@
 #!/bin/bash
 
 export SomaLogic=/scratch/jhz22/SomaLogic
-export box=$SomaLogic/box
-export sumstats=$SomaLogic/sumstats
 export bs=45
 
 awk 'NR==(b-1)*bs+1, NR==b*bs {
@@ -13,4 +11,4 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
          sort -k2,2n -k3,3n | \
          gzip -f > $sumstat/KORA/KORA.${1}.txt.gz"
     system(cmd)
-}' b=S1 bs=$bs box=$box sumstats=$sumstats $sumstats/KORA.list
+}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $sumstats/KORA.list
