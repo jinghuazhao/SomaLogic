@@ -4,11 +4,11 @@ export SomaLogic=/scratch/jhz22/SomaLogic
 export bs=45
 
 awk 'NR==(b-1)*bs+1, NR==b*bs {
-    cmd="gunzip -c $box/KORA/KORA_pGWAS.${1}.assoc.linear.gz | \
+    cmd="gunzip -c box/KORA/KORA_pGWAS.${1}.assoc.linear.gz | \
          sort -k2,2 | \
-         join -j2 - $sumstats/KORA.bim | \
+         join -j2 - sumstats/KORA.bim | \
          awk -vOFS=\"\\t\" -f doc/KORA.awk | \
          sort -k2,2n -k3,3n | \
-         gzip -f > $sumstat/KORA/KORA.${1}.txt.gz"
+         gzip -f > sumstat/KORA/KORA.${1}.txt.gz"
     system(cmd)
-}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $sumstats/KORA.list
+}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/KORA.list
