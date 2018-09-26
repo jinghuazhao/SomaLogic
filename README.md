@@ -1,7 +1,7 @@
 # SomaLogic
 SomaLogic data analysis
 
-![**A conceptual figure on SERPINA1**](doc/SERPINA1.pdf)
+![**An impressionist's figure on SERPINA1**](doc/SERPINA1.pdf)
 
 ## SomaLogic SOMAscan assays
 
