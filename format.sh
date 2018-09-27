@@ -38,7 +38,7 @@ function KORA()
   join -j2 - $sumstats/KORA.bim | \
   awk -vOFS="\t" -f doc/KORA.awk | \
   sort -k2,2n -k3,3n | \
-  gzip -f > $sumstat/KORA/KORA.{}.txt.gz'
+  gzip -f > $sumstats/KORA/KORA.{}.txt.gz'
 }
 
 function Malmo()
