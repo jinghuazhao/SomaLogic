@@ -36,8 +36,7 @@ Cotton RJ, GraumannEmail J (2016) readat: An R package for reading and working w
 *BMC Bioinformatics*, https://doi.org/10.1186/s12859-016-1007-8, [Bioconductor](https://bioconductor.org/packages/release/bioc/html/readat.html) and [bitbucket](https://bitbucket.org/graumannlabtools/readat).
 
 Stacey D, et al. (2018), ProGeM: a framework for the prioritization of candidate causal genes 
-at molecular quantitative trait loci. *Nucleic Acids Research*. 
-https://doi.org/10.1093/nar/gky837, [GitHub](https://github.com/ds763/ProGeM), [biorxiv](http://dx.doi.org/10.1101/230094).
+at molecular quantitative trait loci. *Nucleic Acids Research*, https://doi.org/10.1093/nar/gky837, [GitHub](https://github.com/ds763/ProGeM) and [bioRxiv](http://dx.doi.org/10.1101/230094).
 
 Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79, SomaLogic plasma protein GWAS summary statistics, https://app.box.com/s/u3flbp13zjydegrxjb2uepagp1vb6bj2, [EGA entry](https://ega-archive.org/studies/EGAS00001002555).
 
