@@ -44,5 +44,5 @@ Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558:
 
 File | Description
 -------------|---------------------------------
-[SERPINA1.R](doc/SERPINA1.R) | Code to create ![**an impressionist's SERPINA1**](doc/SERPINA1.pdf) similar to [RCircos version by Jimmy](doc/fig2.R)
+[SERPINA1.R](doc/SERPINA1.R) | Code to create ![**an artist's SERPINA1**](doc/SERPINA1.pdf) similar to [RCircos version by Jimmy](doc/fig2.R)
 [Methods.md](doc/Methods.md) | Methods
