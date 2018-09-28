@@ -23,8 +23,8 @@ doc/ | Documents and auxiliary files
 [analysis-plan.md](analysis-plan.md) | Analysis plan
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of file lists and directories
-[format.sh](format.sh) | Reformatting GWAS summary statistics, e.g., `format.sh FHS`
-[format.sbatch](format.sbatch), [array.sbatch](array.sbatch) | Experimental [SLURM](https://slurm.schedmd.com/) scripts which call [array.subs](array.subs)
+[format.sh](format.sh) | Reformatting GWAS summary statistics from login node, e.g., `format.sh FHS`
+[format.sbatch](format.sbatch), [array.sbatch](array.sbatch) | [SLURM](https://slurm.schedmd.com/) scripts which call [array.subs](array.subs)
 [metal.sh](metal.sh) | Generation of individual METAL entries
 
 ## References
