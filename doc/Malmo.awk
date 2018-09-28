@@ -1,8 +1,15 @@
 {
   if ($1!="") SNPID=$1; else SNPID=$2 ":" $3
-  CODE_ALL_FREQ=(af_coded_b1*n_b1+af_coded_b2*n_b2)/n
   if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FREQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
-  else print SNPID,$2,$3,"NA",$17,$4,$5,CODE_ALL_FREQ,$14,$15,$16,"NA","NA","NA"
+  else {
+    af_coded_b1=$18
+    af_coded_b2=$20
+    n_b1=$12
+    n_b2=$13
+    n=$17
+    CODE_ALL_FREQ=(af_coded_b1*n_b1+af_coded_b2*n_b2)/n
+    print SNPID,$2,$3,"NA",$17,$4,$5,CODE_ALL_FREQ,$14,$15,$16,"NA","NA","NA"
+  }
 }
 
 #1	SNP
