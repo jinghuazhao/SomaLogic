@@ -10,10 +10,10 @@ do
    echo $study
    if [ $s -eq 1 ]
    then
-      id=$(sbatch -J $study -a 1-40 -e $study.e -o $study.o -D $PWD --export=ALL $format $study $SLURM_ARRAY_TASK_ID)
+      id=$(sbatch -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL $format $study)
    else
 #     sbatch -p $P -a 1-40 -e $study.e -o $study.o -D $PWD --export=ALL -d after:$joblist $format
-      id=$(sbatch -J $study -a 1-40 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$id $format $study $SLURM_ARRAY_TASK_ID)
+      id=$(sbatch -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$id $format $study)
    fi
 done
 
