@@ -1,7 +1,8 @@
 #!/bin/bash --login
 #SBATCH -n 1
-#SBATCH -o array.%A
 #SBATCH -a 1-10
+#SBATCH -o array.%A
+#SBATCH -P long
 #SBATCH --export ALL
 
 function module ()
