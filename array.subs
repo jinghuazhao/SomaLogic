@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export SomaLogic=/scratch/jhz22/SomaLogic
-export bs=45
+export bs=185
 
 function FHS()
 {
@@ -11,7 +11,7 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
        sort -k2,2n -k3,3n | \
        gzip -f > %s/FHS/FHS.${2}.txt.gz",box,sumstats)
    system(cmd)
-}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/FHS.list
+}' b=$SLURM_ARRAY_TASK_ID bs=$SLURM_ARRAY_TASK_ID box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/FHS.list
 }
 
 function KORA()
@@ -24,7 +24,7 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
          sort -k2,2n -k3,3n | \
          gzip -f > %s/KORA/KORA.${1}.txt.gz",box,sumstats,sumstats)
     system(cmd)
-}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/KORA.list
+}' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/KORA.list
 }
 
 function Malmo()
@@ -35,7 +35,7 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
          sort -k2,2n -k3,3n | \
          gzip -f > %s/Malmo/Malmo.${2}.txt.gz",box,sumstats)
     system(cmd)
-}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/Malmo.list
+}' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/Malmo.list
 }
 
 function QMDiab()
@@ -48,7 +48,7 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
          sort -k2,2n -k3,3n | \
          gzip -f > %s/QMDiab/QMDiab.${1}.txt.gz",box,sumstats,sumstats)
     system(cmd)
-}' b=S1 bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/QMDiab.list
+}' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/QMDiab.list
 }
 
-$1 $2
+$1
