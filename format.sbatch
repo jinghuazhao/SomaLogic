@@ -1,7 +1,6 @@
 #!/bin/bash
 
 export format=$HOME/SomaLogic/array.subs
-
 declare -a cohorts=(FHS KORA Malmo QMDiab)
 for s in $(seq 1 ${#cohorts[@]})
 do
