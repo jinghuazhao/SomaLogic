@@ -6,10 +6,10 @@ export bs=185
 function FHS()
 {
 awk 'NR==(b-1)*bs+1, NR==b*bs {
-   cmd=sprintf("gunzip -c %s/FHS/X_${1}.txt.gz | \
+   cmd=sprintf("gunzip -c %s/FHS/X_%s.txt.gz | \
        awk -vFS=\",\" -vOFS=\"\\t\" -f doc/FHS.awk | \
        sort -k2,2n -k3,3n | \
-       gzip -f > %s/FHS/FHS.${2}.txt.gz",box,sumstats)
+       gzip -f > %s/FHS/FHS.%s.txt.gz",box,$1,sumstats,$2)
    system(cmd)
 }' b=$SLURM_ARRAY_TASK_ID bs=$SLURM_ARRAY_TASK_ID box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/FHS.list
 }
@@ -17,12 +17,12 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
 function KORA()
 {
 awk 'NR==(b-1)*bs+1, NR==b*bs {
-    cmd=sprintf("gunzip -c %s/KORA/KORA_pGWAS.${1}.assoc.linear.gz | \
+    cmd=sprintf("gunzip -c %s/KORA/KORA_pGWAS.%s.assoc.linear.gz | \
          sort -k2,2 | \
          join -j2 - %s/KORA.bim | \
          awk -vOFS=\"\\t\" -f doc/KORA.awk | \
          sort -k2,2n -k3,3n | \
-         gzip -f > %s/KORA/KORA.${1}.txt.gz",box,sumstats,sumstats)
+         gzip -f > %s/KORA/KORA.%s.txt.gz",box,$1,sumstats,sumstats,$1)
     system(cmd)
 }' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/KORA.list
 }
@@ -30,10 +30,10 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
 function Malmo()
 {
 awk 'NR==(b-1)*bs+1, NR==b*bs {
-    cmd=sprintf("gunzip -c %s/Malmo/zln${1}_summary.csv.gz | \
+    cmd=sprintf("gunzip -c %s/Malmo/zln%s_summary.csv.gz | \
          awk -vFS=\",\" -vOFS=\"\\t\" -f doc/Malmo.awk | \
          sort -k2,2n -k3,3n | \
-         gzip -f > %s/Malmo/Malmo.${2}.txt.gz",box,sumstats)
+         gzip -f > %s/Malmo/Malmo.%s.txt.gz",box,$1,sumstats,$2)
     system(cmd)
 }' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/Malmo.list
 }
@@ -41,12 +41,12 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
 function QMDiab()
 {
 awk 'NR==(b-1)*bs+1, NR==b*bs {
-    cmd=sprintf("gunzip -c %s/QMDiab/PGWAS_Results/QMDiab_pGWAS.${1}.assoc.linear.gz | \
+    cmd=sprintf("gunzip -c %s/QMDiab/PGWAS_Results/QMDiab_pGWAS.%s.assoc.linear.gz | \
          sort -k2,2 | \
          join -j2 - %s/QMDiab.bim | \
          awk -vOFS=\"\\t\" -f doc/QMDiab.awk | \
          sort -k2,2n -k3,3n | \
-         gzip -f > %s/QMDiab/QMDiab.${1}.txt.gz",box,sumstats,sumstats)
+         gzip -f > %s/QMDiab/QMDiab.%s.txt.gz",box,$1,sumstats,sumstats,$2)
     system(cmd)
 }' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/QMDiab.list
 }
