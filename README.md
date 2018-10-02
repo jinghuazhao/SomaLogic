@@ -13,6 +13,7 @@ The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/So
 ## Analysis
 
 * [User environment and modules](https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules)
+* [SLURM usage](https://www.ch.cam.ac.uk/computing/slurm-usage)
 * [Submission of jobs](https://www.hpc.cam.ac.uk/using-clusters/running-jobs/submission)
 
 ## A summary of files
