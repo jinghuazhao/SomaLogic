@@ -29,7 +29,7 @@ File  | Description
 
 ## References
 
-Cotton RJ, GraumannEmail J (2016) readat: An R package for reading and working with SomaLogic ADAT files.
+Cotton RJ, Graumann J (2016) readat: An R package for reading and working with SomaLogic ADAT files.
 *BMC Bioinformatics*, https://doi.org/10.1186/s12859-016-1007-8, [Bioconductor](https://bioconductor.org/packages/release/bioc/html/readat.html) and [bitbucket](https://bitbucket.org/graumannlabtools/readat).
 
 Stacey D, et al. (2018), ProGeM: a framework for the prioritization of candidate causal genes 
