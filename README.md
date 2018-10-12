@@ -38,4 +38,4 @@ at molecular quantitative trait loci. *Nucleic Acids Research*, https://doi.org/
 
 Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79, SomaLogic plasma protein GWAS summary statistics, https://app.box.com/s/u3flbp13zjydegrxjb2uepagp1vb6bj2, [EGA entry](https://ega-archive.org/studies/EGAS00001002555).
 **Notes at this repository**: [SERPINA1.R](doc/SERPINA1.R) is Code to create ![**an artist's SERPINA1**](doc/SERPINA1.pdf) similar to [RCircos version by Jimmy](doc/fig2.R), and
-[Methods.md](doc/Methods.md) is the Markdown version of the Methods setion.
+[Methods.md](doc/Methods.md) is the Markdown version of the Methods section of the paper.
