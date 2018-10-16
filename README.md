@@ -12,9 +12,9 @@ The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/So
 
 ## Analysis
 
-* [User environment and modules](https://www.hpc.cam.ac.uk/using-clusters/user-environment-and-modules)
+* [Environment modules](https://www.ch.cam.ac.uk/computing/software/environment-modules)
 * [SLURM usage](https://www.ch.cam.ac.uk/computing/slurm-usage)
-* [Submission of jobs](https://www.hpc.cam.ac.uk/using-clusters/running-jobs/submission)
+* [Bright Cluster Management](https://www.ch.cam.ac.uk/computing/files/clusters/cv-admin-manual.pdf))
 
 ## A summary of files
 
