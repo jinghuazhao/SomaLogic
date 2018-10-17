@@ -1,6 +1,6 @@
 {
   if ($1!="") SNPID=$1; else SNPID=$2 ":" $3
-  if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FREQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
+  if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
   else {
     af_coded_b1=$18
     af_coded_b2=$20
