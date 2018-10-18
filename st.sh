@@ -1,4 +1,4 @@
-# 17-10-2018 JHZ
+# 18-10-2018 JHZ
 
 git add .gitignore
 git commit -m ".gitignore"
@@ -10,7 +10,7 @@ git add analysis-plan.md
 git commit -m "Analysis plan"
 git add SomaLogic.R
 git commit -m "Generation of auxiliary files from curated databases"
-git add list.sh format.sh format.sbatch array.sbatch array.subs metal.sh
+git add list.sh format.sh format.sb array.sb array.subs metal.sh
 git commit -m "Programs"
 git add st.sh
 git commit -m "st.sh"
