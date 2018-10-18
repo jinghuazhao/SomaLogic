@@ -1,4 +1,4 @@
-# 22-9-2018 JHZ
+# 18-10-2018 JHZ
 # Generation of file lists and directories
 
 export SomaLogic=/scratch/jhz22/SomaLogic
@@ -35,7 +35,7 @@ cat $sumstats/KORA.input > $sumstats/KORA.list
 # Malmo, 1306 panel, 15m imputed genotypes by EntrezGeneSymbol
 
 ls $box/Malmo | sed 's/^zln//g;s/_summary.csv.gz//g' | sort -k1,1 > $sumstats/Malmo.input
-sort -k3,3 doc/MDCs.txt | \
+sort -k3,3 doc/MDCs.tsv | \
 join -11 -23 -t$'\t' $sumstats/Malmo.input - | \
 awk '{print $1, $2}' > $sumstats/Malmo.list
 
