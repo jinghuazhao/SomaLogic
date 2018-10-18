@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export sumstats=/scratch/jhz22/SomaLogic/sumstats
 export format=$HOME/SomaLogic/array.subs
 declare -a cohorts=(FHS KORA Malmo QMDiab)
 for s in $(seq 1 ${#cohorts[@]})
@@ -7,6 +8,7 @@ do
    export study=${cohorts[$(( $s-1 ))]}
    export joblist=`squeue -u $USER --noheader -o "%i" | sed -n '1h;2,$H;${g;s/\n/:/g;p}'`
    echo $study
+   export TMPDIR=$sumstats/$study
    if [ $s -eq 1 ]
    then
       id=$(sbatch --wait -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL $format $study)
