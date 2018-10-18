@@ -26,7 +26,7 @@ File  | Description
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of submitted and renamed file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics from login node, e.g., `format.sh FHS`
-[format.sbatch](format.sbatch), [array.sbatch](array.sbatch) | [SLURM](https://slurm.schedmd.com/) scripts which call [array.subs](array.subs)
+[format.sb](format.sb), [array.sb](array.sb) | [SLURM](https://slurm.schedmd.com/) scripts which call [array.subs](array.subs)
 [metal.sh](metal.sh) | Generation of individual METAL entries
 
 ## References
