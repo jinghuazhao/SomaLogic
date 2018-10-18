@@ -11,9 +11,9 @@ do
    export TMPDIR=$sumstats/$study
    if [ $s -eq 1 ]
    then
-      id=$(sbatch --wait -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL $format $study)
+      id=$(sbatch --wait -p medium -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL $format $study)
    else
 #     sbatch -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d after:$joblist $format
-      id=$(sbatch --wait -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$id $format $study)
+      id=$(sbatch --wait -p medium -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$id $format $study)
    fi
 done
