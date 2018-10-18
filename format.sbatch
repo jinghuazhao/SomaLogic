@@ -13,7 +13,7 @@ do
    then
       id=$(sbatch --wait -p medium -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL $format $study)
    else
-#     sbatch -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d after:$joblist $format
+#     sbatch --wait -p medium -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d after:$joblist $format
       id=$(sbatch --wait -p medium -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$id $format $study)
    fi
 done
