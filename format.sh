@@ -1,5 +1,5 @@
 #!/bin/bash
-# 17-10-2018 JHZ
+# 20-10-2018 JHZ
 # Reformatting files into directories
 
 function module ()
@@ -67,4 +67,5 @@ function QMDiab()
   gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
 
+export TMPDIR=$sumstats/$1
 $1
