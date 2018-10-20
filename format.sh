@@ -67,5 +67,5 @@ function QMDiab()
   gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
 
-export TMPDIR=$sumstats/$1
+export TMPDIR=/scratch/jhz22/tmp
 $1
