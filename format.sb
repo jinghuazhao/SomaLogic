@@ -14,6 +14,6 @@ for s in $(seq 1 ${#cohorts[@]}); do
      id=$(sbatch --wait -p long -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL $format $study)
   else
 #    sbatch --wait -p long -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d after:$joblist $format
-     id=$(sbatch --wait -p long -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d afterok:$id $format $study)
+     id=$(sbatch --wait -p long -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d afterany:$id $format $study)
   fi
 done
