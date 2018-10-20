@@ -9,6 +9,7 @@ function module ()
 
 # module load parallel/20131222
 # This version has problem with TEMPDIR, https://stackoverflow.com/questions/24398941/gnu-parallel-unlink-error
+# The lastest is here, http://ftp.gnu.org/gnu/parallel/parallel-latest.tar.bz2
 
 ## raw and reformatted SUMSTATS
 export SomaLogic=/scratch/jhz22/SomaLogic
