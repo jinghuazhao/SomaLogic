@@ -7,7 +7,8 @@ function module ()
   eval `/usr/bin/modulecmd bash $*`
 }
 
-module load parallel/20131222
+# module load parallel/20131222
+# This version has problem with TEMPDIR, https://stackoverflow.com/questions/24398941/gnu-parallel-unlink-error
 
 ## raw and reformatted SUMSTATS
 export SomaLogic=/scratch/jhz22/SomaLogic
