@@ -55,4 +55,5 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
 }' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/QMDiab.list
 }
 
+export TMPDIR=/scratch/jhz22/SomaLogic/sumstats/$1
 $1
