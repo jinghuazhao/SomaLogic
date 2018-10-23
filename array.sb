@@ -3,7 +3,7 @@
 #SBATCH -a 1-10
 #SBATCH -o array.%A
 #SBATCH -p long
-#SBATCH -t 7-0:0
+#SBATCH -t 4-0:0
 #SBATCH --export ALL
 
 function module ()
