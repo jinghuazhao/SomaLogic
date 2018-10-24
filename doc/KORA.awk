@@ -1,7 +1,7 @@
 {
   if ($2!="") SNPID=$2; else SNPID=$1 ":" $3
   if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
-  else print SNPID,$1,$3,"NA",$6,$4,"A2","NA",$7,$7/$8,$9,"NA","NA","NA"
+  else print SNPID,$1,$3,"NA",$6,$4,"NA","NA",$7,$7/$8,$9,"NA","NA","NA"
 }
 
 #1 CHR
