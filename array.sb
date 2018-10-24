@@ -8,7 +8,10 @@
 #SBATCH --export ALL
 
 # module work
-function module () { eval `/usr/bin/modulecmd bash $*` }
+function module ()
+{
+  eval `/usr/bin/modulecmd bash $*`
+}
 module purge
 module load parallel/20131222
 # Define parallel arguments:
