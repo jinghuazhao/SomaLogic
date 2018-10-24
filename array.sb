@@ -23,7 +23,7 @@ $parallel "$srun array.subs {}" ::: Malmo QMDiab
 
 function note()
 {
-  #Multi-threaded tasks
+  echo Multi-threaded tasks
   #http://portal.hpcwales.co.uk/wordpress/index.php/index/slurm/interactive-use-job-arrays/batch-submission-of-serial-jobs-for-parallel-execution/
   #SBATCH --nodes=3
   #SBATCH --ntasks-per-node=3
