@@ -1,5 +1,6 @@
 #!/bin/bash --login
 
+#SBATCH -J SomaLogic
 #SBATCH -n 1
 #SBATCH -a 1-10
 #SBATCH -o SomaLogic.%A
