@@ -1,4 +1,5 @@
 #!/bin/bash --login
+
 #SBATCH -n 1
 #SBATCH -a 1-10
 #SBATCH -o array.%A
@@ -6,24 +7,41 @@
 #SBATCH -t 4-0:0
 #SBATCH --export ALL
 
-function module ()
-{
-  eval `/usr/bin/modulecmd bash $*`
-}
-
+# module work
+function module () { eval `/usr/bin/modulecmd bash $*` }
 module purge
 module load parallel/20131222
-
 # Define parallel arguments:
 parallel="parallel -N 1 --delay .2 -j $SLURM_NTASKS"
-
 # Define srun arguments:
 srun="/usr/local/Cluster-Apps/slurm/bin/srun -n1 -N1 --exclusive"
 
 $parallel "$srun array.subs {}" ::: FHS KORA Malmo QMDiab
 
-#Multi-threaded tasks
-#http://portal.hpcwales.co.uk/wordpress/index.php/index/slurm/interactive-use-job-arrays/batch-submission-of-serial-jobs-for-parallel-execution/
-##SBATCH --nodes=3
-##SBATCH --ntasks-per-node=3
-##SBATCH --cpus-per-task=4
+function note()
+{
+  #Multi-threaded tasks
+  #http://portal.hpcwales.co.uk/wordpress/index.php/index/slurm/interactive-use-job-arrays/batch-submission-of-serial-jobs-for-parallel-execution/
+  #SBATCH --nodes=3
+  #SBATCH --ntasks-per-node=3
+  #SBATCH --cpus-per-task=4
+}
+
+function obsolete()
+{
+  export array=$HOME/SomaLogic/array.subs
+  declare -a cohorts=(FHS KORA Malmo QMDiab)
+  for s in $(seq 1 ${#cohorts[@]}); do
+    export study=${cohorts[$(( $s-1 ))]}
+    export joblist=`squeue -u $USER --noheader -o "%i" | sed -n '1h;2,$H;${g;s/\n/:/g;p}'`
+    echo $study
+    export TMPDIR=/scratch/jhz22/SomaLogic/sumstats/$study
+    if [ $s -eq 1 ]
+    then
+       id=$(sbatch --wait -p long -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL $array $study)
+    else
+  #    sbatch --wait -p long -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d after:$joblist $array
+       id=$(sbatch --wait -p long -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d afterany:$id $array $study)
+    fi
+  done
+}
