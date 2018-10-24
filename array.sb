@@ -13,7 +13,6 @@ function module ()
   eval `/usr/bin/modulecmd bash $*`
 }
 module purge
-module load parallel/20131222
 # Define parallel arguments:
 parallel="parallel -N 1 --delay .2 -j $SLURM_NTASKS"
 # Define srun arguments:
