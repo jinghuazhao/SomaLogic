@@ -1,0 +1,27 @@
+function note()
+{
+  echo Multi-threaded tasks
+  #http://portal.hpcwales.co.uk/wordpress/index.php/index/slurm/interactive-use-job-arrays/batch-submission-of-serial-jobs-for-parallel-execution/
+  #SBATCH --nodes=3
+  #SBATCH --ntasks-per-node=3
+  #SBATCH --cpus-per-task=4
+}
+
+function obsolete()
+{
+  export array=$HOME/SomaLogic/array.subs
+  declare -a cohorts=(FHS KORA Malmo QMDiab)
+  for s in $(seq 1 ${#cohorts[@]}); do
+    export study=${cohorts[$(( $s-1 ))]}
+    export joblist=`squeue -u $USER --noheader -o "%i" | sed -n '1h;2,$H;${g;s/\n/:/g;p}'`
+    echo $study
+    export TMPDIR=/scratch/jhz22/SomaLogic/sumstats/$study
+    if [ $s -eq 1 ]
+    then
+       id=$(sbatch -p long -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL $array $study)
+    else
+  #    sbatch -p long -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d after:$joblist $array
+       id=$(sbatch -p long -J $study -a 1-10 -e $study.e -o $study.o -D $PWD --export=ALL -d afterany:$id $array $study)
+    fi
+  done
+}
