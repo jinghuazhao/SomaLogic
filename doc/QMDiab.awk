@@ -22,5 +22,3 @@
 #4 POS
 #5 A1
 #6 A2
-
-# gunzip -c KORA/KORA_pGWAS.4292-5_3.assoc.linear.gz | head -1 > ~/1
