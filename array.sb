@@ -19,7 +19,7 @@ parallel="parallel -N 1 --delay .2 -j $SLURM_NTASKS"
 # Define srun arguments:
 srun="/usr/local/Cluster-Apps/slurm/bin/srun -n1 -N1 --exclusive"
 
-$parallel "$srun array.subs {}" ::: Malmo QMDiab
+$parallel "$srun array.subs {}" ::: KORA Malmo QMDiab
 
 function note()
 {
