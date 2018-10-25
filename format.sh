@@ -1,5 +1,5 @@
 #!/bin/bash
-# 20-10-2018 JHZ
+# 25-10-2018 JHZ
 # Reformatting files into directories
 
 function module ()
