@@ -303,48 +303,70 @@ the Nature Research Reporting Summary linked to this paper.
 European Genotype Archive (accession number EGAS00001002555). Summary association results are also publically available at 
 http://www.phpc.cam.ac.uk/ceu/proteins/, through PhenoScanner (http://www.phenoscanner.medschl.cam.ac.uk) and from the NHGRI-EBI GWAS Catalog 
 (https://www.ebi.ac.uk/gwas/downloads/summary-statistics).
- 
- 38.  Moore, C. et al. The INTERVAL trial to determine whether intervals between blood donations can be safely and acceptably decreased to optimise blood supply: 
-study protocol for a randomised controlled trial. Trials 15, 363 (2014).
- 39.  Gold, L. et al. Aptamer-based multiplexed proteomic technology for biomarker discovery. PLoS ONE 5, e15004 (2010).
- 40.  Sattlecker, M. et al. Alzheimer’s disease biomarker discovery using SOMAscan multiplexed protein technology. Alzheimers Dement. 10, 724–734 (2014).
- 41.  McLaren, W. et al. Deriving the consequences of genomic variants with the Ensembl API and SNP Effect Predictor. Bioinformatics 26, 2069–2070 (2010).
- 42.  UniProt Consortium. UniProt: a hub for protein information. Nucleic Acids Res. 43, D204–D212 (2015).
- 43.  Ashburner, M. et al.; The Gene Ontology Consortium. Gene ontology: tool for the unification of biology. Nat. Genet. 25, 25–29 (2000).
- 44.  Menni, C. et al. Circulating proteomic signatures of chronological age. J. Gerontol. A Biol. Sci. Med. Sci. 70, 809–816 (2015).
- 45.  Ngo, D. et al. Aptamer-based proteomic profiling reveals novel candidate biomarkers and pathways in cardiovascular disease. Circulation 134, 270–285 (2016).
- 46.  Chang, C. C. et al. Second-generation PLINK: rising to the challenge of larger and richer datasets. Gigascience 4, 7 (2015).
- 47.  Marchini, J., Howie, B., Myers, S., McVean, G. & Donnelly, P. A new multipoint method for genome-wide association studies by imputation of genotypes. Nat. 
-Genet. 39, 906–913 (2007).
- 48.  Willer, C. J., Li, Y. & Abecasis, G. R. METAL: fast and efficient meta-analysis of genomewide association scans. Bioinformatics 26, 2190–2191 (2010).
- 49.  Yang, J. et al. Conditional and joint multiple-SNP analysis of GWAS summary statistics identifies additional variants influencing complex traits. Nat. 
-Genet. 44, 369–375 (2012).
- 50.  Welter, D. et al. The NHGRI GWAS Catalog, a curated resource of SNP-trait associations. Nucleic Acids Res. 42, D1001–D1006 (2014).
- 51.  Malone, J. et al. Modeling sample variables with an Experimental Factor Ontology. Bioinformatics 26, 1112–1118 (2010).
- 52.  Javierre, B. M. et al. Lineage-specific genome architecture links enhancers and non-coding disease variants to target gene promoters. Cell 167, 1369–1384. 
-e19 (2016).
- 53.  Lawrence, M. et al. Software for computing and annotating genomic ranges. PLOS Comput. Biol. 9, e1003118 (2013).
- 54.  Amberger, J. S., Bocchini, C. A., Schiettecatte, F., Scott, A. F. & Hamosh, A. OMIM. org: Online Mendelian Inheritance in Man (OMIM®), an online catalog of 
-human genes and genetic disorders. Nucleic Acids Res. 43, D789–D798 (2015).
- 55.  Kanehisa, M., Sato, Y., Kawashima, M., Furumichi, M. & Tanabe, M. KEGG as a reference resource for gene and protein annotation. Nucleic Acids Res. 44, 
-D457–D462 (2016).
- 56.  Szklarczyk, D. et al. STRINGv10: protein-protein interaction networks, integrated over the tree of life. Nucleic Acids Res. 43, D447–D452 (2015).
- 57.  Smith, R. N. et al. InterMine: a flexible data warehouse system for the integration and analysis of heterogeneous biological data. Bioinformatics 28, 
-3163–3165 (2012).
- 58.  Franceschini, A. et al. STRINGv9.1: protein–protein interaction networks, with increased coverage and integration. Nucleic Acids Res. 41, D808–D815 (2013).
- 59.  Lek, M. et al. Analysis of protein-coding genetic variation in 60,706 humans. Nature 536, 285–291 (2016).
- 60.  Iotchkova, V. et al. GARFIELD—GWAS Analysis of Regulatory or Functional Information Enrichment with LD correction. Preprint at 
-https://www.biorxiv.org/content/early/2016/11/07/085738 (2016).
- 61.  Staley, J. R. et al. PhenoScanner: a database of human genotype–phenotype associations. Bioinformatics 32, 3207–3209 (2016).
- 62.  Giambartolomei, C. et al. Bayesian test for colocalisation between pairs of genetic association studies using summary statistics. PLoS Genet. 10, e1004383 
-(2014).
- 63.  Hingorani, A. & Humphries, S. Nature’s randomised trials. Lancet 366, 1906–1908 (2005).
- 64.  Nikpay, M. et al. A comprehensive 1,000 Genomes-based genome-wide association meta-analysis of coronary artery disease. Nat. Genet. 47, 1121–1130 (2015).
- 65.  Burgess, S., Butterworth, A. & Thompson, S. G. Mendelian randomization analysis with multiple genetic variants using summarized data. Genet. Epidemiol. 37, 
-658–665 (2013).
- 66.  Burgess, S., Dudbridge, F. & Thompson, S. G. Combining information on multiple instrumental variables in Mendelian randomization: comparison of allele score 
-and summarized data methods. Stat. Med. 35, 1880–1906 (2016).
- 67.  Burgess, S. & Thompson, S. G. Multivariable Mendelian randomization: the use of pleiotropic genetic variants to estimate causal effects. Am. J. Epidemiol. 
-181, 251–260 (2015).
- 68.  Burgess, S., Dudbridge, F. & Thompson, S. G. Re: “Multivariable Mendelian randomization: the use of pleiotropic genetic variants to estimate causal 
-effects”. Am. J. Epidemiol. 181, 290–291 (2015).
+
+1. Albert, F. W. & Kruglyak, L. The role of regulatory variation in complex traits and disease. Nat. Rev. Genet. 16, 197–212 (2015).
+2. Liu, Y. et al. Quantitative variability of 342 plasma proteins in a human twin population. Mol. Syst. Biol. 11, 786 (2015).
+3. Suhre, K. et al. Connecting genetic risk to disease end points through the human blood plasma proteome. Nat. Commun. 8, 14357 (2017).
+4. Yao, C. et al. Genome-wide association study of plasma proteins identifi putatively causal genes, proteins, and pathways for cardiovascular disease. Preprint at https://www.biorxiv.org/content/early/2017/05/12/136523 (2017).
+5. de Vries, P. S. et al. Whole-genome sequencing study of serum peptide levels: the Atherosclerosis Risk in Communities study. Hum. Mol. Genet. 26,  3442–3450 (2017).
+6. Wu, L. et al. Variation and genetic control of protein abundance in humans. Nature 499, 79–82 (2013).
+7. Battle, A. et al. Impact of regulatory variation from RNA to protein. Science 347, 664–667 (2015).
+8. Rohloff J. C. et al. Nucleic acid ligands with protein-like side chains: modifi aptamers and their use as diagnostic and therapeutic agents. Mol. Ther. Nucleic Acids 3, e201 (2014).
+9. Di Angelantonio, E. et al. Effi	and safety of varying the frequency of whole blood donation (INTERVAL): a randomised trial of 45 000 donors. Lancet 390, 2360–2371 (2017).
+10. Astle, W. J. et al. The allelic landscape of human blood cell trait variation and links to common complex disease. Cell 167, 1415–1429.e19 (2016).
+11. Burgess, S., Scott, R. A., Timpson, N. J., Davey Smith, G. & Thompson, S. G. Using published data in Mendelian randomization: a blueprint for efficient identification of causal risk factors. Eur. J. Epidemiol. 30, 543–552 (2015).
+12. Stranger, B. E. et al. Patterns of cis regulatory variation in diverse human populations. PLoS Genet. 8, e1002639 (2012).
+13. Lundberg, M., Eriksson, A., Tran, B., Assarsson, E. & Fredriksson, S. Homogeneous antibody-based proximity extension assays provide sensitive and specifi  detection of low-abundant proteins in human blood. Nucleic Acids Res. 39, e102 (2011).
+14. Walter, K. et al. The UK10K project identifi   rare variants in health and disease. Nature 526, 82–90 (2015).
+15. Westra, H.-J. et al. Systematic identifi	of trans eQTLs as putative drivers of known disease associations. Nat. Genet. 45, 1238–1243 (2013).
+16. Lappalainen, T. et al. Transcriptome and genome sequencing uncovers functional variation in humans. Nature 501, 506–511 (2013).
+17. Schadt, E. E. et al. Mapping the genetic architecture of gene expression in human liver. PLoS Biol. 6, e107 (2008).
+18. Zeller, T. et al. Genetics and beyond—the transcriptome of human monocytes and disease susceptibility. PLoS ONE 5, e10693 (2010).
+19. Nai, A. et al. TMPRSS6 rs855791 modulates hepcidin transcription in vitro and serum hepcidin levels in normal individuals. Blood 118, 4459–4462 (2011).
+20. Carrasquillo, M. M. et al. Genome-wide screen identifi    rs646776 near sortilin as a regulator of progranulin levels in human plasma. Am. J. Hum. Genet. 87, 890–897 (2010).
+21. Gooptu, B., Dickens, J. A. & Lomas, D. A. The molecular and cellular pathology of α1-antitrypsin defi	. Trends Mol. Med. 20, 116–127 (2014).
+22. Stacey, D. et al. ProGeM: A framework for the prioritisation of candidate causal genes at molecular quantitative trait loci. https://doi.org/10.1101/230094 (2017).
+23. Liu, J. Z. et al. Association analyses identify 38 susceptibility loci for infl	bowel disease and highlight shared genetic risk across populations. Nat. Genet. 47, 979–986 (2015).
+24. Di Narzo, A. F. et al. High-throughput characterization of blood serum proteomics of IBD patients with respect to aging and genetic factors. PLoS Genet. 13, e1006565 (2017).
+25. Huang, H. et al. Fine-mapping infl	bowel disease loci to single-variant resolution. Nature 547, 173–178 (2017).
+26. Lyons, P. A. et al. Genetically distinct subsets within ANCA-associated vasculitis. N. Engl. J. Med. 367, 214–223 (2012).
+27. Merkel, P. A. et al. Identifi of functional and expression polymorphisms associated with risk for anti-neutrophil cytoplasmic autoantibody-associated vasculitis. Arthritis Rheumatol. 69, 1054–1066 (2017).
+28. Battle, A., Brown, C. D., Engelhardt, B. E. & Montgomery, S. B. Genetic eff	on gene expression across human tissues. Nature 550, 204–213 (2017).
+29. Grönberg, H. et al. Prostate cancer screening in men aged 50-69 years (STHLM3): a prospective population-based diagnostic study. Lancet Oncol. 16, 1667–1676 (2015).
+30. Eeles, R. A. et al. Multiple newly identifi    loci associated with prostate cancer susceptibility. Nat. Genet. 40, 316–321 (2008).
+31. Paternoster, L. et al. Multi-ancestry genome-wide association study of 21,000 cases and 95,000 controls identifi    new risk loci for atopic dermatitis. Nat. Genet. 47, 1449–1456 (2015).
+32. Dahl, R. et al. Eff	of an oral MMP-9 and -12 inhibitor, AZD1236, on biomarkers in moderate/severe COPD: a randomised controlled trial. Pulm. Pharmacol. Ther. 25, 169–177 (2012).
+33. Ganz, P. et al. Development and validation of a protein-based risk score for cardiovascular outcomes among patients with stable coronary heart disease.  J. Am. Med. Assoc. 315, 2532–2541 (2016).
+34. Traylor, M. et al. A novel MMP12 locus is associated with large artery atherosclerotic stroke using a genome-wide age-at-onset informed approach.  PLoS Genet. 10, e1004469 (2014).
+35. Nelson, M. R. et al. The support of human genetic evidence for approved drug indications. Nat. Genet. 47, 856–860 (2015).
+36. Albagha, O. M. E. et al. Genome-wide association study identifi   variants at CSF1, OPTN and TNFRSF11A as genetic risk factors for Paget’s disease of bone.  Nat. Genet. 42, 520–524 (2010).
+37. Schwarz, P., Rasmussen, A. Q., Kvist, T. M., Andersen, U. B. & Jørgensen, N. R. Paget’s disease of the bone after treatment with Denosumab: a case report. Bone 50, 1023–1025 (2012).
+38. Moore, C. et al. The INTERVAL trial to determine whether intervals between blood donations can be safely and acceptably decreased to optimise blood supply: study protocol for a randomised controlled trial. Trials 15, 363 (2014).
+39. Gold, L. et al. Aptamer-based multiplexed proteomic technology for biomarker discovery. PLoS ONE 5, e15004 (2010).
+40. Sattlecker, M. et al. Alzheimer’s disease biomarker discovery using SOMAscan multiplexed protein technology. Alzheimers Dement. 10, 724–734 (2014).
+41. McLaren, W. et al. Deriving the consequences of genomic variants with the Ensembl API and SNP Effect Predictor. Bioinformatics 26, 2069–2070 (2010).
+42. UniProt Consortium. UniProt: a hub for protein information. Nucleic Acids Res. 43, D204–D212 (2015).
+43. Ashburner, M. et al.; The Gene Ontology Consortium. Gene ontology: tool for the unification of biology. Nat. Genet. 25, 25–29 (2000).
+44. Menni, C. et al. Circulating proteomic signatures of chronological age. J. Gerontol. A Biol. Sci. Med. Sci. 70, 809–816 (2015).
+45. Ngo, D. et al. Aptamer-based proteomic profiling reveals novel candidate biomarkers and pathways in cardiovascular disease. Circulation 134, 270–285 (2016).
+46. Chang, C. C. et al. Second-generation PLINK: rising to the challenge of larger and richer datasets. Gigascience 4, 7 (2015).
+47. Marchini, J., Howie, B., Myers, S., McVean, G. & Donnelly, P. A new multipoint method for genome-wide association studies by imputation of genotypes. Nat. Genet. 39, 906–913 (2007).
+48. Willer, C. J., Li, Y. & Abecasis, G. R. METAL: fast and efficient meta-analysis of genomewide association scans. Bioinformatics 26, 2190–2191 (2010).
+49. Yang, J. et al. Conditional and joint multiple-SNP analysis of GWAS summary statistics identifies additional variants influencing complex traits. Nat. Genet. 44, 369–375 (2012).
+50. Welter, D. et al. The NHGRI GWAS Catalog, a curated resource of SNP-trait associations. Nucleic Acids Res. 42, D1001–D1006 (2014). 51.  Malone, J. et al. Modeling sample variables with an Experimental Factor Ontology. Bioinformatics 26, 1112–1118 (2010).
+52. Javierre, B. M. et al. Lineage-specific genome architecture links enhancers and non-coding disease variants to target gene promoters. Cell 167, 1369–1384. e19 (2016).
+53. Lawrence, M. et al. Software for computing and annotating genomic ranges. PLOS Comput. Biol. 9, e1003118 (2013).
+54. Amberger, J. S., Bocchini, C. A., Schiettecatte, F., Scott, A. F. & Hamosh, A. OMIM. org: Online Mendelian Inheritance in Man (OMIM®), an online catalog of human genes and genetic disorders. Nucleic Acids Res. 43, D789–D798 (2015).
+55. Kanehisa, M., Sato, Y., Kawashima, M., Furumichi, M. & Tanabe, M. KEGG as a reference resource for gene and protein annotation. Nucleic Acids Res. 44, D457–D462 (2016).
+56. Szklarczyk, D. et al. STRINGv10: protein-protein interaction networks, integrated over the tree of life. Nucleic Acids Res. 43, D447–D452 (2015).
+57. Smith, R. N. et al. InterMine: a flexible data warehouse system for the integration and analysis of heterogeneous biological data. Bioinformatics 28, 3163–3165 (2012).
+58. Franceschini, A. et al. STRINGv9.1: protein–protein interaction networks, with increased coverage and integration. Nucleic Acids Res. 41, D808–D815 (2013).
+59. Lek, M. et al. Analysis of protein-coding genetic variation in 60,706 humans. Nature 536, 285–291 (2016). 60.  Iotchkova, V. et al. GARFIELD—GWAS Analysis of Regulatory or Functional Information Enrichment with LD correction. Preprint at https://www.biorxiv.org/content/early/2016/11/07/085738 (2016).
+61. Staley, J. R. et al. PhenoScanner: a database of human genotype–phenotype associations. Bioinformatics 32, 3207–3209 (2016).
+62. Giambartolomei, C. et al. Bayesian test for colocalisation between pairs of genetic association studies using summary statistics. PLoS Genet. 10, e1004383 (2014).
+63. Hingorani, A. & Humphries, S. Nature’s randomised trials. Lancet 366, 1906–1908 (2005).
+64. Nikpay, M. et al. A comprehensive 1,000 Genomes-based genome-wide association meta-analysis of coronary artery disease. Nat. Genet. 47, 1121–1130 (2015).
+65. Burgess, S., Butterworth, A. & Thompson, S. G. Mendelian randomization analysis with multiple genetic variants using summarized data. Genet. Epidemiol. 37, 658–665 (2013).
+66. Burgess, S., Dudbridge, F. & Thompson, S. G. Combining information on multiple instrumental variables in Mendelian randomization: comparison of allele score and summarized data methods. Stat. Med. 35, 1880–1906 (2016).
+67. Burgess, S. & Thompson, S. G. Multivariable Mendelian randomization: the use of pleiotropic genetic variants to estimate causal effects. Am. J. Epidemiol. 181, 251–260 (2015).
+68. Burgess, S., Dudbridge, F. & Thompson, S. G. Re: “Multivariable Mendelian randomization: the use of pleiotropic genetic variants to estimate causal effects”. Am. J. Epidemiol. 181, 290–291 (2015).
