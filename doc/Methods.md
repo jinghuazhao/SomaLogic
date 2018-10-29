@@ -316,7 +316,7 @@ http://www.phpc.cam.ac.uk/ceu/proteins/, through PhenoScanner (http://www.phenos
 10. Astle, W. J. et al. The allelic landscape of human blood cell trait variation and links to common complex disease. Cell 167, 1415–1429.e19 (2016).
 11. Burgess, S., Scott, R. A., Timpson, N. J., Davey Smith, G. & Thompson, S. G. Using published data in Mendelian randomization: a blueprint for efficient identification of causal risk factors. Eur. J. Epidemiol. 30, 543–552 (2015).
 12. Stranger, B. E. et al. Patterns of cis regulatory variation in diverse human populations. PLoS Genet. 8, e1002639 (2012).
-13. Lundberg, M., Eriksson, A., Tran, B., Assarsson, E. & Fredriksson, S. Homogeneous antibody-based proximity extension assays provide sensitive and specifi  detection of low-abundant proteins in human blood. Nucleic Acids Res. 39, e102 (2011).
+13. Lundberg, M., Eriksson, A., Tran, B., Assarsson, E. & Fredriksson, S. Homogeneous antibody-based proximity extension assays provide sensitive and specific detection of low-abundant proteins in human blood. Nucleic Acids Res. 39, e102 (2011).
 14. Walter, K. et al. The UK10K project identifi   rare variants in health and disease. Nature 526, 82–90 (2015).
 15. Westra, H.-J. et al. Systematic identifi	of trans eQTLs as putative drivers of known disease associations. Nat. Genet. 45, 1238–1243 (2013).
 16. Lappalainen, T. et al. Transcriptome and genome sequencing uncovers functional variation in humans. Nature 501, 506–511 (2013).
