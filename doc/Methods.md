@@ -307,7 +307,7 @@ http://www.phpc.cam.ac.uk/ceu/proteins/, through PhenoScanner (http://www.phenos
 1. Albert, F. W. & Kruglyak, L. The role of regulatory variation in complex traits and disease. *Nat. Rev. Genet.* 16, 197–212 (2015).
 2. Liu, Y. et al. Quantitative variability of 342 plasma proteins in a human twin population. *Mol. Syst. Biol.* 11, 786 (2015).
 3. Suhre, K. et al. Connecting genetic risk to disease end points through the human blood plasma proteome. *Nat. Commun.* 8, 14357 (2017).
-4. Yao, C. et al. Genome-wide association study of plasma proteins identifi putatively causal genes, proteins, and pathways for cardiovascular disease. Preprint at https://www.biorxiv.org/content/early/2017/05/12/136523 (2017).
+4. Yao, C. et al. Genome-wide association study of plasma proteins identifies putatively causal genes, proteins, and pathways for cardiovascular disease. Preprint at https://www.biorxiv.org/content/early/2017/05/12/136523 (2017).
 5. de Vries, P. S. et al. Whole-genome sequencing study of serum peptide levels: the Atherosclerosis Risk in Communities study. *Hum. Mol. Genet*. 26,  3442–3450 (2017).
 6. Wu, L. et al. Variation and genetic control of protein abundance in humans. *Nature* 499, 79–82 (2013).
 7. Battle, A. et al. Impact of regulatory variation from RNA to protein. *Science* 347, 664–667 (2015).
@@ -317,7 +317,7 @@ http://www.phpc.cam.ac.uk/ceu/proteins/, through PhenoScanner (http://www.phenos
 11. Burgess, S., Scott, R. A., Timpson, N. J., Davey Smith, G. & Thompson, S. G. Using published data in Mendelian randomization: a blueprint for efficient identification of causal risk factors. *Eur. J. Epidemiol.* 30, 543–552 (2015).
 12. Stranger, B. E. et al. Patterns of cis regulatory variation in diverse human populations. *PLoS Genet.* 8, e1002639 (2012).
 13. Lundberg, M., Eriksson, A., Tran, B., Assarsson, E. & Fredriksson, S. Homogeneous antibody-based proximity extension assays provide sensitive and specific detection of low-abundant proteins in human blood. *Nucleic Acids Res.* 39, e102 (2011).
-14. Walter, K. et al. The UK10K project identified rare variants in health and disease. *Nature* 526, 82–90 (2015).
+14. Walter, K. et al. The UK10K project identifies rare variants in health and disease. *Nature* 526, 82–90 (2015).
 15. Westra, H.-J. et al. Systematic identification of trans eQTLs as putative drivers of known disease associations. *Nat. Genet.* 45, 1238–1243 (2013).
 16. Lappalainen, T. et al. Transcriptome and genome sequencing uncovers functional variation in humans. *Nature* 501, 506–511 (2013).
 17. Schadt, E. E. et al. Mapping the genetic architecture of gene expression in human liver. *PLoS Biol.* 6, e107 (2008).
