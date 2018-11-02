@@ -1,7 +1,7 @@
 {
-  if ($4==$13) A2=$14; else A2=$13
+  if ($4==$13) A1=$14; else A1=$13
   if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
-  else print $1,$2,$3,"NA",$6,$4,A2,"NA",$7,$7/$8,$9,"NA","NA","NA"
+  else print $1,$2,$3,"NA",$6,A1,$4,"NA",$7,$7/$8,$9,"NA","NA","NA"
 }
 
 # merge of the following two sources,
