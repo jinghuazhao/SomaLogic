@@ -50,7 +50,7 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
         awk -vOFS=\"\\t\" -f doc/QMDiab.awk | \
         sort -k2,2n -k3,3n | \
         awk -f doc/order.awk | \
-        gzip -f > %s/QMDiab/QMDiab.%s.txt.gz",box,$1,sumstats,sumstats,$1)
+        gzip -f > %s/QMDiab/QMDiab.%s.txt.gz",box,$1,sumstats,$1)
     system(cmd)
 }' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/QMDiab.list
 }
