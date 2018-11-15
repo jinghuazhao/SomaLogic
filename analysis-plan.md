@@ -1,6 +1,25 @@
 # Analysis plan
 
-This is to be updated -- for now the following columns as in OLINK SCALLOP/CVD1/INF1 analysis plan are assumed.
+*15/11/2018*
+
+This is an initial draft, which follows SCALLOP/CVD1/INF1.
+
+## Data
+
+* Phenotypes. Cohorts have 1129 and 1310 arrays.
+* Genotypes. Please use imputed genotypes.
+
+## Model
+
+* Multiple linear regression for all samples with covariates
+* Additive genetic model
+* For case-control studies, please conduct analysis for cases and controls separately.
+
+## Software
+
+It is preferable to use software which account for genotype uncertainty, such as SNPTEST, QUICKTEST, and BOLT-LMM.
+
+## SNP-level summary statistics
 
 SNP table for association results. Missing values are coded as “NA”.
 
@@ -21,9 +40,34 @@ No. | Variable name | Description
 13 | RSQ_IMP| Observed divided by expected variance for imputed allele dosage.
 14 | IMP | Please specify whether the SNP was imputed or genotyped: 1: imputed SNP, 0: directly genotyped SNP
 
-Cohorts which reported results from PLINK, please provided SNP-level information as appropriate. 
+### PLINK results
 
+Cohorts may opt to report results from PLINK, with the following information, then SNP-level information as appropriate:
+
+No | Name | Description | Additional comment
+--|----------|----------|-------------------------------------
+1 | BP | Position in base pairs
+2 | CHR | Chromosome
+3 | SNP | CHR:POS_A1_A2 or rsid
+4* | HWE | Hardy-Weinberg equilibrium P-value
+5* | MAF | Minor allele frequency | Please indicate if this is the effect allele frequency
+6 | A1 | Allele 1 | Please indicate if this is the effect/reference allele
+7* | A2 | Allele 2 | Please indicate if this is the effect/reference allele
+8 | NMISS | Sample size
+9 | BETA | Regression coefficient
+10 | STAT | Regression test statistic
+11 | P | P value
+
+\* may be taken from the PLINK --hardy option and .bim file.
+
+In this case, please provide for each SNP information on strand, effect allele, effect allele frequency, and the information measures for imputation -- the information
+measure can be on the genotype level obtained once for a cohort rather than from phenotype-genotype regression through software such as SNPTEST. SNP and sample based
+statistics can be greatly facilitated with software qctool, http://www.well.ox.ac.uk/~gav/qctool_v2/.
+
+## Descriptive statistics
+
+This would include cohort-level summary statistics, brief description of the protein assays, genechips, quality controls, imputation.
 
 ## References
 
-https://github.com/jinghuazhao/INF/blob/master/SCALLOP_INF_I_analysis_plan.md
+https://github.com/jinghuazhao/INF/blob/master/SCALLOP_INF_I_analysis_plan.md.
