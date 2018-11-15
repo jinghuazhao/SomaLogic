@@ -7,7 +7,7 @@ This is an initial draft, which follows SCALLOP/CVD1/INF1.
 ## Data
 
 * Phenotypes. Cohorts have 1129 and 1310 arrays.
-* Genotypes. Please use imputed genotypes.
+* Genotypes. Please use imputed genotypes with build37 (hg19) coordinates.
 
 ## Model
 
