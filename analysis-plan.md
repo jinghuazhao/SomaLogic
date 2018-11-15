@@ -1,12 +1,12 @@
 # Analysis plan
 
-This is to be updated -- for now the following columns as in OLINK SCALLOP/CVD1 analysis plan are assumed.
+This is to be updated -- for now the following columns as in OLINK SCALLOP/CVD1/INF1 analysis plan are assumed.
 
 SNP table for association results. Missing values are coded as “NA”.
 
 No. | Variable name | Description
---|---------------|------------
-1 | SNPID | SNP ID as rs number
+--|---------------|-----------------------------------------------------------------------------------
+1 | SNPID | CHR:POS_A1_A2 (where A1<A2) or rsid
 2 | CHR | Chromosome number (1-22)
 3 | POS | Physical position for the reference sequence (please indicate NCBI build in descriptive file)
 4 | STRAND | Indicator of strand direction. Please specify “+” if positive or forward strand and “-” if negative or reverse strand. 
@@ -22,3 +22,8 @@ No. | Variable name | Description
 14 | IMP | Please specify whether the SNP was imputed or genotyped: 1: imputed SNP, 0: directly genotyped SNP
 
 Cohorts which reported results from PLINK, please provided SNP-level information as appropriate. 
+
+
+## References
+
+https://github.com/jinghuazhao/INF/blob/master/SCALLOP_INF_I_analysis_plan.md
