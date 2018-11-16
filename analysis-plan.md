@@ -53,7 +53,7 @@ No. | Variable name | Description
 
 ### PLINK results
 
-Cohorts may opt to report results from PLINK, with the following information, then SNP-level information as appropriate:
+Cohorts may opt to report sppedy results from PLINK with the following information, then it is desirable to provide SNP-level information:
 
 No | Name | Description | Additional comment
 --|----------|----------|-------------------------------------
