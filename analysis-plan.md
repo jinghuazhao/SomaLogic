@@ -1,6 +1,8 @@
 # Analysis plan
 
-*16/11/2018*
+*Last updated 16/11/2018*
+
+## Overview
 
 This analysis attempts to collect and analyse GWAS summary statistics for proteins on the following [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/SomaLogic)) SOMAscan assays,
 
@@ -83,6 +85,15 @@ Please contact us for details.
 
 ## References
 
-[GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k)
+[GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k).
 
 [The SOMAscan whie paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
+
+Cotton RJ, Graumann J (2016) readat: An R package for reading and working with SomaLogic ADAT files.
+*BMC Bioinformatics*, https://doi.org/10.1186/s12859-016-1007-8, [Bioconductor](https://bioconductor.org/packages/release/bioc/html/readat.html) and [bitbucket](https://bitbucket.org/graumannlabtools/readat).
+
+Stacey D, et al. (2018), ProGeM: a framework for the prioritization of candidate causal genes 
+at molecular quantitative trait loci. *Nucleic Acids Research*, https://doi.org/10.1093/nar/gky837, [GitHub](https://github.com/ds763/ProGeM) and [bioRxiv](http://dx.doi.org/10.1101/230094).
+
+Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79, SomaLogic plasma protein GWAS summary statistics, https://app.box.com/s/u3flbp13zjydegrxjb2uepagp1vb6bj2, [EGA entry](https://ega-archive.org/studies/EGAS00001002555).
+**Notes**: [SERPINA1.R](doc/SERPINA1.R) creates ![**an artist's SERPINA1**](doc/SERPINA1.pdf) similar to [RCircos version by Jimmy](doc/fig2.R), and [Methods.md](doc/Methods.md) is the Markdown version of the Methods section of the paper.
