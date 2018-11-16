@@ -4,7 +4,7 @@
 
 ## Overview
 
-This analysis attempts to collect and analyse GWAS summary statistics for proteins on the following [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/SomaLogic)) SOMAscan assays,
+This analysis attempts to collect and analyse GWAS summary statistics for proteins on the following SomaLogic SOMAscan assays,
 
 * **1129 assay** ([1129.tsv](doc/1129.tsv), derived from [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf))
 * **1310 assay** ([1310.tsv](doc/1310.tsv), derived from [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf)) and [Rev-2](doc/SSM-045-Rev-2-SOMAscan-Assay-1.3k-Content.xlsx)
@@ -85,7 +85,7 @@ Please contact us for details.
 
 ## References
 
-[GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k).
+[SomaLogic](https://somalogic.com/), [wiki](https://en.wikipedia.org/wiki/SomaLogic) and [GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k).
 
 [The SOMAscan whie paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
 
