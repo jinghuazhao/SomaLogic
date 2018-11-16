@@ -2,12 +2,12 @@
 
 *16/11/2018*
 
-This is an initial draft, which follows SCALLOP/CVD1/INF1.
+This is an initial draft.
 
 ## Data
 
 * Phenotypes. Cohorts have 1129 and 1310 arrays.
-* Genotypes. Please use imputed genotypes with build37 (hg19) coordinates.
+* Genotypes. genechip and imputed genotypes with build37 (hg19) coordinates.
 
 ## Model
 
@@ -66,8 +66,8 @@ statistics can be greatly facilitated with software qctool, http://www.well.ox.a
 
 ## Descriptive statistics
 
-This would include cohort-level summary statistics, brief description of the protein assays, genechips, quality controls, imputation.
+This would include cohort-level summary statistics, brief description of the protein assays, genechips, quality controls, imputation. Please provide details of imputation panels.
 
-## References
+## Data upload
 
-https://github.com/jinghuazhao/INF/blob/master/SCALLOP_INF_I_analysis_plan.md.
+Please contact us for details.
