@@ -10,13 +10,6 @@ The [SomaLogic](https://somalogic.com/) ([wiki](https://en.wikipedia.org/wiki/So
 * **1129 assay** ([1129.tsv](doc/1129.tsv), derived from [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf))
 * **1310 assay** ([1310.tsv](doc/1310.tsv), derived from [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf)) and [Rev-2](doc/SSM-045-Rev-2-SOMAscan-Assay-1.3k-Content.xlsx)
 
-## Analysis
-
-* [Environment modules](https://www.ch.cam.ac.uk/computing/software/environment-modules)
-* [SLURM usage](https://www.ch.cam.ac.uk/computing/slurm-usage)
-* [Bright Cluster Management](https://www.ch.cam.ac.uk/computing/files/clusters/cv-admin-manual.pdf))
-* [VPN (Virtual Private Network)](https://confluence.medschl.cam.ac.uk/pages/viewpage.action?pageId=12094187)
-
 ## A summary of files
 
 File  | Description
