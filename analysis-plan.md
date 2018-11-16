@@ -83,6 +83,10 @@ This would include cohort-level summary statistics, brief description of the pro
 
 Please contact us for details.
 
+## Participating cohorts
+
+FHS, INTERVAL, KORA, Malmo, QMDiab.
+
 ## References
 
 [SomaLogic](https://somalogic.com/), [wiki](https://en.wikipedia.org/wiki/SomaLogic) and [GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k).
