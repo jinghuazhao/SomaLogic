@@ -7,8 +7,8 @@ This analysis attempts to collect summary statistics from various protein GWAS f
 ## Data
 
 * Phenotypes. The 1,129 and 13,10 arrays.
-  * **1129 assay** ([1129.tsv](doc/1129.tsv), derived from [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf]
-  * **1310 assay** ([1310.tsv](doc/1310.tsv), derived from [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf]
+  * **1129 assay** ([1129.tsv](doc/1129.tsv))
+  * **1310 assay** ([1310.tsv](doc/1310.tsv))
 * Genotypes. Genechip and imputed genotypes with build37 (hg19) coordinates.
 * Covariates. age, sex, principal components.
 
