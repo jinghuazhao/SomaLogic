@@ -85,4 +85,4 @@ Please contact us for details.
 
 [GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k)
 
-[The SOMAscan whie paper)[http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
+[The SOMAscan whie paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
