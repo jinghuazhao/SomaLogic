@@ -1,6 +1,6 @@
 # Analysis plan
 
-*15/11/2018*
+*16/11/2018*
 
 This is an initial draft, which follows SCALLOP/CVD1/INF1.
 
@@ -32,7 +32,7 @@ No. | Variable name | Description
 5 | N | Number of non-missing observations
 6 | EFFECT_ALLELE | Allele for which the effect (beta coefficient) is reported. For example, in an A/G SNP in which AA = 0, AG=1, and GG=2, the coded allele is G.
 7 | REFERENCE_ALLELE | Second allele at the SNP (the other allele). In the example above, the non-coded allele is A. 
-8 | CODE_ALL_FQ | Allele frequency for the coded allele – “NA” if not available
+8 | EAF | Effect allele frequency – “NA” if not available
 9 | BETA | Effect size for the coded allele, beta estimate from the genotype-phenotype association, with at least 5 decimal places. Note: if not available, please report “NA” for this variable.
 10 | SE | Standard error of the beta estimate, to at least 5 decimal places - “NA” if not available. 
 11 | PVAL | p-value of Wald test statistic – “NA” if not available
