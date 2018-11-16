@@ -2,17 +2,23 @@
 
 *16/11/2018*
 
-This is an initial draft.
+This analysis attempts to collect summary statistics from various protein GWAS for meta-analysis.
 
 ## Data
 
-* Phenotypes. Cohorts have 1129 and 1310 arrays.
-* Genotypes. genechip and imputed genotypes with build37 (hg19) coordinates.
+* Phenotypes. The 1,129 and 13,10 arrays.
+* Genotypes. Genechip and imputed genotypes with build37 (hg19) coordinates.
+* Covariates. age, sex, principal components.
 
 ## Model
 
-* Multiple linear regression for all samples with covariates
-* Additive genetic model
+*  Rank-based inverse normal transformation on the raw measurement of proteins including those below lower limit of detection, e.g., via `invnormal` function,
+```r
+invnormal <- function(x)
+  qnorm((rank(x,na.last="keep")-0.5)/sum(!is.na(x)))
+```
+* Multiple linear regression for all samples with covariates.
+* Additive genetic model.
 * For case-control studies, please conduct analysis for cases and controls separately.
 
 ## Software
