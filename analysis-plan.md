@@ -51,6 +51,10 @@ No. | Variable name | Description
 13 | RSQ_IMP| Observed divided by expected variance for imputed allele dosage.
 14 | IMP | Please specify whether the SNP was imputed or genotyped: 1: imputed SNP, 0: directly genotyped SNP
 
+File-naming convention
+
+It is recommended to use format STUDY_analyst_SomaLogic_protein_SeqID_UniProtID_date.gz, see the [SomaLogic Master Table](doc/SOMALOGIC_Master_Table_160410_1129info.tsv) and also https://www.uniprot.org/ for additional information on UniProt IDs.
+
 ### PLINK results
 
 Cohorts may opt to report sppedy results from PLINK with the following information, then it is desirable to provide SNP-level information:
