@@ -1,6 +1,6 @@
-# Analysis plan
+# SomaLogic data analysis plan
 
-*Last updated 16/11/2018*
+*Last updated 18/11/2018*
 
 ## Overview
 
