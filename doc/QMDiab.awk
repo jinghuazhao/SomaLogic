@@ -1,9 +1,8 @@
 {
-  if ($4==$13) A1=$14; else A1=$13
   if (NR==1) print "SNPID","CHR","POS","STRAND","N","EFFECT_ALLELE","REFERENCE_ALLELE","CODE_ALL_FQ","BETA","SE","PVAL","RSQ","RSQ_IMP","IMP"
   else {
-    if ($7!="NA" && $8!="NR") print $1,$2,$3,"NA",$6,A1,$4,"NA",$7,$7/$8,$9,"NA","NA","NA";
-    else print $1,$2,$3,"NA",$6,A1,$4,"NA",$7,"NA",$9,"NA","NA","NA"
+    if ($7!="NA" && $8!="NR") print $1,$2,$3,"NA",$6,$14,$4,"NA",$7,$7/$8,$9,"NA","NA","NA";
+    else print $1,$2,$3,"NA",$6,$14,$4,"NA",$7,"NA",$9,"NA","NA","NA"
   }
 }
 
