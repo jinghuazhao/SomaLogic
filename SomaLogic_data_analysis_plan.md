@@ -89,7 +89,7 @@ Please contact us for details.
 
 ## Participating cohorts
 
-FHS, INTERVAL, KORA, Malmo, QMDiab.
+FHS, INTERVAL, KORA, Malmo, QMDiab, TwinsUK.
 
 ## References
 
