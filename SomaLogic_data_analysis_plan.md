@@ -29,7 +29,9 @@ It is preferable to use software which account for genotype uncertainty, such as
 
 ## SNP-level summary statistics
 
-SNP table for association results. Missing values are coded as “NA”.
+### SNP table for association results
+
+These are summaised in the following table, with missing values coded as “NA”.
 
 No. | Variable name | Description
 --|---------------|-----------------------------------------------------------------------------------
@@ -47,10 +49,6 @@ No. | Variable name | Description
 12 | RSQ | Residual phenotypic variance explained by SNP. “NA” if not available
 13 | RSQ_IMP| Observed divided by expected variance for imputed allele dosage.
 14 | IMP | Please specify whether the SNP was imputed or genotyped: 1: imputed SNP, 0: directly genotyped SNP
-
-### File-naming convention
-
-It is recommended to use format STUDY_analyst_SomaLogic_protein_SeqID_UniProtID_date.gz, see the [SomaLogic Master Table](doc/SOMALOGIC_Master_Table_160410_1129info.tsv) and also https://www.uniprot.org/ for additional information on UniProt IDs.
 
 ### PLINK results
 
@@ -76,7 +74,11 @@ In this case, please provide for each SNP information on strand, effect allele, 
 measure can be on the genotype level obtained once for a cohort rather than from phenotype-genotype regression through software such as SNPTEST. SNP and sample based
 statistics can be greatly facilitated with software qctool, http://www.well.ox.ac.uk/~gav/qctool_v2/.
 
-## Descriptive statistics
+## File-naming convention
+
+It is recommended to use format STUDY_analyst_SomaLogic_protein_SeqID_UniProtID_date.gz, see the [SomaLogic Master Table](doc/SOMALOGIC_Master_Table_160410_1129info.tsv) and also https://www.uniprot.org/ for additional information on UniProt IDs.
+
+### Descriptive statistics
 
 This would include cohort-level summary statistics, brief description of the protein assays, genechips, quality controls, imputation. Please provide details of imputation panels.
 
