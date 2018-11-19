@@ -4,7 +4,7 @@
 
 ## Overview
 
-This analysis attempts to collect and analyse GWAS summary statistics for proteins on SomaLogic SOMAscan assays,
+This analysis attempts to collect and analyse GWAS summary statistics for proteins on SomaLogic SOMAscan assays.
 
 ## Data
 
