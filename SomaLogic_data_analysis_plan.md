@@ -87,6 +87,16 @@ This would include cohort-level summary statistics, brief description of the pro
 
 Please contact us for details.
 
+## Meta-analysis
+
+Meta-analysis will be performed centrally using the inverse-N weighted analysis of regression betas and standard errors, as implemented in the software METAL (https://github.com/statgen/METAL).
+
+Genomic control and appropriate marker filters will be applied at this stage.
+
+ * Marker exclusion filters: we will apply imputation quality filters at the meta-analysis stage, so provide unfiltered results.
+ * Genomic control (GC): genomic control will be applied to each study at the meta-analysis stage (single GC), so GC-correction is needed for each cohort.
+ * Significance: the Bonferroni threshold for the genome-wide analyses will be set at 5 x 10<sup>-11</sup>. The results will be replicated in independent cohorts.
+
 ## Participating cohorts
 
 FHS, INTERVAL, KORA, Malmo, QMDiab, TwinsUK.
