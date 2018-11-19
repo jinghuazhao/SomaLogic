@@ -27,9 +27,9 @@ invnormal <- function(x)
 
 It is preferable to use software which account for genotype uncertainty, such as SNPTEST, QUICKTEST, and BOLT-LMM.
 
-## SNP-level summary statistics
+## Summary statistics
 
-### SNP table for association results
+### SNP-level association results
 
 These are summaised in the following table, with missing values coded as “NA”.
 
