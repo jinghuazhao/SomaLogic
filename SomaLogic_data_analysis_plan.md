@@ -74,13 +74,16 @@ In this case, please provide for each SNP information on strand, effect allele, 
 measure can be on the genotype level obtained once for a cohort rather than from phenotype-genotype regression through software such as SNPTEST. SNP and sample based
 statistics can be greatly facilitated with software qctool, http://www.well.ox.ac.uk/~gav/qctool_v2/.
 
-### File-naming convention
-
-It is recommended to use format STUDY_analyst_SomaLogic_protein_SeqID_UniProtID_date.gz, see the [SomaLogic Master Table](doc/SOMALOGIC_Master_Table_160410_1129info.tsv) and also https://www.uniprot.org/ for additional information on UniProt IDs.
-
 ### Descriptive statistics
 
 This would include cohort-level summary statistics, brief description of the protein assays, genechips, quality controls, imputation. Please provide details of imputation panels.
+
+### File-naming convention
+
+It is recommended to use format 
+
+* *STUDY_analyst_SomaLogic_protein_SeqID_UniProtID_date.gz* for SNP-based results, see the [SomaLogic Master Table](doc/SOMALOGIC_Master_Table_160410_1129info.tsv) and also https://www.uniprot.org/ for additional information on UniProt IDs.
+* *STUDY_analyst_SomaLogic_Descriptive_Information_date.txt* for cohort level information.
 
 ## Data upload
 
