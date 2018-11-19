@@ -82,7 +82,7 @@ This would include cohort-level summary statistics, brief description of the pro
 
 It is recommended to use format 
 
-* *STUDY_analyst_SomaLogic_protein_SeqID_UniProtID_date.gz* for SNP-based results, see the [SomaLogic Master Table](doc/SOMALOGIC_Master_Table_160410_1129info.tsv) and also https://www.uniprot.org/ for additional information on UniProt IDs.
+* *STUDY_analyst_SomaLogic_protein_SeqID_UniProtID_date.gz* for SNP-based results, see the [SomaLogic Master Table](doc/SOMALOGIC_Master_Table_160410_1129info.tsv) for SeqID and also https://www.uniprot.org/ for additional information on UniProt IDs.
 * *STUDY_analyst_SomaLogic_Descriptive_Information_date.txt* for cohort level information.
 
 ## Data upload
