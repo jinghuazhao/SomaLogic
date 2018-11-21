@@ -8,17 +8,15 @@ This analysis attempts to collect and analyse GWAS summary statistics for protei
 
 ## Data
 
-* Phenotypes. Protein levels.
-* Genotypes. Genechip and imputed genotypes with build37 (hg19) coordinates.
-* Covariates. Age, sex, principal components.
-
-## Model
-
-*  Rank-based inverse normal transformation on the raw measurement of proteins including those below lower limit of detection, e.g., via `invnormal` function,
+* Phenotypes. Rank-inverse Normal transformation of residuals from `ln(Relative protein abundance) ~ age + sex PCs`, e.g., via `invnormal` function,
 ```r
 invnormal <- function(x)
   qnorm((rank(x,na.last="keep")-0.5)/sum(!is.na(x)))
 ```
+* Genotypes. Genechip and imputed genotypes with build37 (hg19) coordinates.
+
+## Model
+
 * Multiple linear regression for all samples with covariates.
 * Additive genetic model.
 * For case-control studies, please conduct analysis for cases and controls separately.
