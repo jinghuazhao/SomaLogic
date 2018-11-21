@@ -1,6 +1,6 @@
 # SomaLogic data analysis plan
 
-*Last updated 19/11/2018*
+*Last updated 21/11/2018*
 
 ## Overview
 
@@ -8,7 +8,7 @@ This analysis attempts to collect and analyse GWAS summary statistics for protei
 
 ## Data
 
-* Phenotypes. Rank-inverse Normal transformation of residuals from `ln(Relative protein abundance) ~ age + sex PCs`, e.g., via `invnormal` function,
+* Phenotypes. Rank-inverse Normal transformation of residuals from `ln(Relative protein abundance) ~ age + sex + PCs`, e.g., via `invnormal` function,
 ```r
 invnormal <- function(x)
   qnorm((rank(x,na.last="keep")-0.5)/sum(!is.na(x)))
