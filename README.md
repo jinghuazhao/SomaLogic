@@ -13,7 +13,7 @@ File  | Description
 [array.sb](array.sb) | [SLURM](https://slurm.schedmd.com/) scripts which call [array.subs](array.subs)
 [metal.sh](metal.sh) | Generation of individual METAL entries
 
-## References
+## A featured article
 
 Behar M (2018). Proteomics might have saved my mother’s life and it may yet save mine. *The New York Times Magazine*,
 https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-proteomics.html
