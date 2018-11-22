@@ -12,3 +12,7 @@ File  | Description
 [format.sh](format.sh) | Reformatting GWAS summary statistics from login node, e.g., `format.sh FHS`
 [array.sb](array.sb) | [SLURM](https://slurm.schedmd.com/) scripts which call [array.subs](array.subs)
 [metal.sh](metal.sh) | Generation of individual METAL entries
+
+## References
+
+https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-proteomics.html
