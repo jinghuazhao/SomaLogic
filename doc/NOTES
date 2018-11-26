@@ -1,6 +1,11 @@
-FHS non-gz file:
+FHS:
 
-/scratch/jhz22/SomaLogic/box/FHS/X_261756.txt.gz
+non-gz file: /scratch/jhz22/SomaLogic/box/FHS/X_261756.txt.gz
+FHS.tsv has 1373 lines but box has 1118 entries, missing IFNg, etc.
+
+Malmo:
+
+box has 1305 entries but sumstats 1152, IFNg not missing.
 
 KORA/QMDiab:
 
