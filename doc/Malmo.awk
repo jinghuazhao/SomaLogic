@@ -7,7 +7,8 @@
     n_b1=$12
     n_b2=$13
     n=$17
-    CODE_ALL_FREQ=(af_coded_b1*n_b1+af_coded_b2*n_b2)/n
+    if(n=="NA") CODE_ALL_FREQ="NA";
+           else CODE_ALL_FREQ=(af_coded_b1*n_b1+af_coded_b2*n_b2)/n
     print SNPID,$2,$3,"NA",$17,$4,$5,CODE_ALL_FREQ,$14,$15,$16,"NA","NA","NA"
   }
 }
