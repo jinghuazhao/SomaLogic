@@ -10,6 +10,7 @@ FHS.tsv has 1373 lines but box has 1118 entries, missing IFNg, etc.
 Malmo:
 
 box has 1305 entries with IFNg (14147-50_3).
+zlnX41_summary.csv.gz does not have information on b1 nevertheless 14093806 entries
 
 KORA/QMDiab:
 
