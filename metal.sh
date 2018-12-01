@@ -48,6 +48,6 @@ do
 done
 
 ls $METAL/*.metal | sed 's/.metal//g' | parallel --dry-run --env METAL -j3 -C' ' '
-  metal $METAL/{}.metal; \
-  gzip -f $METAL/{}-1.tbl
+  metal {}.metal; \
+  gzip -f {}-1.tbl
 '
