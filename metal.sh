@@ -40,9 +40,14 @@ do
    echo STDERRLABEL SE
    echo SCHEME STDERR
    echo GENOMICCONTROL OFF
-   echo OUTFILE $HOME/INF/METAL/${p}- .tbl
-   grep -w '"$p"' METAL/METAL.list # | awk '{$1="PROCESS"; print}'
+   echo OUTFILE $METAL/${p}- .tbl
+   grep -w "$p" $METAL/METAL.list | awk '{$1="PROCESS"; print}'
    echo ANALYZE
    echo CLEAR
-) > METAL/$p.metal
+) > $METAL/$p.metal
 done
+
+ls $METAL/*.metal | sed 's/.metal//g' | parallel --dry-run --env METAL -j3 -C' ' '
+  metal $METAL/{}.metal; \
+  gzip -f $METAL/{}-1.tbl
+'
