@@ -12,14 +12,25 @@ do
    ls $sumstats/$study | sed 's/'"$study".'//g' | awk -vstudy=$study '{
       s=$1;gsub(/.gz|@/,"",s);
       p=s;gsub(/\.txt/,"",p);
-      print p " " ENVIRON["sumstats"] study "/" study "." s ".gz"
+      print p " " ENVIRON["sumstats"] "/" study "/" study "." s ".gz"
    }'
 done
 ) > $METAL/METAL.tmp
-sort -k1,1 $METAL/METAL.tmp > $METAL/METAL.list
-for p in $(cat doc/SomaLogic.list)
+
+sort -k1,1 METAL/METAL.tmp > METAL/METAL.list
+for p in $(cat doc/SomaLogic.list | tr '\n' ' ')
 do
 (
+   echo SEPARATOR TAB
+   echo COLUMNCOUNTING STRICT
+   echo CHROMOSOMELABEL CHR
+   echo POSITIONLABEL POS
+   echo CUSTOMVARIABLE N
+   echo LABEL N as N
+   echo TRACKPOSITIONS ON
+   echo AVERAGEFREQ ON
+   echo MINMAXFREQ ON
+   echo ADDFILTER >= 50
    echo MARKERLABEL SNPID
    echo ALLELELABELS EFFECT_ALLELE REFERENCE_ALLELE
    echo EFFECTLABEL BETA
@@ -27,10 +38,10 @@ do
    echo WEIGHTLABEL N
    echo FREQLABEL CODE_ALL_FQ
    echo STDERRLABEL SE
-   echo SCHEME SAMPLESIZE
+   echo SCHEME STDERR
    echo GENOMICCONTROL OFF
-   echo OUTFILE $METAL/$p- .tbl
-   echo $p | join $METAL/METAL.list - | awk '{$1="PROCESS"; print}'
+   echo OUTFILE $HOME/INF/METAL/${p}- .tbl
+   grep -w '"$p"' METAL/METAL.list # | awk '{$1="PROCESS"; print}'
    echo ANALYZE
    echo CLEAR
 ) > METAL/$p.metal
