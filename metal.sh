@@ -17,7 +17,7 @@ do
 done
 ) > $METAL/METAL.tmp
 
-sort -k1,1 METAL/METAL.tmp > METAL/METAL.list
+sort -k1,1 $METAL/METAL.tmp > $METAL/METAL.list
 for p in $(cat doc/SomaLogic.list | tr '\n' ' ')
 do
 (
