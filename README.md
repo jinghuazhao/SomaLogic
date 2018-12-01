@@ -1,6 +1,13 @@
 # SomaLogic
 SomaLogic data analysis
 
+## Installation
+
+The repository can be downloaded locally with
+```bash
+git clone https://github.com/jinghuazhao/SomaLogic
+```
+
 ## A summary of files
 
 File  | Description
