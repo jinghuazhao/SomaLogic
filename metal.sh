@@ -10,13 +10,14 @@ if [ ! -d $METAL ]; then mkdir $METAL; fi
 for study in FHS KORA Malmo QMDiab
 do
    ls $sumstats/$study | sed 's/'"$study".'//g' | awk -vstudy=$study '{
-      s=$1
-      gsub(/.gz|@/,"",s);print s " " ENVIRON["sumstats"] study "/" study "." s ".gz"
+      s=$1;gsub(/.gz|@/,"",s);
+      p=s;gsub(/\.txt/,"",p);
+      print p " " ENVIRON["sumstats"] study "/" study "." s ".gz"
    }'
 done
 ) > $METAL/METAL.tmp
 sort -k1,1 $METAL/METAL.tmp > $METAL/METAL.list
-for p in $(cut -f1 doc/SomaLogic.list)
+for p in $(cat doc/SomaLogic.list)
 do
 (
    echo MARKERLABEL SNPID
@@ -32,5 +33,5 @@ do
    echo $p | join $METAL/METAL.list - | awk '{$1="PROCESS"; print}'
    echo ANALYZE
    echo CLEAR
-) > METAL/$p.run
+) > METAL/$p.metal
 done
