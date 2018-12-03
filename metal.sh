@@ -1,4 +1,4 @@
-# 1-12-2018 JHZ
+# 3-12-2018 JHZ
 ## generation of protein-specific METAL entries
 
 export SomaLogic=/scratch/jhz22/SomaLogic
@@ -46,6 +46,14 @@ do
    echo CLEAR
 ) > $METAL/$p.metal
 done
+
+if [ ! -d $sumstats/work ]; then mkdir $sumstat/work; fi
+
+cat $METAL/METAL.tmp | \
+parallel -j10 -C' ' '
+  echo {2}; \
+  ln -sf {2} $sumstats/work/$(basename {2})
+'
 
 ls $METAL/*.metal | sed 's/.metal//g' | parallel --dry-run --env METAL -j3 -C' ' '
   metal {}.metal; \
