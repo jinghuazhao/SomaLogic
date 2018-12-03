@@ -1,9 +1,10 @@
 # 3-12-2018 JHZ
-## generation of protein-specific METAL entries
 
 export SomaLogic=/scratch/jhz22/SomaLogic
 export sumstats=$SomaLogic/sumstats
 export METAL=$SomaLogic/METAL
+
+## generation of protein-specific METAL entries
 
 if [ ! -d $METAL ]; then mkdir $METAL; fi
 (
@@ -47,13 +48,16 @@ do
 ) > $METAL/$p.metal
 done
 
-if [ ! -d $sumstats/work ]; then mkdir $sumstat/work; fi
+## all in one directory to get ready for QCGWAS
 
+if [ ! -d $sumstats/work ]; then mkdir $sumstats/work; fi
 cat $METAL/METAL.tmp | \
 parallel -j10 -C' ' '
   echo {2}; \
   ln -sf {2} $sumstats/work/$(basename {2})
 '
+
+## subject to adapt for SLRUM
 
 ls $METAL/*.metal | sed 's/.metal//g' | parallel --dry-run --env METAL -j3 -C' ' '
   metal {}.metal; \
