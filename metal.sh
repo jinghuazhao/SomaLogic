@@ -53,7 +53,7 @@ done
 if [ ! -d $sumstats/work ]; then mkdir $sumstats/work; fi
 parallel --env sumstats -j10 -C' ' 'ln -vsf {} $sumstats/work/$(basename {})' ::: $(cut -d' ' -f2 $METAL/METAL.tmp)
 
-## subject to adapt for SLRUM
+## subject to adaptation for SLURM
 
 ls $METAL/*.metal | sed 's/.metal//g' | parallel --dry-run --env METAL -j3 -C' ' '
   metal {}.metal; \
