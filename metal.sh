@@ -51,11 +51,7 @@ done
 ## all in one directory to get ready for QCGWAS
 
 if [ ! -d $sumstats/work ]; then mkdir $sumstats/work; fi
-cat $METAL/METAL.tmp | \
-parallel -j10 -C' ' '
-  echo {2}; \
-  ln -sf {2} $sumstats/work/$(basename {2})
-'
+parallel --env sumstats -j10 -C' ' 'ln -vsf {} $sumstats/work/$(basename {})' ::: $(cut -d' ' -f2 $METAL/METAL.tmp)
 
 ## subject to adapt for SLRUM
 
