@@ -23,4 +23,4 @@ File  | Description
 ## A featured article
 
 Behar M (2018). Proteomics might have saved my mother’s life and it may yet save mine. *The New York Times Magazine*,
-https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-proteomics.html
+https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-proteomics.html [PDF](http://www.michaelbehar.com/wp-content/uploads/2012/09/The-Everything-Test-The-New-York-Times-Magazine.pdf).
