@@ -10,8 +10,7 @@ This analysis attempts to collect and analyse GWAS summary statistics for protei
 
 * Phenotypes. Rank-inverse Normal transformation of residuals from `ln(Relative protein abundance) ~ age + sex + PCs`, e.g., via `invnormal` function,
 ```r
-invnormal <- function(x)
-  qnorm((rank(x,na.last="keep")-0.5)/sum(!is.na(x)))
+invnormal <- function(x) qnorm((rank(x,na.last="keep")-0.5)/sum(!is.na(x)))
 ```
 * Genotypes. Genechip and imputed genotypes with build37 (hg19) coordinates.
 
