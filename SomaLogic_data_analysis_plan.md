@@ -79,7 +79,7 @@ See Appendix for a full example using SLURM.
 
 This would include cohort-level summary statistics, brief description of the protein assays, genechips, quality controls, imputation. Please provide details of imputation panels.
 
-A [Google sheet](https://tinyurl.com/y7vjd8lo) has been set up to enable assembling of the information online; please send us your e-mail address in order to do so.
+A [Google sheet](https://tinyurl.com/y7vjd8lo) has been set up to enable assembling of the information online; please send us your gmail address in order to do so.
 
 [https://tinyurl.com/yd8tck8y](https://tinyurl.com/yd8tck8y)
 
