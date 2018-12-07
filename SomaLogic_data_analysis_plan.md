@@ -70,7 +70,7 @@ No | Name | Description | Additional comment
 
 In this case, please provide for each SNP information on strand, effect allele, effect allele frequency, and the information measures for imputation -- the information
 measure can be on the genotype level obtained once for a cohort rather than from phenotype-genotype regression through software such as SNPTEST. SNP and sample based
-statistics can be greatly facilitated with software qctool, http://www.well.ox.ac.uk/~gav/qctool_v2/.
+statistics can be greatly facilitated with software qctool, http://www.well.ox.ac.uk/~gav/qctool_v2/. See Appendix for an example using SLURM.
 
 ### Descriptive statistics
 
@@ -114,3 +114,34 @@ at molecular quantitative trait loci. *Nucleic Acids Research*, https://doi.org/
 
 Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79, SomaLogic plasma protein GWAS summary statistics, https://app.box.com/s/u3flbp13zjydegrxjb2uepagp1vb6bj2, [EGA entry](https://ega-archive.org/studies/EGAS00001002555).
 **Notes**: [SERPINA1.R](doc/SERPINA1.R) creates ![**an artist's SERPINA1**](doc/SERPINA1.pdf) similar to [RCircos version by Jimmy](doc/fig2.R), and [Methods.md](doc/Methods.md) is the Markdown version of the Methods section of the paper.
+
+## Appendix
+
+**SLURM script for qctool 2.0.1**
+
+This is called with `sbatch qctool.sb`, where `qctool.sb` contains the following lines:
+
+```bash
+#!/bin/bash --login
+# 6-12-2018 JHZ
+
+#SBATCH -J qctool
+#SBATCH -o qctool.log
+#SBATCH -p long
+#SBATCH -t 4-0:0
+#SBATCH --export ALL
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+
+export DIR=/scratch/bp406/data_sets/interval_subset_olink/genotype_files/unrelated_4994_pihat_0.1875_autosomal_typed_only
+export INTERVAL=$DIR/interval_olink_subset_unrelated_4994_pihat_0.1875_autosomal_typed_only
+ln -sf $INTERVAL.bgen INTERVAL.bgen
+ln -sf $INTERVAL.sample INTERVAL.sample
+
+# to obtain SNP-specific statistics as in .bgen and .sample format with qctool, tested with qctool 2.0.1
+
+qctool -g INTERVAL.bgen -s INTERVAL.sample -snp-stats -osnp INTERVAL.snp-stats -sample-stats -osample INTERVAL.sample-stats
+
+# Note in particular: the # option allows for chromosome-specific analysis; the -strand option will enable results in positive strand.
+```
