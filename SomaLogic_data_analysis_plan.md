@@ -80,6 +80,10 @@ See Appendix for a full example using SLURM.
 
 This would include cohort-level summary statistics, brief description of the protein assays, genechips, quality controls, imputation. Please provide details of imputation panels.
 
+A Google spreadsheet is available to enable assembling of these information online,
+
+https://tinyurl.com/y7vjd8lo
+
 ### File-naming convention
 
 It is recommended to use format 
