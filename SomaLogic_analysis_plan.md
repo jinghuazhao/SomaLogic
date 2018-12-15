@@ -75,7 +75,7 @@ qctool -g INTERVAL.bgen -s INTERVAL.sample -snp-stats -osnp INTERVAL.snp-stats -
 ```
 See Appendix for a full example using SLURM.
 
-When a dosage format is used, PLINK can also gives an INFO measure, http://zzz.bwh.harvard.edu/plink/dosage.shtml.
+When a dosage format is used, PLINK can also gives an INFO measure, see http://zzz.bwh.harvard.edu/plink/dosage.shtml.
 
 ### Descriptive statistics
 
