@@ -65,7 +65,7 @@ No | Name | Description | Additional comment
 10 | STAT | Regression test statistic
 11 | P | P value
 
-\* may be taken from the PLINK --hardy option and .bim file.
+\* may be taken from the PLINK --hardy option and .bim file, see http://zzz.bwh.harvard.edu/plink/anal.shtml#glm.
 
 In this case, please provide for each SNP information on strand, effect allele, effect allele frequency, and the information measures for imputation -- the information
 measure can be on the genotype level obtained once for a cohort rather than from phenotype-genotype regression through software such as SNPTEST. SNP and sample based
@@ -74,6 +74,8 @@ statistics can be greatly facilitated with software qctool, http://www.well.ox.a
 qctool -g INTERVAL.bgen -s INTERVAL.sample -snp-stats -osnp INTERVAL.snp-stats -sample-stats -osample INTERVAL.sample-stats
 ```
 See Appendix for a full example using SLURM.
+
+When a dosage format is used, PLINK can also gives an INFO measure, http://zzz.bwh.harvard.edu/plink/dosage.shtml.
 
 ### Descriptive statistics
 
