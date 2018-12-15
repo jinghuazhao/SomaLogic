@@ -13,7 +13,7 @@ git clone https://github.com/jinghuazhao/SomaLogic
 File  | Description
 -------------|---------------------------------
 [doc/](doc) | Documents and auxiliary files
-[SomaLogic_analysis_plan.md](SomaLogic_data_analysis_plan.md) | Analysis plan
+[SomaLogic_analysis_plan.md](SomaLogic_analysis_plan.md) | Analysis plan
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
 [list.sh](list.sh) | Generation of submitted and renamed file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics using GNU Parallel, e.g., `format.sh FHS`
