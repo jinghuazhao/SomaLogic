@@ -1,6 +1,6 @@
 # SomaLogic analysis plan
 
-*Last updated 7/12/2018*
+*Last updated 15/12/2018*
 
 ## Overview
 
