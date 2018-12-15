@@ -1,4 +1,4 @@
-# SomaLogic data analysis plan
+# SomaLogic analysis plan
 
 *Last updated 7/12/2018*
 
