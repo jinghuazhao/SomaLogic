@@ -16,7 +16,8 @@ do
       print p " " ENVIRON["sumstats"] "/" study "/" study "." s ".gz"
    }'
 done
-) > $METAL/METAL.tmp
+| \
+awk '{print $0, NR}' > METAL/METAL.tmp
 
 sort -k1,1 $METAL/METAL.tmp > $METAL/METAL.list
 for p in $(cat doc/SomaLogic.list | tr '\n' ' ')
@@ -42,7 +43,7 @@ do
    echo SCHEME STDERR
    echo GENOMICCONTROL OFF
    echo OUTFILE $METAL/${p}- .tbl
-   grep -w "$p" $METAL/METAL.list | awk '{$1="PROCESS"; print}'
+   echo $p | join METAL/METAL.list - | sort -k3,3n | awk '{print "PROCESS", $2}'
    echo ANALYZE
    echo CLEAR
 ) > $METAL/$p.metal
