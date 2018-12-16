@@ -1,4 +1,4 @@
-# 3-12-2018 JHZ
+# 16-12-2018 JHZ
 
 export SomaLogic=/scratch/jhz22/SomaLogic
 export sumstats=$SomaLogic/sumstats
