@@ -1,4 +1,4 @@
-# 16-12-2018 JHZ
+# 17-12-2018 JHZ
 
 export SomaLogic=/scratch/jhz22/SomaLogic
 export sumstats=$SomaLogic/sumstats
@@ -16,7 +16,7 @@ do
       print p " " ENVIRON["sumstats"] "/" study "/" study "." s ".gz"
    }'
 done
-| \
+) | \
 awk '{print $0, NR}' > METAL/METAL.tmp
 
 sort -k1,1 $METAL/METAL.tmp > $METAL/METAL.list
