@@ -15,8 +15,8 @@ File  | Description
 [doc/](doc) | Documents and auxiliary files
 [SomaLogic_analysis_plan.md](SomaLogic_analysis_plan.md) | Analysis plan
 [SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
-[format.sb](format.sb) | [SLURM](https://slurm.schedmd.com/) scripts
 [format.sh](format.sh) | GWAS summary statistics reformat using GNU Parallel, e.g., `format.sh FHS`
+[format.sb](format.sb) | [SLURM](https://slurm.schedmd.com/) scripts
 [format.subs](format.subs) | Processing of a particular study and array job
 [list.sh](list.sh) | Generation of received and output file lists and directories
 [metal.sh](metal.sh) | Generation and execution of individual METAL entries
