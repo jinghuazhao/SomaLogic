@@ -18,7 +18,7 @@ File  | Description
 [format.sb](format.sb) | [SLURM](https://slurm.schedmd.com/) scripts
 [format.sh](format.sh) | GWAS summary statistics reformat using GNU Parallel, e.g., `format.sh FHS`
 [format.subs](format.subs) | process of a particular study and array job
-[list.sh](list.sh) | Generation of submitted and renamed file lists and directories
+[list.sh](list.sh) | Generation of received and output file lists and directories
 [metal.sh](metal.sh) | Generation and execution of individual METAL entries
 [metal.sb](metal.sb) | SLURM routine
 [QCGWAS.sb](QCGWAS.sb) | QCGWAS -- SLURM
