@@ -60,3 +60,5 @@ ls $METAL/*.metal | sed 's/.metal//g' | parallel --dry-run --env METAL -j3 -C' '
   metal {}.metal; \
   gzip -f {}-1.tbl
 '
+
+sbatch metal.sb
