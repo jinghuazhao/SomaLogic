@@ -21,7 +21,8 @@ File  | Description
 [QCGWAS.sb](QCGWAS.sb) | QCGWAS -- SLURM
 [QCGWAS.sh](QCGWAS.sh) | QCGWAS -- Bash
 [QCGWAS.R](QCGWAS.R) | QCGWAS -- R
-[metal.sh](metal.sh) | Generation of individual METAL entries
+[metal.sh](metal.sh) | Generation and execution of individual METAL entries
+[metal.sb](metal.sb) | SLURM routine
 
 ## A featured article
 
