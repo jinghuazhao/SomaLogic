@@ -16,6 +16,6 @@ export bs=10
 
 cd $rt
 awk 'NR==(b-1)*bs+1, NR==b*bs {
-    cmd=sprintf("echo %s;export protein=%s;metal %s/METAL/%s.metal;gzip -f %s/work/%s-1.tbl.gz",$1,$1,rt,$1,rt,$1)
+    cmd=sprintf("echo %s;export protein=%s;metal %s/METAL/%s.metal;gzip -f %s/METAL/%s-1.tbl.gz",$1,$1,rt,$1,rt,$1)
     system(cmd)
 }' b=$SLURM_ARRAY_TASK_ID bs=$bs rt=/scratch/jhz22/SomaLogic/doc/SomaLogic.list
