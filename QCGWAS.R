@@ -3,10 +3,10 @@
 library(QCGWAS)
 
 prot <- Sys.getenv("protein")
-src <- "INTERVAL"
+src <- "FHS"
 src_in <- paste(src, prot, "gz", sep=".")
 src_out <- paste(src, prot, sep=".")
-studies <- c("INTERVAL", "FHS", "KORA", "Malmo", "QMDiab")
+studies <- c("FHS", "KORA", "Malmo", "QMDiab")
 QC_in <- paste(studies, prot, "gz", sep=".")
 QC_out <- paste(studies, prot, sep=".")
 header_translations <- read.delim("doc/header_translations.tsv",as.is=TRUE)
