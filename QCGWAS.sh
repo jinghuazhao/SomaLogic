@@ -1,3 +1,4 @@
+#!/bin/bash
 # 17-12-2018 JHZ
 
 export rt=$HOME/SomaLogic
