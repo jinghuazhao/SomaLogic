@@ -18,7 +18,8 @@ File  | Description
 [list.sh](list.sh) | Generation of submitted and renamed file lists and directories
 [format.sh](format.sh) | Reformatting GWAS summary statistics using GNU Parallel, e.g., `format.sh FHS`
 [array.sb](array.sb) | [SLURM](https://slurm.schedmd.com/) scripts which call [array.subs](array.subs)
-[QCGWAS.R](QCGWAS.R) | R code using QCGWAS
+[QCGWAS.sh](QCGWAS.sh) | QCGWAS
+[QCGWAS.R](QCGWAS.R) |
 [metal.sh](metal.sh) | Generation of individual METAL entries
 
 ## A featured article
