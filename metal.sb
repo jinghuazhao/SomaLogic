@@ -3,7 +3,7 @@
 
 #SBATCH -J METAL
 #SBATCH -o METAL.log
-#SNATCH -a 1-390
+#SNATCH -a 1-139
 #SBATCH -p long
 #SBATCH -t 1-30:0
 #SBATCH --export ALL
