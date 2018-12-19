@@ -1,4 +1,4 @@
-# 17-12-2018 JHZ
+# 19-12-2018 JHZ
 
 export SomaLogic=/scratch/jhz22/SomaLogic
 export sumstats=$SomaLogic/sumstats
@@ -32,7 +32,7 @@ do
    echo TRACKPOSITIONS ON
    echo AVERAGEFREQ ON
    echo MINMAXFREQ ON
-   echo "ADDFILTER >= 50"
+   echo ADDFILTER N ">=" 50
    echo MARKERLABEL SNPID
    echo ALLELELABELS EFFECT_ALLELE REFERENCE_ALLELE
    echo EFFECTLABEL BETA

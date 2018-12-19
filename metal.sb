@@ -1,11 +1,10 @@
 #!/bin/bash --login
-# 17-12-2018 JHZ
+# 19-12-2018 JHZ
 
 #SBATCH -J METAL
 #SBATCH -o METAL.log
-#SBATCH -p long
 #SNATCH -a 1-139
-#SBATCH -t 4-0:0
+#SBATCH -t 1-0:0
 #SBATCH --export ALL
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
