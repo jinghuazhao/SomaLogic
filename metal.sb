@@ -4,8 +4,8 @@
 #SBATCH -J METAL
 #SBATCH -o METAL.log
 #SNATCH -a 1-139
-#SBATCH -p short
-#SBATCH -t 700
+#SBATCH -p long
+#SBATCH -t 90
 #SBATCH --export ALL
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
