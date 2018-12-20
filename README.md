@@ -11,10 +11,10 @@ git clone https://github.com/jinghuazhao/SomaLogic
 ## A summary of files and their use
 
 File  | Description
--------------|---------------------------------
+-------------|-------------------------------------------------------------------------------------
 [doc/](doc) | Documents and auxiliary files
 [SomaLogic_analysis_plan.md](SomaLogic_analysis_plan.md) | Analysis plan
-[SomaLogic.R](SomaLogic.R) | Generation of auxiliary files from curated databases
+[SomaLogic.R](SomaLogic.R) | Generation of [SomaLogic.list](doc/SomaLogic.list) for a list proteins.
 [format.sh](format.sh) | GWAS summary statistics reformat using GNU Parallel, e.g., `format.sh FHS`
 [format.sb](format.sb) | [SLURM](https://slurm.schedmd.com/) scripts
 [format.subs](format.subs) | Processing of a particular study and array job
@@ -34,8 +34,6 @@ The workflows involve the following components,
 5. Batch scripts for metal analysis are then generated and executed with metal.*.
 6. Downstream analysis according to plan.
 
-[SomaLogic.list](doc/SomaLogic.list) is an auxilliary file conaining a list of proteins available from studies.
-
 ## Additional information
 
 [SomaLogic](https://somalogic.com/), [wiki](https://en.wikipedia.org/wiki/SomaLogic), [GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k), the **1129 assay** ([1129.tsv](doc/1129.tsv), derived from [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)), **1310 assay** ([1310.tsv](doc/1310.tsv), derived from [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf), and [Rev-2](doc/SSM-045-Rev-2-SOMAscan-Assay-1.3k-Content.xlsx)),
@@ -45,4 +43,3 @@ Behar M (2018). Proteomics might have saved my mother’s life and it may yet sa
 https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-proteomics.html, 
 also [here](http://www.michaelbehar.com/articles/the-new-york-times-november-18-2018/)
 ([PDF](http://www.michaelbehar.com/wp-content/uploads/2012/09/The-Everything-Test-The-New-York-Times-Magazine.pdf)).
-
