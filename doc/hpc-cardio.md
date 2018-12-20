@@ -7,7 +7,7 @@
 * [Bright Cluster Management](https://www.ch.cam.ac.uk/computing/files/clusters/cv-admin-manual.pdf)
 * [VPN (Virtual Private Network)](https://confluence.medschl.cam.ac.uk/pages/viewpage.action?pageId=12094187)
 
-## SLRUM
+## SLURM
 
 * squeue -u $USER
 * scontrol show config	
