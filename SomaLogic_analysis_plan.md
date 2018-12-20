@@ -135,7 +135,7 @@ This is called with `sbatch qctool.sb`, where `qctool.sb` contains the following
 #SBATCH -J qctool
 #SBATCH -o qctool.log
 #SBATCH -p long
-#SBATCH -t 4-0:0
+#SBATCH -t 1-0:0
 #SBATCH --export ALL
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
