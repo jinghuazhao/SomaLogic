@@ -7,19 +7,7 @@
 * [Bright Cluster Management](https://www.ch.cam.ac.uk/computing/files/clusters/cv-admin-manual.pdf)
 * [VPN (Virtual Private Network)](https://confluence.medschl.cam.ac.uk/pages/viewpage.action?pageId=12094187)
 
-## SLURM
-
-* squeue -u $USER
-* scontrol show config	
-* scontrol show partition
-* scontrol show job [jobid]
-* sview
-* control hold/release/requeue/resume/suspend/update job
-* saccount -j jobid
-
-## Array jobs
-
-* https://slurm.schedmd.com/job_array.html
+* https://github.com/jinghuazhao/Computational-Statistics/blob/master/PARALLEL.md
 
 ## Cardio
 
