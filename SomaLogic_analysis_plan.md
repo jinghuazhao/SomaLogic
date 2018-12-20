@@ -160,7 +160,7 @@ The following script obtain SNP-statistics for each chromosome,
 #SBATCH -o qctool.log
 #SBATCH -p long
 #SBATCH -a 1-22
-#SBATCH -t 4-0:0
+#SBATCH -t 1-0:0
 #SBATCH --export ALL
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
