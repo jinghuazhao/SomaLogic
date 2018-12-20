@@ -8,7 +8,7 @@ The repository can be downloaded locally with
 git clone https://github.com/jinghuazhao/SomaLogic
 ```
 
-## A summary of files
+## A summary of files and their use
 
 File  | Description
 -------------|---------------------------------
@@ -25,11 +25,14 @@ File  | Description
 [QCGWAS.sh](QCGWAS.sh) | QCGWAS -- Bash
 [QCGWAS.R](QCGWAS.R) | QCGWAS -- R
 
-## Miscellaneous notes
+The workflows involve the following components,
 
-File [box.md](doc/box.md) describes ways to handle data with Box server.
+1. Data are downloaded from the Box server to dedicated directories; as noted in [box.md](doc/box.md).
+2. available entries are catalogued in a list, as done by list.*.
+3. GWAS summary statistics associated with the list are reformatted by format.* according to the analysis plan.
+4. Batch scripts for metal analysis are then generated and executed with metal.*.
 
-[SomaLogic.list](doc/SomaLogic.list) gives a list of proteins available from studies.
+[SomaLogic.list](doc/SomaLogic.list) is an auxilliary file conaining a list of proteins available from studies.
 
 ## A featured article
 
