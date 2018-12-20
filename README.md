@@ -25,6 +25,12 @@ File  | Description
 [QCGWAS.sh](QCGWAS.sh) | QCGWAS -- Bash
 [QCGWAS.R](QCGWAS.R) | QCGWAS -- R
 
+## Miscellaneous notes
+
+File [box.md](doc/box.md) describes ways to handle data with Box server.
+
+[SomaLogic.list](doc/SomaLogic.list) gives a list of proteins available from studies.
+
 ## A featured article
 
 Behar M (2018). Proteomics might have saved my mother’s life and it may yet save mine. *The New York Times Magazine*,
