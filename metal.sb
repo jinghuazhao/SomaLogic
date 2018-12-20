@@ -13,6 +13,8 @@ export id=$SLURM_ARRAY_TASK_ID
 for p in $(awk 'NR==(a-1)*cs+1, NR==a*cs' a=$id cs=10 doc/SomaLogic.list)
 do
    echo ${p}
-   metal METAL/${p}.metal
+   if [ $(grep PROCESS METAL/${p}.metal | wc -l) -gt 1 ]; then
+      metal METAL/${p}.metal
+   fi
    gzip -f METAL/${p}-1.tbl.gz
 done
