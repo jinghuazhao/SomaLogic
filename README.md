@@ -11,10 +11,10 @@ git clone https://github.com/jinghuazhao/SomaLogic
 ## A summary of files and their use
 
 File  | Description
--------------|-------------------------------------------------------------------------------------
+-------------|----------------------------------------------------------------------------------------
 [doc/](doc) | Documents and auxiliary files
 [SomaLogic_analysis_plan.md](SomaLogic_analysis_plan.md) | Analysis plan
-[SomaLogic.R](SomaLogic.R) | Generation of [SomaLogic.list](doc/SomaLogic.list) for a list proteins.
+[SomaLogic.R](SomaLogic.R) | Generation of [SomaLogic.list](doc/SomaLogic.list) for a list of proteins
 [format.sh](format.sh) | GWAS summary statistics reformat using GNU Parallel, e.g., `format.sh FHS`
 [format.sb](format.sb) | [SLURM](https://slurm.schedmd.com/) scripts
 [format.subs](format.subs) | Processing of a particular study and array job
