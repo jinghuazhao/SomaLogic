@@ -85,6 +85,8 @@ A [Google sheet](https://tinyurl.com/y7vjd8lo) has been set up to enable assembl
 
 [https://tinyurl.com/yd8tck8y](https://tinyurl.com/yd8tck8y)
 
+Alternatively, an [Excel spreadsheet](doc/SomaLogic.xlsx) is also available for download.
+
 ### File-naming convention
 
 It is recommended to use format 
