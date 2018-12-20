@@ -12,7 +12,7 @@ awk 'NR==(b-1)*bs+1, NR==b*bs {
        awk -f doc/order.awk | \
        gzip -f > %s/FHS/FHS.%s.txt.gz",box,$1,sumstats,$2)
    system(cmd)
-}' b=$SLURM_ARRAY_TASK_ID bs=$SLURM_ARRAY_TASK_ID box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/FHS.list
+}' b=$SLURM_ARRAY_TASK_ID bs=$bs box=$SomaLogic/box sumstats=$SomaLogic/sumstats $SomaLogic/sumstats/FHS.list
 }
 
 function KORA()

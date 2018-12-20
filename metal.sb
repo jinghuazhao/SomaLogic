@@ -5,15 +5,14 @@
 #SBATCH -J METAL
 #SBATCH -o METAL.log
 #SNATCH -a 1-1381%10
-#SBATCH -p long
+#SBATCH -p short
 #SBATCH -t 0-1:30
 #SBATCH -D /scratch/jhz22/SomaLogic
 #SBATCH --export ALL
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=1
 
-for p in $(awk 'NR==(a-1)*cs+1, NR==a*cs' a=$SLURM_ARRAY_TASK_ID cs=10 doc/SomaLogic.list)
+export id=$SLURM_ARRAY_TASK_ID
+
+for p in $(awk 'NR==(a-1)*cs+1, NR==a*cs' a=$id cs=10 doc/SomaLogic.list)
 do
    echo ${p}
    metal METAL/${p}.metal
