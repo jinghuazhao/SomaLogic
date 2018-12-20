@@ -17,7 +17,7 @@
 * control hold/release/requeue/resume/suspend/update job
 * saccount -j jobid
 
-## array jobs
+## Array jobs
 
 * https://slurm.schedmd.com/job_array.html
 
