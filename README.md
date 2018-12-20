@@ -30,7 +30,7 @@ The workflows involve the following components,
 1. Data are downloaded from the Box server to dedicated directories; as noted in [box.md](doc/box.md).
 2. Available entries are catalogued in a list, as done by list.*.
 3. GWAS summary statistics associated with the list are reformatted by format.* according to the analysis plan.
-4. Then necessary, the summary statistics are examined with R/QCGWAS.
+4. When necessary, the summary statistics are examined with R/QCGWAS.
 5. Batch scripts for metal analysis are then generated and executed with metal.*.
 6. Downstream analysis according to plan.
 
