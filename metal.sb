@@ -4,7 +4,7 @@
 #SBATCH -o METAL.log
 #SNATCH -a 1-1381%10
 #SBATCH -p short
-#SBATCH -t 1-0:0
+#SBATCH -t 0-1:0
 #SBATCH -D /scratch/jhz22/SomaLogic
 #SBATCH --export ALL
 
