@@ -1,7 +1,5 @@
 #!/bin/bash --login
 
-# 20-12-2018 JHZ
-
 #SBATCH -J METAL
 #SBATCH -o METAL.log
 #SNATCH -a 1-1381%10
