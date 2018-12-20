@@ -1,4 +1,4 @@
-# 19-12-2018 JHZ
+# 20-12-2018 JHZ
 
 export SomaLogic=/scratch/jhz22/SomaLogic
 export sumstats=$SomaLogic/sumstats
@@ -53,14 +53,5 @@ done
 
 if [ ! -d $sumstats/work ]; then mkdir $sumstats/work; fi
 parallel --env sumstats -j10 -C' ' 'ln -vsf {} $sumstats/work/$(basename {})' ::: $(cut -d' ' -f2 $METAL/METAL.tmp)
-
-## parallel
-
-ls $METAL/*.metal | sed 's/.metal//g' | parallel --dry-run --env METAL -j3 -C' ' '
-  metal {}.metal; \
-  gzip -f {}-1.tbl
-'
-
-## SLURM
 
 sbatch metal.sb
