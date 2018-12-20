@@ -11,11 +11,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 
-export rt=$HOME/SomaLogic
-export bs=10
-
-cd $rt
-for p in $(awk 'NR==(b-1)*bs+1, NR==b*bs' b=$SLURM_ARRAY_TASK_ID bs=$bs doc/SomaLogic.list)
+cd $HOME/SomaLogic
+for p in $(awk 'NR==(a-1)*cs+1, NR==a*cs' a=$SLURM_ARRAY_TASK_ID cs=10 doc/SomaLogic.list)
 do
    echo ${p}
    metal METAL/${p}.metal
