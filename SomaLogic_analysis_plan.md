@@ -129,7 +129,6 @@ This is called with `sbatch qctool.sb`, where `qctool.sb` contains the following
 
 ```bash
 #!/bin/bash --login
-# 6-12-2018 JHZ
 
 #SBATCH -J qctool
 #SBATCH -o qctool.log
@@ -145,16 +144,15 @@ export INTERVAL=$DIR/interval_olink_subset_unrelated_4994_pihat_0.1875_autosomal
 ln -sf $INTERVAL.bgen INTERVAL.bgen
 ln -sf $INTERVAL.sample INTERVAL.sample
 
-# to obtain SNP-specific statistics as in .bgen and .sample format with qctool, tested with qctool 2.0.1
+# to obtain SNP-specific statistics as in .bgen and .sample format
 
-qctool -g INTERVAL.bgen -s INTERVAL.sample -snp-stats -osnp INTERVAL.snp-stats -sample-stats -osample INTERVAL.sample-stats
+qctool -g INTERVAL.bgen -s INTERVAL.sample -snp-stats -osnp INTERVAL.snp-stats
 
 # Note in particular: the # option allows for chromosome-specific analysis; the -strand option will enable results in positive strand.
 ```
 The following script obtain SNP-statistics for each chromosome,
 ```bash
 #!/bin/bash --login
-# 20-12-2018 JHZ
 
 #SBATCH -J qctool
 #SBATCH -o qctool.log
