@@ -43,3 +43,6 @@ Behar M (2018). Proteomics might have saved my mother’s life and it may yet sa
 https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-proteomics.html, 
 also [here](http://www.michaelbehar.com/articles/the-new-york-times-november-18-2018/)
 ([PDF](http://www.michaelbehar.com/wp-content/uploads/2012/09/The-Everything-Test-The-New-York-Times-Magazine.pdf)).
+
+Gan P, et al. (2016). Development and Validation of a Protein-Based Risk Score for Cardiovascular Outcomes Among Patients With Stable Coronary Heart Disease. *JAMA* 315(23):2532-2541. doi:10.1001/jama.2016.5951,
+https://jamanetwork.com/journals/jama/fullarticle/2529627
