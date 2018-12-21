@@ -44,5 +44,5 @@ https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-proteomics.h
 also [here](http://www.michaelbehar.com/articles/the-new-york-times-november-18-2018/)
 ([PDF](http://www.michaelbehar.com/wp-content/uploads/2012/09/The-Everything-Test-The-New-York-Times-Magazine.pdf)).
 
-Ganz P, et al. (2016). Development and Validation of a Protein-Based Risk Score for Cardiovascular Outcomes Among Patients With Stable Coronary Heart Disease. *JAMA* 315(23):2532-2541. doi:10.1001/jama.2016.5951,
+Ganz P, et al. (2016). Development and validation of a protein-based risk score for cardiovascular outcomes among patients with stable coronary heart disease. *JAMA* 315(23):2532-2541. doi:10.1001/jama.2016.5951,
 https://jamanetwork.com/journals/jama/fullarticle/2529627
