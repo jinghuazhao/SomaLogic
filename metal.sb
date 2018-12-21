@@ -2,7 +2,7 @@
 
 #SBATCH -J METAL
 #SBATCH -o METAL.medium
-#SNATCH -a 1-10
+#SNATCH -a 1-1381%10
 #SBATCH -p medium
 #SBATCH -t 1-0:0
 #SBATCH --export ALL
@@ -10,7 +10,7 @@
 export id=$SLURM_ARRAY_TASK_ID
 export TMPDIR=/scratch/jhz22/tmp
 
-for p in $(awk 'NR==(a-1)*cs+1, NR==a*cs' a=$id cs=138 doc/SomaLogic.list)
+for p in $(awk 'NR==(a-1)*cs+1, NR==a*cs' a=$id cs=10 doc/SomaLogic.list)
 do
    echo ${p}
    if [ $(grep PROCESS METAL/${p}.metal | wc -l) -gt 1 ]; then
