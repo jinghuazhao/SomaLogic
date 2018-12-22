@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #SBATCH --ntasks=1
 #SBATCH --job-name=METAL.medium
 #SBATCH --time=12:00:00
@@ -7,7 +8,6 @@
 #SBATCH --array=1-1381
 #SBATCH --output=work/METAL_%A_%a.out
 #SBATCH --error=work/METAL_%A_%a.err
-###SBATCH --mail-type=ALL
 
 . /etc/profile.d/modules.sh
 module load default-cardio
