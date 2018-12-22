@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #SBATCH --ntasks=1
-#SBATCH --job-name=METAL.medium
-#SBATCH --time=12:00:00
+#SBATCH --job-name=METAL
+#SBATCH --time=4:00:00
 #SBATCH --cpus-per-task=8
-#SBATCH --partition=medium
+#SBATCH --partition=short
 #SBATCH --array=1-1381
 #SBATCH --output=work/METAL_%A_%a.out
 #SBATCH --error=work/METAL_%A_%a.err
