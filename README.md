@@ -22,7 +22,6 @@ File  | Description
 [metal.sh](metal.sh) | Generation and execution of individual METAL entries
 [metal.sb](metal.sb) | SLURM routine
 [QCGWAS.sb](QCGWAS.sb) | QCGWAS -- SLURM
-[QCGWAS.sh](QCGWAS.sh) | QCGWAS -- Bash
 [QCGWAS.R](QCGWAS.R) | QCGWAS -- R
 
 The workflows involve the following components,
