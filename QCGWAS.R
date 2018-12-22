@@ -1,8 +1,8 @@
-# 17-12-2018 JHZ
+# 22-12-2018 JHZ
 
 library(QCGWAS)
 
-prot <- Sys.getenv("protein")
+prot <- Sys.getenv("p")
 src <- "FHS"
 src_in <- paste(src, prot, "gz", sep=".")
 src_out <- paste(src, prot, sep=".")
