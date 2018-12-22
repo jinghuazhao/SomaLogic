@@ -8,16 +8,16 @@
 #SBATCH --array=1-1381
 #SBATCH --output=work/METAL_%A_%a.out
 #SBATCH --error=work/METAL_%A_%a.err
+#SBATCH --export ALL
 
 . /etc/profile.d/modules.sh
 module load default-cardio
 module load slurm
 module load use.own
 
-export id=$SLURM_ARRAY_TASK_ID
 export TMPDIR=/scratch/jhz22/tmp
+export p=$(awk 'NR==ENVIRON["SLURM_ARRAY_TASK_ID"]' doc/SomaLogic.list)
 
-export p=$(awk 'NR==a' a=$id doc/SomaLogic.list)
 echo ${p}
 if [ $(grep PROCESS METAL/${p}.metal | wc -l) -gt 1 ]; then
    metal METAL/${p}.metal
