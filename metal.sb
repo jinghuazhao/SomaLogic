@@ -18,8 +18,8 @@ module load use.own
 export TMPDIR=/scratch/jhz22/tmp
 export p=$(awk 'NR==ENVIRON["SLURM_ARRAY_TASK_ID"]' doc/SomaLogic.list)
 
-echo ${p}
 if [ $(grep PROCESS METAL/${p}.metal | wc -l) -gt 1 ]; then
+   echo ${p}
    metal METAL/${p}.metal
    gzip -f METAL/${p}-1.tbl.gz
 fi
