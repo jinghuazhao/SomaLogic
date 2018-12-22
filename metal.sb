@@ -1,20 +1,26 @@
 #!/bin/bash
+#SBATCH --ntasks=1
+#SBATCH --job-name=METAL.medium
+#SBATCH --time=12:00:00
+#SBATCH --cpus-per-task=8
+#SBATCH --partition=medium
+#SBATCH --array=1-1381
+#SBATCH --output=work/METAL_%A_%a.out
+#SBATCH --error=work/METAL_%A_%a.err
+###SBATCH --mail-type=ALL
 
-#SBATCH -J METAL
-#SBATCH -o METAL.medium
-#SNATCH -a 1-1381%10
-#SBATCH -p medium
-#SBATCH -t 1-0:0
-#SBATCH --export ALL
+. /etc/profile.d/modules.sh
+module load default-cardio
+module load slurm
+module load use.own
 
 export id=$SLURM_ARRAY_TASK_ID
 export TMPDIR=/scratch/jhz22/tmp
 
-for p in $(awk 'NR==(a-1)*cs+1, NR==a*cs' a=$id cs=10 doc/SomaLogic.list)
-do
-   echo ${p}
-   if [ $(grep PROCESS METAL/${p}.metal | wc -l) -gt 1 ]; then
-      metal METAL/${p}.metal
-   fi
+export p=$(awk 'NR==a' a=$id doc/SomaLogic.list)
+echo ${p}
+if [ $(grep PROCESS METAL/${p}.metal | wc -l) -gt 1 ]; then
+   metal METAL/${p}.metal
    gzip -f METAL/${p}-1.tbl.gz
-done
+fi
+
