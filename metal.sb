@@ -1,4 +1,4 @@
-#!/bin/bash --login
+#!/bin/bash
 
 #SBATCH -J METAL
 #SBATCH -o METAL.medium
