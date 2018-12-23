@@ -4,6 +4,7 @@ GWAS summary statistics need to reinstalled.
 
 FHS:
 
+per-SNP sample size
 non-gz file: /scratch/jhz22/SomaLogic/box/FHS/X_261756.txt.gz
 FHS.tsv has 1373 lines but box has 1118 entries, missing IFNg, etc.
 
