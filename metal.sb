@@ -21,6 +21,7 @@ export p=$(awk 'NR==ENVIRON["SLURM_ARRAY_TASK_ID"]' doc/SomaLogic.list)
 if [ $(grep PROCESS METAL/${p}.metal | wc -l) -gt 1 ]; then
    echo ${p}
    metal METAL/${p}.metal
-   gzip -f METAL/${p}-1.tbl.gz
+   if [ -f METAL/${p}-1.tbl ]; then 
+      gzip -f METAL/${p}-1.tbl.gz
+   fi
 fi
-
