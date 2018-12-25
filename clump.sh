@@ -27,6 +27,7 @@ plink --bfile /scratch/jhz22/data/INTERVAL/INTERVAL \
 sed 's|'"$rt"'/||g;s/.clumped://g' | \
 awk '(NF>1){$3="";print}' | \
 awk '{$1=$1;if(NR==1)$1="prot";print}' > SomaLogic.clumped
+# a panel similar to inf1 needs to be set up below
 R --no-save -q <<END
   require(gap)
   clumped <- read.table("SomaLogic.clumped",as.is=TRUE,header=TRUE)
