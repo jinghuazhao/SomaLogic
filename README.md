@@ -25,6 +25,7 @@ File  | Description
 [QCGWAS.R](QCGWAS.R) | QCGWAS -- R
 [clump.sh](clump.sh) | PLINK clumping
 [clump.sb](clump.sb) | SLURM routine
+[qml.sb](qml.sb) | Q-Q, Manhattan ([qqman.R]{(qqman.R)) and LocusZoom plots
 
 The workflows involve the following components,
 
