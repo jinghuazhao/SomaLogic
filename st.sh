@@ -10,7 +10,7 @@ git add SomaLogic_analysis_plan.md
 git commit -m "Analysis plan"
 git add SomaLogic.R
 git commit -m "Generation of auxiliary files from curated databases"
-git add format.* list.sh metal.* QCGWAS.* clump.*
+git add format.* list.sh metal.* QCGWAS.* clump.* qml.*
 git commit -m "Programs"
 git add st.sh
 git commit -m "st.sh"
