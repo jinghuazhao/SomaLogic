@@ -24,6 +24,7 @@ File  | Description
 [QCGWAS.sb](QCGWAS.sb) | QCGWAS -- SLURM
 [QCGWAS.R](QCGWAS.R) | QCGWAS -- R
 [clump.sh](clump.sh) | PLINK clumping
+[clump.sb](clump.sb) | SLURM routine
 
 The workflows involve the following components,
 
