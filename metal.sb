@@ -22,6 +22,6 @@ if [ $(grep PROCESS METAL/${p}.metal | wc -l) -gt 1 ]; then
    echo ${p}
    metal METAL/${p}.metal
    if [ -f METAL/${p}-1.tbl ]; then 
-      gzip -f METAL/${p}-1.tbl.gz
+      gzip -f METAL/${p}-1.tbl
    fi
 fi
