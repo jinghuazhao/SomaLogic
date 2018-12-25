@@ -2,23 +2,7 @@
 
 echo "--> clumping"
 
-export rt=$HOME/SomaLogic/METAL
-ls METAL/*tbl.gz | \
-sed 's/-1.tbl.gz//g' | \
-xargs -l basename | \
-parallel -j2 --env rt -C' ' '
-if [ -f $rt/{}.clumped ]; then rm $rt/{}.clumped; fi; \
-plink --bfile /scratch/jhz22/data/INTERVAL/INTERVAL \
-      --clump $rt/{}-1.tbl.gz \
-      --clump-snp-field MarkerName \
-      --clump-field P-value \
-      --clump-kb 500 \
-      --clump-p1 5e-10 \
-      --clump-p2 0.01 \
-      --clump-r2 0 \
-      --mac 50 \
-      --out $rt/{}
-'
+sbatch --wait clump.sb
 (
   grep CHR $rt/*.clumped | \
   head -1
