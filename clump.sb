@@ -22,6 +22,7 @@ export rt=$HOME/SomaLogic/METAL
 echo ${p}
 if [ -f $rt/${p}.clumped ]; then rm $rt/${p}.clumped; fi
 plink --bfile /scratch/jhz22/data/INTERVAL/INTERVAL \
+      --exclude range doc/high-LD-regions-hg19.txt \
       --clump $rt/${p}-1.tbl.gz \
       --clump-snp-field MarkerName \
       --clump-field P-value \
