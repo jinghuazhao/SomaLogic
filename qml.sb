@@ -25,42 +25,26 @@ echo ${p}
 export protein=${p}
 R --no-save -q < $rt/qqman.R'
 
-# further adaptation is required below
-(
-  echo -e "chrom\tstart\tend\tgene\tprot"
-  sort -k2,2 $rt/inf1.list > inf1.tmp
-  cut -f2,3,7-10 $rt/doc/olink.inf.panel.annot.tsv  | \
-  awk -vFS="\t" -vOFS="\t" '(NR>1){
-      gsub(/\"/,"",$0)
-      if($2=="Q8NF90") $3="FGF5"
-      if($2=="Q8WWJ7") $3="CD6"
-      print
-  }' | \
-  sort -t$'\t' -k2,2 | \
-  join -t$'\t' -j2 inf1.tmp - | \
-  awk -vFS="\t" -vOFS="\t" '{print $5,$6,$7,$4,$2}' | \
-  sort -k1,1n -k2,2n
-) > st.bed
 (
    echo -e "MarkerName\tP-value\tWeight"
    grep -w ${p} st.bed | \
    awk -vOFS="\t" -vM=1000000 "{start=\$2-M;if(start<0) start=0;end=\$3+M;\$2=start;\$3=end};1" > st.tmp; \
    read chrom start end gene prot < st.tmp; \
-   gunzip -c METAL/{}-1.tbl.gz | \
+   gunzip -c METAL/${p}-1.tbl.gz | \
    awk -vOFS="\t" -vchr=$chrom -vstart=$start -vend=$end "(\$1 == chr && \$2 >= start && \$2 <= end){split(\$3,a,\"_\");print a[1],\$12,\$14}"
 )  > METAL/${p}.lz'
-   grep -w {} st.bed | \
-   awk -vOFS="\t" -vM=1000000 "{start=\$2-M;if(start<0) start=0;end=\$3+M;\$2=start;\$3=end};1" > st.tmp; \
-   read chrom start end gene prot < st.tmp; \
-   cd METAL; \
-   rm -f ld_cache.db; \
-   locuszoom --source 1000G_Nov2014 --build hg19 --pop EUR --metal {}.lz \
-             --plotonly --chr $chrom --start $start --end $end --no-date --rundir .; \
-   mv chr${chrom}_${start}-${end}.pdf {}.lz.pdf; \
-   pdftopng -r 300 {}.lz.pdf {}; \
-   mv {}-000001.png {}.lz-1.png; \
-   mv {}-000002.png {}.lz-2.png; \
-   cd -
+grep -w ${p} st.bed | \
+awk -vOFS="\t" -vM=1000000 "{start=\$2-M;if(start<0) start=0;end=\$3+M;\$2=start;\$3=end};1" > st.tmp; \
+read chrom start end gene prot < st.tmp; \
+cd METAL; \
+rm -f ld_cache.db; \
+locuszoom --source 1000G_Nov2014 --build hg19 --pop EUR --metal ${p}.lz \
+          --plotonly --chr $chrom --start $start --end $end --no-date --rundir .; \
+mv chr${chrom}_${start}-${end}.pdf ${p}.lz.pdf; \
+pdftopng -r 300 ${p}.lz.pdf ${p}; \
+mv ${p}-000001.png ${p}.lz-1.png; \
+mv ${p}-000002.png ${p}.lz-2.png; \
+cd -
 
 # convert OPG.lz-1.png -resize 130% OPG.lz-3.png
 # convert \( OPG.qq.png -append OPG.manhattan.png -append OPG.lz-3.png -append \) +append OPG-qml.png
