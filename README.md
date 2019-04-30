@@ -49,3 +49,5 @@ also [here](http://www.michaelbehar.com/articles/the-new-york-times-november-18-
 
 Ganz P, et al. (2016). Development and validation of a protein-based risk score for cardiovascular outcomes among patients with stable coronary heart disease. *JAMA* 315(23):2532-2541. doi:10.1001/jama.2016.5951,
 https://jamanetwork.com/journals/jama/fullarticle/2529627
+
+Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. Nature 558: 73–79.
