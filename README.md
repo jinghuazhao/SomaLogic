@@ -1,5 +1,4 @@
-# SomaLogic
-SomaLogic data analysis
+# SomaLogic data analysis
 
 ## A summary of files and their use
 
