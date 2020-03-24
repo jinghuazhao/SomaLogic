@@ -1,13 +1,6 @@
 # SomaLogic
 SomaLogic data analysis
 
-## Installation
-
-The repository can be downloaded locally with
-```bash
-git clone https://github.com/jinghuazhao/SomaLogic
-```
-
 ## A summary of files and their use
 
 File  | Description
@@ -37,7 +30,16 @@ The workflows involve the following components,
 5. Batch scripts for metal analysis are then generated and executed with `metal.*`.
 6. Downstream analysis according to plan.
 
+## Installation
+
+The repository can be downloaded locally with
+```bash
+git clone https://github.com/jinghuazhao/SomaLogic
+```
+
 ## Additional information
+
+https://metabolomics.helmholtz-muenchen.de/pgwas/download/probeanno.tsv.
 
 [SomaLogic](https://somalogic.com/), [wiki](https://en.wikipedia.org/wiki/SomaLogic), [GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k), the **1129 assay** ([1129.tsv](doc/1129.tsv), derived from [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)), **1310 assay** ([1310.tsv](doc/1310.tsv), derived from [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf), and [Rev-2](doc/SSM-045-Rev-2-SOMAscan-Assay-1.3k-Content.xlsx)),
 and [SOMAscan Proteomic Assay Technical Whie Paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
