@@ -1,6 +1,6 @@
 # SomaLogic data analysis
 
-## A summary of files and their use
+## A summary
 
 File  | Description
 -------------|----------------------------------------------------------------------------------------
