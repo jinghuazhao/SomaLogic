@@ -1,7 +1,7 @@
-# 18-10-2018 JHZ
+# 25-3-2020 JHZ
 # Generation of file lists and directories
 
-export SomaLogic=/scratch/jhz22/SomaLogic
+export SomaLogic=/home/jhz22/SomaLogic
 export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
 
@@ -9,7 +9,7 @@ if [ ! -d $sumstats ]; then
    mkdir $sumstats
 fi
 cd $sumstats
-for s in FHS INTERVAL KORA Malmo QMDiab
+for s in FHS INTERVAL KORA Malmo QMDiab TwinsUK
 do
    if [ ! -d $s ]; then
       mkdir $s
@@ -46,3 +46,7 @@ sed 's/QMDiab_pGWAS.//g;s/.assoc.linear.gz//g;s/.assoc.linear//g' | awk 'NR>2' >
 export src=$box/QMDiab/PGWAS_Results
 sort -k2,2 $src/QMDiab.bim > $sumstats/QMDiab.bim
 cat $sumstats/QMDiab.input > $sumstats/QMDiab.list
+
+# TwinsUK, by-chromosome GEMMA output with sample sizes in PLINK output
+echo SL004415 > $sumstats/TwinsUK.input
+echo SL004415 2805-6_2 > $sumstats/TwinsUK.list

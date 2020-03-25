@@ -1,5 +1,5 @@
 #!/bin/bash
-# 25-10-2018 JHZ
+# 25-3-2030 JHZ
 # Reformatting files into directories
 
 function module ()
@@ -12,7 +12,7 @@ function module ()
 # The lastest is here, http://ftp.gnu.org/gnu/parallel/parallel-latest.tar.bz2
 
 ## raw and reformatted SUMSTATS
-export SomaLogic=/scratch/jhz22/SomaLogic
+export SomaLogic=/home/jhz22/SomaLogic
 export box=$SomaLogic/box
 export sumstats=$SomaLogic/sumstats
 export threads=4
@@ -69,5 +69,43 @@ function QMDiab()
   gzip -f > $sumstat/QMDiab/QMDiab.{}.txt.gz'
 }
 
-export TMPDIR=/scratch/jhz22/tmp
+function TwinsUK()
+{
+  echo -- TwinsUK --
+  export src=$box/TwinsUK
+  cat $sumstats/TwinsUK.list | \
+  parallel -j$threads -C' ' --env src --env sumstats '
+  (
+    awk -v OFS="\t" "BEGIN{
+      print \"SNPID\",\"CHR\",\"POS\",\"STRAND\",\"N\",\"EFFECT_ALLELE\",\"REFERENCE_ALLELE\",\"CODE_ALL_FQ\",\"BETA\",\"SE\",\"PVAL\",\"RSQ\",\"RSQ_IMP\",\"IMP\"
+    }"
+    for chr in $(seq 22)
+    do
+      awk -v OFS="\t" "NR > 1 {
+        CHR=\$1
+        POS=\$3
+        A1=toupper(\$5)
+        A2=toupper(\$6)
+        if(A1<A2) {A1A2=\"_\" A1 \"_\" A2} else {A1A2=\"_\" A2 \"_\" A1}
+        SNPID=\"chr\" CHR \":\" POS A1A2
+        STRAND=\"NA\"
+        N=91
+        EFFECT_ALLELE=\$5
+        REFERENCE_ALLELE=\$6
+        CODE_ALL_FQ=\$7
+        BETA=\$8
+        SE=\$9
+        PVAL=\$14
+        RSQ=\"NA\"
+        RSQ_IMP=\"NA\"
+        IMP="NA"
+        print SNPID,CHR,POS,STRAND,N,EFFECT_ALLELE,REFERENCE_ALLELE,CODE_ALL_FQ,BETA,SE,PVAL,RSQ,RSQ_IMP,IMP
+      }" ${src}/protein_{1}_HRC_r1.1_TUK_chr${chr}_GEMMA.assoc.txt
+    done
+  ) | \
+  gzip -f > $sumstats/TwinsUK/TwinsUK.{2}.txt.gz'
+}
+
+# ln -sf $HPC_WORK/work $HOME/tmp
+export TMPDIR=/home/jhz22/tmp
 $1
