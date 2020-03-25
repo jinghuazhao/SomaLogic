@@ -24,7 +24,8 @@ join -j1 $sumstats/FHS.input doc/FHS.tsv > $sumstats/FHS.list
 
 # INTERVAL, A1CF results for imputed genotypes by chromosome
 
-ls $box/INTERVAL/A1CF.12423.38.3/ | sed 's/12423.38.3_chrom_//g;s/_meta_final_v1.tsv.gz//g' > $sumstats/INTERVAL.list
+# ls $box/INTERVAL/A1CF.12423.38.3/ | sed 's/12423.38.3_chrom_//g;s/_meta_final_v1.tsv.gz//g' > $sumstats/INTERVAL.list
+echo ACE2 2805.6.2 2805-6_2 > $sumstats/INTERVAL.list
 
 # KORA, 1131 panel, PLINK outputs on 8m imputed genotypes by AptamerId
 

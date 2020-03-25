@@ -32,6 +32,48 @@ function FHS()
   gzip -f > $sumstats/FHS/FHS.{2}.txt.gz'
 }
 
+function INTERVAL()
+{
+  echo -- INTERVAL --
+  export snpstats=${box}/INTERVAL/box/round_all_chrom_merged_lite_INFO.snpstats
+  seq 22 | \
+  parallel -C' ' -j${threads} --env SomaLogic --env snpstats --env sumstats \
+                 'awk -v chr={} -f ${SomaLogic}/doc/INTERVAL.awk ${snpstats} > ${sumstats}/INTERVAL.{}.snpstats'
+  cat $sumstats/INTERVAL.list | \
+  parallel -j$threads -C' ' --env box --env sumstats '
+  (
+    awk -v OFS="\t" "BEGIN{
+      print \"SNPID\",\"CHR\",\"POS\",\"STRAND\",\"N\",\"EFFECT_ALLELE\",\"REFERENCE_ALLELE\",\"CODE_ALL_FQ\",\"BETA\",\"SE\",\"PVAL\",\"RSQ\",\"RSQ_IMP\",\"IMP\"
+    }"
+    for chr in $(seq 22)
+    do
+      gunzip -c ${box}/INTERVAL/{1}.{2}/{1}.{2}_chrom_${chr}_meta_final_v1.tsv.gz | \
+      awk "NR > 1 {
+        CHR=\$2
+        POS=\$3
+        A1=toupper(\$4)
+        A2=toupper(\$5)
+        if(A1<A2) {A1A2=\"_\" A1 \"_\" A2} else {A1A2=\"_\" A2 \"_\" A1}
+        SNPID=\"chr\" CHR \":\" POS A1A2
+        STRAND=\"NA\"
+        N=3301
+        EFFECT_ALLELE=\$4
+        REFERENCE_ALLELE=\$5
+        BETA=\$6
+        SE=\$7
+        PVAL=10^\$8
+        print SNPID,CHR,POS,STRAND,N,A1,A2,BETA,SE,PVAL
+      }" | \
+      join - ${sumstats}/INTERVAL.${chr}.snpstats | \
+      awk -v OFS="\t" "{
+        if(\$6==\$11) {EAF=\$13} else {EAF=1-\$13}
+        if(\$14>0.3) print \$1,\$2,\$3,\$4,\$5,\$6,\$7,EAF,\$8,\$9,\$10,\"NA\",\$14,\"NA\"
+      }"
+    done
+  ) | \
+  gzip -f > $sumstats/INTERVAL/INTERVAL.{3}.txt.gz'
+}
+
 function KORA()
 {
   echo --- KORA ---
