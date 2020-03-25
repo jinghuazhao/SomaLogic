@@ -51,4 +51,4 @@ https://jamanetwork.com/journals/jama/fullarticle/2529627
 
 Suhre K, et al. (2017). Connecting genetic risk to disease end points through the human blood plasma proteome. *Nat Commun* 8, 14357, https://doi.org/10.1038/ncomms14357 (https://metabolomics.helmholtz-muenchen.de/pgwas/).
 
-Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79.
+Sun BB, et al. (2018). Genomic atlas of the human plasma proteome. *Nature* 558: 73–79 ([http://www.phpc.cam.ac.uk/ceu/proteins/](http://www.phpc.cam.ac.uk/ceu/proteins/)).
