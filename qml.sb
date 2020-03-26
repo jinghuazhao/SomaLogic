@@ -1,50 +1,27 @@
 #!/bin/bash
 
 #SBATCH --ntasks=1
-#SBATCH --job-name=METAL
+#SBATCH --job-name=qml
 #SBATCH --time=4:00:00
 #SBATCH --cpus-per-task=8
-#SBATCH --partition=short
+#SBATCH --partition=skylake
 #SBATCH --array=1-1381
 #SBATCH --output=work/METAL_%A_%a.out
 #SBATCH --error=work/METAL_%A_%a.err
 #SBATCH --export ALL
 
-. /etc/profile.d/modules.sh
-module load default-cardio
-module load slurm
-module load use.own
+function cardio()
+{
+  . /etc/profile.d/modules.sh
+  module load default-cardio
+  module load slurm
+  module load use.own
+}
 
 export p=$(awk 'NR==ENVIRON["SLURM_ARRAY_TASK_ID"]' doc/SomaLogic.list)
-export TMPDIR=/scratch/jhz22/tmp
+export TMPDIR=$HOME/tmp
 export rt=$HOME/SomaLogic
 
-echo "--> Q-Q/Manhattan/LocusZoom plots"
-echo ${p}
-
+echo "${p} --> Q-Q/Manhattan/LocusZoom plots"
 export protein=${p}
-R --no-save -q < $rt/qqman.R'
-
-(
-   echo -e "MarkerName\tP-value\tWeight"
-   grep -w ${p} st.bed | \
-   awk -vOFS="\t" -vM=1000000 "{start=\$2-M;if(start<0) start=0;end=\$3+M;\$2=start;\$3=end};1" > st.tmp; \
-   read chrom start end gene prot < st.tmp; \
-   gunzip -c METAL/${p}-1.tbl.gz | \
-   awk -vOFS="\t" -vchr=$chrom -vstart=$start -vend=$end "(\$1 == chr && \$2 >= start && \$2 <= end){split(\$3,a,\"_\");print a[1],\$12,\$14}"
-)  > METAL/${p}.lz'
-grep -w ${p} st.bed | \
-awk -vOFS="\t" -vM=1000000 "{start=\$2-M;if(start<0) start=0;end=\$3+M;\$2=start;\$3=end};1" > st.tmp; \
-read chrom start end gene prot < st.tmp; \
-cd METAL; \
-rm -f ld_cache.db; \
-locuszoom --source 1000G_Nov2014 --build hg19 --pop EUR --metal ${p}.lz \
-          --plotonly --chr $chrom --start $start --end $end --no-date --rundir .; \
-mv chr${chrom}_${start}-${end}.pdf ${p}.lz.pdf; \
-pdftopng -r 300 ${p}.lz.pdf ${p}; \
-mv ${p}-000001.png ${p}.lz-1.png; \
-mv ${p}-000002.png ${p}.lz-2.png; \
-cd -
-
-# convert OPG.lz-1.png -resize 130% OPG.lz-3.png
-# convert \( OPG.qq.png -append OPG.manhattan.png -append OPG.lz-3.png -append \) +append OPG-qml.png
+R --no-save -q < $rt/qqman.R

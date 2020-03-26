@@ -8,7 +8,7 @@ export METAL=$SomaLogic/METAL
 
 if [ ! -d $METAL ]; then mkdir $METAL; fi
 (
-for study in FHS KORA Malmo QMDiab TwinsUK
+for study in FHS INTERVAL KORA Malmo QMDiab TwinsUK
 do
    ls $sumstats/$study | sed 's/'"$study".'//g' | awk -vstudy=$study '{
       s=$1;gsub(/.gz|@/,"",s);
