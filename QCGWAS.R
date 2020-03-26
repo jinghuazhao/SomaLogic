@@ -1,4 +1,4 @@
-# 22-12-2018 JHZ
+# 26-3-2020 JHZ
 
 library(QCGWAS)
 
@@ -15,7 +15,7 @@ src_qc <- QC_GWAS(src_in,
 	filename_output = src_out,
 	dir_data = "sumstats/work",
 	dir_output = paste0("work/",prot),
-	dir_references = "/scratch/jhz22/data/1KG",
+	dir_references = "/home/jhz22/INF/data/1KG",
 	header_translations = header_translations,
 	save_final_dataset = FALSE,
 	HQfilter_FRQ = 0.01,
