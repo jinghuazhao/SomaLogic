@@ -1,12 +1,12 @@
 INTERVAL:
 
-GWAS summary statistics need to reinstalled.
+GWAS summary statistics available from box.
 
 FHS:
 
 per-SNP sample size
-strand
-non-gz file: /scratch/jhz22/SomaLogic/box/FHS/X_261756.txt.gz
+strand information is missing
+non-gz file: X_261756.txt.gz
 FHS.tsv has 1373 lines but box has 1118 entries, missing IFNg, etc.
 
 Malmo:
