@@ -1,13 +1,13 @@
 INTERVAL:
 
-GWAS summary statistics available from box.
+GWAS summary statistics available from box would probably has some overlap with OLINK.
 
 FHS:
 
 per-SNP sample size
-strand information is missing
+strand information
 non-gz file: X_261756.txt.gz
-FHS.tsv has 1373 lines but box has 1118 entries, missing IFNg, etc.
+FHS.tsv has 1373 lines but box has 1118 entries, missing IFNg.
 
 Malmo:
 
