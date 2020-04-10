@@ -11,4 +11,6 @@ somalogic <- rename(subset(somalogic[vars],chromosome_name%in%chrs),
                   c(chromosome_name="chr",start_position="start",end_position="end",
                     EntrezGeneSymbol="symbol",ensembl_gene_id="ensGene",external_gene_name="extGene"))
 gs <- merge(gwas,somalogic,by.x="SOMAMER_ID",by.y="SOMAS_ID_round2")
-write.table(gs,file="INTERVAL-box.tsv",quote=FALSE,row.names=FALSE,sep="\t")
+out <- c("chr","start","end","ensGene","UniProt","symbol","TargetFullName","extGene","Target","UniProts","SOMAMER_ID")
+ord <- with(gs,order(chr,start,end))
+write.table(gs[ord,out],file="INTERVAL-box.tsv",quote=FALSE,row.names=FALSE,sep="\t")
