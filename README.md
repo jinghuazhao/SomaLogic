@@ -39,7 +39,7 @@ git clone https://github.com/jinghuazhao/SomaLogic
 ## References
 
 [SomaLogic](https://somalogic.com/), [wiki](https://en.wikipedia.org/wiki/SomaLogic), [GenomeWeb reports](https://www.genomeweb.com/resources/new-product/somalogic-somascan-assay-13k), the **1129 assay** ([1129.tsv](doc/1129.tsv), derived from [SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf](http://www.somalogic.com/wp-content/uploads/2016/10/SSM-011-Rev-11-SOMAscan-Assay-V1-1k-Content.pdf)), **1310 assay** ([1310.tsv](doc/1310.tsv), derived from [SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf](http://somalogic.com/wp-content/uploads/2016/09/SSM-045-REV-1-SOMAscan-Assay-1-3k-Content-1.pdf), and [Rev-2](doc/SSM-045-Rev-2-SOMAscan-Assay-1.3k-Content.xlsx)),
-and [SOMAscan Proteomic Assay Technical Whie Paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
+and [SOMAscan Proteomic Assay Technical White Paper](http://somalogic.com/wp-content/uploads/2017/06/SSM-002-Technical-White-Paper_010916_LSM1.pdf).
 
 Behar M (2018). Proteomics might have saved my mother’s life and it may yet save mine. *The New York Times Magazine*,
 https://www.nytimes.com/interactive/2018/11/15/magazine/tech-design-proteomics.html, 
